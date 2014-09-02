@@ -63,8 +63,15 @@ $scaleFactor: 1.618;
 
 ## Mixins
 
-
-
+* gridlover-body
+	```
+	@mixin gridlover-body($size: $baseFontSize, $rem: false)
+	```
+	Accepts 2 arguments:
+		* `$size: $baseFontSize`
+		Specifies 
+		* `$rem: false`
+		Prints rem units if `true` (`false`by default).
 ## Example usage
 
 ```
