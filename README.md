@@ -12,7 +12,7 @@ adjusted values to any element by editing the css later.
 
 Go play around with the awesome [Gridlover app](http://www.gridlover.net/app/)!
 
-You'll see that you can change the **font size, **line height** and **scale factor** values and then you get
+You'll see that you can change the **font size**, **line height** and **scale factor** values and then you get
 the CSS output in either **px**, **em** and **rem**. Also you can change the output to be in either **CSS**,
 **SCSS**, **Less** or **Stylus**.
 
@@ -20,7 +20,14 @@ So much fun!
 
 ## Usage
 
-**Sassy-Gridlover** consists of 3 mixins:
+**Sassy-Gridlover** consists of 4 variables:
+
+* $browserFontSize;
+* $baseFontSize;
+* $baseLineHeight;
+* $scaleFactor;
+
+and 3 mixins:
 
 * `@mixin gridlover-body($size: $baseFontSize, $rem: false);`
 * `@mixin gridlover-heading($step, $rem: false)`
