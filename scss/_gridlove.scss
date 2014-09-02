@@ -57,7 +57,7 @@
 	margin-top: round($baseFontSize * $baseLineHeight) + px;
 	// displays rem units if 'true'
 	@if($rem == true) {
-		margin-bottom: round($baseFontSize * $baseLineHeight) / $baseFontSize + rem;
-		margin-top: round($baseFontSize * $baseLineHeight) / $baseFontSize + rem;
+		margin-bottom: round($baseFontSize * $baseLineHeight) / $browserFontSize + rem;
+		margin-top: round($baseFontSize * $baseLineHeight) / $browserFontSize + rem;
 	}
 }
