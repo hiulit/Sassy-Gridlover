@@ -23,7 +23,7 @@
 @mixin gridlover-body($size: $baseFontSize, $rem: false) {
 	font-size: $size + px;
 	line-height: round(($size * $baseLineHeight)) + px;
-	// Displays rem units if 'true'
+	// Prints rem units if 'true'
 	@if($rem == true) {
 		font-size: ($size / $browserFontSize) + rem;
 		line-height: round(($size * $baseLineHeight)) / $browserFontSize + rem;
@@ -48,7 +48,7 @@
 	@else {
 		margin-top: $lineHeight + px;
 	}
-	// Displays rem units if 'true'
+	// Prints rem units if 'true'
 	@if($rem == true) {
 		font-size: round($size * exponent($scale, $step)) / $browserFontSize + rem;
 		line-height: ($lineHeight * $lines) / $browserFontSize + rem;
@@ -65,7 +65,7 @@
 @mixin gridlover-margins($rem: false) {
 	margin-bottom: round($baseFontSize * $baseLineHeight) + px;
 	margin-top: round($baseFontSize * $baseLineHeight) + px;
-	// Displays rem units if 'true'
+	// Prints rem units if 'true'
 	@if($rem == true) {
 		margin-bottom: round($baseFontSize * $baseLineHeight) / $browserFontSize + rem;
 		margin-top: round($baseFontSize * $baseLineHeight) / $browserFontSize + rem;
