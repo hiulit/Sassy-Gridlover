@@ -1,29 +1,37 @@
 // @function exponent() taken from Sassy-math https://github.com/Team-Sass/Sassy-math
 @function exponent($base, $exponent) {
-	// reset value
+	// Reset value
 	$value: $base;
-	// positive intergers get multiplied
+	// Positive intergers get multiplied
 	@if $exponent > 1 {
 		@for $i from 2 through $exponent {
 			$value: $value * $base; } }
-	// negitive intergers get divided. A number divided by itself is 1
+	// Negitive intergers get divided. A number divided by itself is 1
 	@if $exponent < 1 {
 		@for $i from 0 through -$exponent {
 			$value: $value / $base; } }
-	// return the last value written
+	// Return the last value written
 	@return $value;
 }
 
-// @mixin gridlover-xxx based on the Gridlover app system http://www.gridlover.net/app/
+// All the gridlover-xxx mixins are based on the Gridlover app http://www.gridlover.net/app/
+
+// $rem -> true/false (if you want to use rem units aswell as pixels)
+
 @mixin gridlover-body($size: $baseFontSize, $rem: false) {
 	font-size: $size + px;
 	line-height: round(($size * $baseLineHeight)) + px;
+	// Displays rem units if 'true'
 	@if($rem == true) {
 		font-size: ($size / $browserFontSize) + rem;
 		line-height: round(($size * $baseLineHeight)) / $browserFontSize + rem;
 	}
 }
 
+// h1 -> $step: 3
+// h2 -> $step: 2
+// h3 -> $step: 1
+// h4 -> $step: 0
 @mixin gridlover-heading($step, $rem: false) {
 	$size: $baseFontSize;
 	$lineHeight: round($size * $baseLineHeight);
@@ -38,7 +46,7 @@
 	@else {
 		margin-top: $lineHeight + px;
 	}
-	// displays rem units if 'true'
+	// Displays rem units if 'true'
 	@if($rem == true) {
 		font-size: round($size * exponent($scale, $step)) / $browserFontSize + rem;
 		line-height: ($lineHeight * $lines) / $browserFontSize + rem;
@@ -55,7 +63,7 @@
 @mixin gridlover-margins($rem: false) {
 	margin-bottom: round($baseFontSize * $baseLineHeight) + px;
 	margin-top: round($baseFontSize * $baseLineHeight) + px;
-	// displays rem units if 'true'
+	// Displays rem units if 'true'
 	@if($rem == true) {
 		margin-bottom: round($baseFontSize * $baseLineHeight) / $browserFontSize + rem;
 		margin-top: round($baseFontSize * $baseLineHeight) / $browserFontSize + rem;
