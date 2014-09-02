@@ -22,15 +22,19 @@ So much fun!
 
 **Sassy-Gridlover** consists of 4 variables:
 
-* $browserFontSize;
-* $baseFontSize;
-* $baseLineHeight;
-* $scaleFactor;
+```
+$browserFontSize;
+$baseFontSize;
+$baseLineHeight;
+$scaleFactor;
+```
 
 and 3 mixins:
 
-* `@mixin gridlover-body($size: $baseFontSize, $rem: false);`
-* `@mixin gridlover-heading($step, $rem: false)`
-* `@mixin gridlover-margins($rem: false)`
+```
+@mixin gridlover-body($size: $baseFontSize, $rem: false);
+@mixin gridlover-heading($step, $rem: false)
+@mixin gridlover-margins($rem: false)
+```
 
 These are the main functionalities of the [Gridlover app](http://www.gridlover.net/app/).
