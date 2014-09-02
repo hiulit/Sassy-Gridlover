@@ -12,13 +12,13 @@ adjusted values to any element by editing the css later.
 
 Go play around with the awesome [Gridlover app](http://www.gridlover.net/app/)!
 
-You'll see that you can change the **font size**, **line height** and **scale factor** values and then you get
+You'll see that you can change the **font size**, **line height** and **scale factor** values. Then you get
 the CSS output in either **px**, **em** and **rem**. Also you can change the output to be in either **CSS**,
 **SCSS**, **Less** or **Stylus**.
 
 So much fun!
 
-## Usage
+## Getting started
 
 **Sassy-Gridlover** consists of 4 variables:
 
@@ -37,4 +37,62 @@ and 3 mixins:
 @mixin gridlover-margins($rem: false)
 ```
 
-These are the main functionalities of the [Gridlover app](http://www.gridlover.net/app/).
+These are the 3 functionalities of the [Gridlover app](http://www.gridlover.net/app/).
+
+## Setup
+
+Import `_gridlover.scss` to your main style sheet.
+
+```
+@import "gridlover";
+```
+
+Change the variables values in `_config.scss` to your liking. ** But leave the `$broweserFontSize at 16!**
+
+### Config.scss example
+
+```
+// Don't change this variable!
+$browserFontSize: 16;
+
+// Change away! :D
+$baseFontSize: 18;
+$baseLineHeight: 1.2;
+$scaleFactor: 1.618;
+```
+
+## Mixins
+
+
+
+## Example usage
+
+```
+@import "gridlover.scss";
+
+body {
+	@include gridlover-body($baseFontSize, true);
+}
+
+h1 {
+	@include gridlover-heading(3, true);
+}
+h2 {
+	@include gridlover-heading(2, true);
+}
+h3 {
+	@include gridlover-heading(1, true);
+}
+h4 {
+	@include gridlover-heading(0, true);
+}
+
+p, ul, ol, pre, table, blockquote {
+	@include gridlover-margins(true);
+}
+```
+
+
+
+
+
