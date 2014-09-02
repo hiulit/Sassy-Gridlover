@@ -47,9 +47,9 @@ Import `_gridlover.scss` to your main style sheet.
 @import "gridlover";
 ```
 
-Change the variables values in `_config.scss` to your liking. **But leave the `$broweserFontSize` at 16!**
+Change the variables values in `_config.scss` to your liking. **But leave the `$browserFontSize` at 16!**
 
-### Config.scss example
+### _config.scss example
 
 ```
 // Don't change this variable!
