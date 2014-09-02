@@ -69,10 +69,10 @@ Gridlover Body
 ```
 
 Accepts 2 arguments:
-* `$size: $baseFontSize`  
-	Specifies 
-* `$rem: false`  
-	Prints rem units if `true` (`false` by default).
+
+* `$size: $baseFontSize` Specifies 
+* `$rem: false` Prints rem units if `true` (`false` by default).
+
 ## Example usage
 
 ```
