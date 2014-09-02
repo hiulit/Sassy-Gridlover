@@ -1,0 +1,31 @@
+// Don't change this variable!
+$browserFontSize: 16;
+
+// Change away! :D
+$baseFontSize: 18;
+$baseLineHeight: 1.2;
+$scaleFactor: 1.618;
+
+@import "gridlove.scss";
+
+body {
+	@include gridlover-body($baseFontSize, true);
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+	@include gridlover-heading(3, true);
+}
+h2 {
+	@include gridlover-heading(2, true);
+}
+h3 {
+	@include gridlover-heading(1, true);
+}
+h4 {
+	@include gridlover-heading(0, true);
+}
+
+p, ul, ol, pre, table, blockquote {
+	@include gridlover-margins(true);
+}
