@@ -71,10 +71,23 @@ $scaleFactor: 1.618;
 
 Accepts 2 arguments:
 
-* `$size: $baseFontSize` Specifies 
+* `$size: $baseFontSize` Specifies the base font size (without unit, just a number).
 * `$rem: false` Prints rem units if `true` (`false` by default).
 
 ### Gridlover heading
+
+```
+@mixin gridlover-heading($step, $rem: false)
+```
+
+Accepts 2 arguments:
+
+* `$step`
+	* h1 -> $step: 3
+	* h2 -> $step: 2
+	* h3 -> $step: 1
+	* h4 -> $step: 0
+* `$rem: false` Prints rem units if `true` (`false` by default).
 
 ### Gridlover margins
 
