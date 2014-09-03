@@ -144,7 +144,7 @@ p, ul, ol, pre, table, blockquote {
 
 Thanks to:
 
-* [Gridlover app](http://www.gridlover.net/app/).
+* [Gridlover app](http://www.gridlover.net/app/) - Created by [Tuomas Jomppanen](http://twitter.com/tuomasj) & [Ville Vanninen](http://twitter.com/sakamies).
 * [Sassy-math](https://github.com/Team-Sass/Sassy-math) - For the `@function exponent()`.
 
 ## Unlicense
