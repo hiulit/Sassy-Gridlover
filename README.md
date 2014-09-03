@@ -108,10 +108,10 @@ Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
 Accepts 2 arguments:
 
 * `$step`
-	* `<h1>` &rarr; `$step`: 3
-	* `<h2>` &rarr; `$step`: 2
-	* `<h3>` &rarr; `$step`: 1
-	* `<h4>` &rarr; `$step`: 0
+	* `<h1>` &rarr; `$step: 3`
+	* `<h2>` &rarr; `$step: 2`
+	* `<h3>` &rarr; `$step: 1`
+	* `<h4>` &rarr; `$step: 0`
 * `$rem: false` Outputs rem units if `true` (`false` by default).
 
 ### Gridlover margins
