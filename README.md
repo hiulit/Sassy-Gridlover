@@ -12,14 +12,13 @@ adjusted values to any element by editing the css later.
 
 Go play around with the awesome [Gridlover app](http://www.gridlover.net/app/)!
 
-So much fun! :D
+It's so much fun! :D
 
 ## Getting started
 
-**Sassy-Gridlover** consists of 4 variables:
+**Sassy-Gridlover** consists of 3 configurable variables:
 
 ```
-$browserFontSize;
 $baseFontSize;
 $baseLineHeight;
 $scaleFactor;
