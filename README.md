@@ -1,7 +1,7 @@
 Sassy-Gridlover
 ===============
 
-Sass mixins to establish a typographic system with modular scale and vertical rhythm.
+**Super easy to use Sass mixins** to establish a typographic system with modular scale and vertical rhythm.
 Based on the Gridlover app http://www.gridlover.net/app/
 
 Gridlover gives you adjustable css for font sizes, line heights and margins.
@@ -12,11 +12,7 @@ adjusted values to any element by editing the css later.
 
 Go play around with the awesome [Gridlover app](http://www.gridlover.net/app/)!
 
-You'll see that you can change the **font size**, **line height** and **scale factor** values. Then you get
-the CSS output in either **px**, **em** and **rem**. Also you can change the output to be in either **CSS**,
-**SCSS**, **Less** or **Stylus**.
-
-So much fun!
+So much fun! :D
 
 ## Getting started
 
