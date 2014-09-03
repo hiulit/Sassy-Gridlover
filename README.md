@@ -63,7 +63,7 @@ $scaleFactor: 1.618;
 
 ## Mixins
 
-### Gridlover Body
+### Gridlover body
 
 To use in `body`.
 
