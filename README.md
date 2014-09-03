@@ -2,7 +2,7 @@ Sassy-Gridlover
 ===============
 
 **Super easy to use Sass mixins** to establish a typographic system with modular scale and vertical rhythm.
-Based on the Gridlover app http://www.gridlover.net/app/
+Based on the [Gridlover app](http://www.gridlover.net/app/)
 
 Gridlover gives you adjustable css for font sizes, line heights and margins.
 The default css output is for body, p and h1 - h4 headings, but you can of course apply your
@@ -33,7 +33,7 @@ and 3 mixins:
 @mixin gridlover-margins($rem: false)
 ```
 
-These are the 3 functionalities of the [Gridlover app](http://www.gridlover.net/app/).
+*These are the 3 functionalities of the [Gridlover app](http://www.gridlover.net/app/)*.
 
 ## Setup
 
