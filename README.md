@@ -27,9 +27,9 @@ $scaleFactor;
 and 3 mixins:
 
 ```
-@mixin gridlover-body();
-@mixin gridlover-heading();
-@mixin gridlover-margins();
+@mixin sassy-gridlover-body();
+@mixin sassy-gridlover-heading();
+@mixin sassy-gridlover-margins();
 ```
 
 *These are the 3 functionalities, that you (should) have been playing with, of the [Gridlover app](http://www.gridlover.net/app/)*.
