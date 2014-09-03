@@ -2,7 +2,6 @@
 
 body {
 	@include gridlover-body($baseFontSize, true);
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 h1 {
