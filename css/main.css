@@ -2,8 +2,7 @@ body {
   font-size: 18px;
   line-height: 22px;
   font-size: 1.125rem;
-  line-height: 1.375rem;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif; }
+  line-height: 1.375rem; }
 
 h1 {
   font-size: 76px;
@@ -50,5 +49,3 @@ p, ul, ol, pre, table, blockquote {
   margin-top: 22px;
   margin-bottom: 1.375rem;
   margin-top: 1.375rem; }
-
-/*# sourceMappingURL=main.css.map */
