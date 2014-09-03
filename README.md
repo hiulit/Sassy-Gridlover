@@ -65,6 +65,10 @@ $scaleFactor: 1.618;
 
 ### Gridlover Body
 
+To use in `body`.
+
+Outputs `font-size`and `line-height`.
+
 ```
 @mixin gridlover-body($size: $baseFontSize, $rem: false)
 ```
@@ -72,9 +76,13 @@ $scaleFactor: 1.618;
 Accepts 2 arguments:
 
 * `$size: $baseFontSize` Specifies the base font size (without unit, just a number).
-* `$rem: false` Prints rem units if `true` (`false` by default).
+* `$rem: false` Outputs rem units if `true` (`false` by default).
 
 ### Gridlover heading
+
+To use in heading `h1 - h4`.
+
+Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
 
 ```
 @mixin gridlover-heading($step, $rem: false)
@@ -87,9 +95,21 @@ Accepts 2 arguments:
 	* h2 -> $step: 2
 	* h3 -> $step: 1
 	* h4 -> $step: 0
-* `$rem: false` Prints rem units if `true` (`false` by default).
+* `$rem: false` Outputs rem units if `true` (`false` by default).
 
 ### Gridlover margins
+
+To use in `p`, `ul`, `ol`, `pre`, `table`, `blockquote`, etc.
+
+Outputs `margin-bottom` and `margin-top`.
+
+```
+@mixin gridlover-margins($rem: false)
+```
+
+Accepts 1 argument:
+
+* `$rem: false` Outputs rem units if `true` (`false` by default).
 
 ## Example usage
 
