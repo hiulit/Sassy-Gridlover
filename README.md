@@ -43,18 +43,40 @@ Import `_gridlover.scss` to your main style sheet.
 @import "gridlover";
 ```
 
-Change the variables values in `_config.scss` to your liking. **But leave the `$browserFontSize` at 16!**
+Change the configurable variables values in `_config.scss` to your liking.
 
-### _config.scss example
+### _config.scss
 
 ```
-// Don't change this variable!
-$browserFontSize: 16;
+// Scale factor variables.
+// Don't change these variables!
+$minorSecond: 1.067;
+$majorSecond: 1.125;
+$minorThird: 1.2;
+$majorThird: 1.25;
+$perfectFourth: 1.333;
+$augmentedFourth: 1.414;
+$perfectFifth: 1.5;
+$minorSixth: 1.6;
+$goldenSection: 1.618;
+$majorSixth: 1.667;
+$minorSeventh: 1.778;
+$majorSeventh: 1.875;
+$octave: 2;
+$majorTenth: 2.5;
+$majorEleventh: 2.667;
+$majorTwelfth: 3;
+$doubleOctave: 4;
 
+// Default font size.
+// Don't change this variable!
+$defaultFontSize: 16;
+
+// Configurable variables.
 // Change away! :D
 $baseFontSize: 18;
 $baseLineHeight: 1.2;
-$scaleFactor: 1.618;
+$scaleFactor: $goldenSection;
 ```
 
 ## Mixins
