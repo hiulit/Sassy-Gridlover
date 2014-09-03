@@ -82,7 +82,7 @@ $scaleFactor: $goldenSection;
 
 ### Gridlover body
 
-To use in `body`.
+To use in `<body>`.
 
 Outputs `font-size`and `line-height`.
 
@@ -97,7 +97,7 @@ Accepts 2 arguments:
 
 ### Gridlover heading
 
-To use in heading `h1 - h4`.
+To use in heading `<h1> - <h4>`.
 
 Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
 
@@ -116,7 +116,7 @@ Accepts 2 arguments:
 
 ### Gridlover margins
 
-To use in `p`, `ul`, `ol`, `pre`, `table`, `blockquote`, etc.
+To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 
 Outputs `margin-bottom` and `margin-top`.
 
