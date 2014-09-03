@@ -1,22 +1,22 @@
-@import "gridlover.scss";
+@import "sassy-gridlover.scss";
 
 body {
-	@include gridlover-body($baseFontSize, true);
+	@include sassy-gridlover-body($baseFontSize, true);
 }
 
 h1 {
-	@include gridlover-heading(3, true);
+	@include sassy-gridlover-heading(3, true);
 }
 h2 {
-	@include gridlover-heading(2, true);
+	@include sassy-gridlover-heading(2, true);
 }
 h3 {
-	@include gridlover-heading(1, true);
+	@include sassy-gridlover-heading(1, true);
 }
 h4 {
-	@include gridlover-heading(0, true);
+	@include sassy-gridlover-heading(0, true);
 }
 
 p, ul, ol, pre, table, blockquote {
-	@include gridlover-margins(true);
+	@include sassy-gridlover-margins(true);
 }

@@ -82,14 +82,14 @@ $scaleFactor: $goldenSection;
 
 By default, all the mixins will output only `px`. But you can also choose to output `rem`.
 
-### Gridlover body
+### Sassy-Gridlover body
 
 To use in `<body>`.
 
 Outputs `font-size`and `line-height`.
 
 ```
-@mixin gridlover-body($size: $baseFontSize, $rem: false)
+@mixin sassy-gridlover-body($size: $baseFontSize, $rem: false)
 ```
 
 Accepts 2 arguments:
@@ -97,14 +97,14 @@ Accepts 2 arguments:
 * `$size: $baseFontSize` Specifies the base font size (without unit, just a number).
 * `$rem: false` Outputs rem units if `true` (`false` by default).
 
-### Gridlover heading
+### Sassy-Gridlover heading
 
 To use in headings `<h1> - <h4>`.
 
 Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
 
 ```
-@mixin gridlover-heading($step, $rem: false)
+@mixin sassy-gridlover-heading($step, $rem: false)
 ```
 
 Accepts 2 arguments:
@@ -116,14 +116,14 @@ Accepts 2 arguments:
 	* `<h4>` &rarr; `$step: 0`
 * `$rem: false` Outputs rem units if `true` (`false` by default).
 
-### Gridlover margins
+### Sassy-Gridlover margins
 
 To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 
 Outputs `margin-bottom` and `margin-top`.
 
 ```
-@mixin gridlover-margins($rem: false)
+@mixin sassy-gridlover-margins($rem: false)
 ```
 
 Accepts 1 argument:
@@ -135,27 +135,27 @@ Accepts 1 argument:
 ###SCSS
 
 ```
-@import "gridlover.scss";
+@import "sassy-gridlover.scss";
 
 body {
-	@include gridlover-body($baseFontSize, true);
+	@include sassy-gridlover-body($baseFontSize, true);
 }
 
 h1 {
-	@include gridlover-heading(3, true);
+	@include sassy-gridlover-heading(3, true);
 }
 h2 {
-	@include gridlover-heading(2, true);
+	@include sassy-gridlover-heading(2, true);
 }
 h3 {
-	@include gridlover-heading(1, true);
+	@include sassy-gridlover-heading(1, true);
 }
 h4 {
-	@include gridlover-heading(0, true);
+	@include sassy-gridlover-heading(0, true);
 }
 
 p, ul, ol, pre, table, blockquote {
-	@include gridlover-margins(true);
+	@include sassy-gridlover-margins(true);
 }
 ```
 
