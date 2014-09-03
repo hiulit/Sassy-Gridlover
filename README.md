@@ -2,7 +2,7 @@ Sassy-Gridlover
 ===============
 
 **Super easy to use Sass mixins** to establish a typographic system with modular scale and vertical rhythm.
-Based on the [Gridlover app](http://www.gridlover.net/app/)
+Based on the [Gridlover app](http://www.gridlover.net/app/).
 
 Gridlover gives you adjustable css for font sizes, line heights and margins.
 The default css output is for body, p and h1 - h4 headings, but you can of course apply your
@@ -27,12 +27,12 @@ $scaleFactor;
 and 3 mixins:
 
 ```
-@mixin gridlover-body($size: $baseFontSize, $rem: false);
-@mixin gridlover-heading($step, $rem: false)
-@mixin gridlover-margins($rem: false)
+@mixin gridlover-body();
+@mixin gridlover-heading();
+@mixin gridlover-margins();
 ```
 
-*These are the 3 functionalities of the [Gridlover app](http://www.gridlover.net/app/)*.
+*These are the 3 functionalities, that you (should) have been playing with, of the [Gridlover app](http://www.gridlover.net/app/)*.
 
 ## Setup
 
@@ -79,6 +79,8 @@ $scaleFactor: $goldenSection;
 ```
 
 ## Mixins
+
+By default, all the mixins will output only `px`. But you can also choose to output `rem`.
 
 ### Gridlover body
 
