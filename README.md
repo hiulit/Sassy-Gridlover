@@ -32,7 +32,7 @@ and 3 mixins:
 @mixin sassy-gridlover-margins();
 ```
 
-*These are the 3 functionalities, that you (should) have been playing with, of the [Gridlover app](http://www.gridlover.net/app/)*.
+*These are the 3 functionalities of the [Gridlover app](http://www.gridlover.net/app/)* that you (should) have been playing with.
 
 ## Setup
 
