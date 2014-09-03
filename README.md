@@ -131,6 +131,8 @@ Accepts 1 argument:
 
 ## Example usage
 
+###SCSS
+
 ```
 @import "gridlover.scss";
 
@@ -156,6 +158,62 @@ p, ul, ol, pre, table, blockquote {
 }
 ```
 
+###CSS OUTPUT
+
+```
+body {
+	font-size: 18px;
+	line-height: 22px;
+	font-size: 1.125rem;
+	line-height: 1.375rem; }
+
+h1 {
+	font-size: 76px;
+	line-height: 88px;
+	margin-bottom: 22px;
+	margin-top: 44px;
+	font-size: 4.75rem;
+	line-height: 5.5rem;
+	margin-bottom: 1.375rem;
+	margin-top: 2.75rem; }
+
+h2 {
+	font-size: 47px;
+	line-height: 66px;
+	margin-bottom: 22px;
+	margin-top: 44px;
+	font-size: 2.9375rem;
+	line-height: 4.125rem;
+	margin-bottom: 1.375rem;
+	margin-top: 2.75rem; }
+
+h3 {
+	font-size: 29px;
+	line-height: 44px;
+	margin-bottom: 22px;
+	margin-top: 22px;
+	font-size: 1.8125rem;
+	line-height: 2.75rem;
+	margin-bottom: 1.375rem;
+	margin-top: 1.375rem; }
+
+h4 {
+	font-size: 18px;
+	line-height: 22px;
+	margin-bottom: 22px;
+	margin-top: 22px;
+	font-size: 1.125rem;
+	line-height: 1.375rem;
+	margin-bottom: 1.375rem;
+	margin-top: 1.375rem; }
+
+p, ul, ol, pre, table, blockquote {
+	margin-bottom: 22px;
+	margin-top: 22px;
+	margin-bottom: 1.375rem;
+	margin-top: 1.375rem; }
+```
+
 ## Inspiration and alternatives
 
 * [Gridlover app](http://www.gridlover.net/app/) - The tool to establish a typographic system with modular scale and vertical rhythm.
@@ -170,6 +228,8 @@ Thanks to:
 * [Sassy-math](https://github.com/Team-Sass/Sassy-math) - For the `@function exponent()`.
 
 ## Unlicense
+
+### Sassy-Gridlover
 
 This is free and unencumbered software released into the public domain.
 
