@@ -25,8 +25,8 @@
 	line-height: round(($size * $baseLineHeight)) + px;
 	// Outputs rem units if 'true'
 	@if($rem == true) {
-		font-size: ($size / $browserFontSize) + rem;
-		line-height: round(($size * $baseLineHeight)) / $browserFontSize + rem;
+		font-size: ($size / $defaultFontSize) + rem;
+		line-height: round(($size * $baseLineHeight)) / $defaultFontSize + rem;
 	}
 }
 
@@ -50,14 +50,14 @@
 	}
 	// Outputs rem units if 'true'
 	@if($rem == true) {
-		font-size: round($size * exponent($scale, $step)) / $browserFontSize + rem;
-		line-height: ($lineHeight * $lines) / $browserFontSize + rem;
-		margin-bottom: $lineHeight / $browserFontSize + rem;
+		font-size: round($size * exponent($scale, $step)) / $defaultFontSize + rem;
+		line-height: ($lineHeight * $lines) / $defaultFontSize + rem;
+		margin-bottom: $lineHeight / $defaultFontSize + rem;
 		@if($step > 1) {
-			margin-top: ($lineHeight * 2) / $browserFontSize + rem;
+			margin-top: ($lineHeight * 2) / $defaultFontSize + rem;
 		}
 		@else {
-			margin-top: $lineHeight / $browserFontSize + rem;
+			margin-top: $lineHeight / $defaultFontSize + rem;
 		}
 	}
 }
@@ -67,7 +67,7 @@
 	margin-top: round($baseFontSize * $baseLineHeight) + px;
 	// Outputs rem units if 'true'
 	@if($rem == true) {
-		margin-bottom: round($baseFontSize * $baseLineHeight) / $browserFontSize + rem;
-		margin-top: round($baseFontSize * $baseLineHeight) / $browserFontSize + rem;
+		margin-bottom: round($baseFontSize * $baseLineHeight) / $defaultFontSize + rem;
+		margin-top: round($baseFontSize * $baseLineHeight) / $defaultFontSize + rem;
 	}
 }
