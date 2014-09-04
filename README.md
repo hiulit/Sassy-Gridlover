@@ -72,7 +72,7 @@ $doubleOctave: 4;
 $defaultFontSize: 16;
 
 // Configurable variables.
-// Ok... You can change these varaibles! :D
+// Ok... You can change these variables! :D
 $baseFontSize: 18;
 $baseLineHeight: 1.2;
 $scaleFactor: $goldenSection;
@@ -80,7 +80,7 @@ $scaleFactor: $goldenSection;
 
 ## Mixins
 
-By default, all the mixins will output only `px`. But you can also choose to output `rem`.
+By default, all the mixins will only output `px`. But you can also choose to output `rem`.
 
 ### Sassy-Gridlover body
 
