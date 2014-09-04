@@ -89,12 +89,12 @@ To use in `<body>`.
 Outputs `font-size`and `line-height`.
 
 ```
-@mixin sassy-gridlover-body($size: $baseFontSize, $rem: false)
+@mixin sassy-gridlover-body($fontSize: $baseFontSize, $rem: false)
 ```
 
 Accepts 2 arguments:
 
-* `$size: $baseFontSize` Specifies the base font size (without unit, just a number).
+* `$fontSize: $baseFontSize` Specifies the base font size (without unit, just a number).
 * `$rem: false` Outputs rem units if `true` (`false` by default).
 
 ### Sassy-Gridlover heading

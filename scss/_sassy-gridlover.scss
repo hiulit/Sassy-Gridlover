@@ -20,13 +20,13 @@
 
 // $rem -> true/false (if you want to use rem units aswell as pixels)
 
-@mixin sassy-gridlover-body($size: $baseFontSize, $rem: false) {
-	font-size: $size + px;
-	line-height: round(($size * $baseLineHeight)) + px;
+@mixin sassy-gridlover-body($fontSize: $baseFontSize, $rem: false) {
+	font-size: $fontSize + px;
+	line-height: round(($fontSize * $baseLineHeight)) + px;
 	// Outputs rem units if 'true'
 	@if($rem == true) {
-		font-size: ($size / $defaultFontSize) + rem;
-		line-height: round(($size * $baseLineHeight)) / $defaultFontSize + rem;
+		font-size: ($fontSize / $defaultFontSize) + rem;
+		line-height: round(($fontSize * $baseLineHeight)) / $defaultFontSize + rem;
 	}
 }
 
@@ -35,11 +35,11 @@
 // h3 -> $step: 1
 // h4 -> $step: 0
 @mixin sassy-gridlover-heading($step, $rem: false) {
-	$size: $baseFontSize;
-	$lineHeight: round($size * $baseLineHeight);
+	$fontSize: $baseFontSize;
+	$lineHeight: round($fontSize * $baseLineHeight);
 	$scale: $scaleFactor;
 	$lines: $step + 1;
-	font-size: round($size * exponent($scale, $step)) + px;
+	font-size: round($fontSize * exponent($scale, $step)) + px;
 	line-height: $lineHeight * $lines + px;
 	margin-bottom: $lineHeight + px;
 	@if($step > 1) {
@@ -50,7 +50,7 @@
 	}
 	// Outputs rem units if 'true'
 	@if($rem == true) {
-		font-size: round($size * exponent($scale, $step)) / $defaultFontSize + rem;
+		font-size: round($fontSize * exponent($scale, $step)) / $defaultFontSize + rem;
 		line-height: ($lineHeight * $lines) / $defaultFontSize + rem;
 		margin-bottom: $lineHeight / $defaultFontSize + rem;
 		@if($step > 1) {
