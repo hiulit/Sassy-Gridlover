@@ -36,10 +36,10 @@ and 3 mixins:
 
 ## Setup
 
-Import `_gridlover.scss` to your main style sheet.
+Import `_sassy-gridlover.scss` to your main style sheet.
 
 ```
-@import "gridlover";
+@import "sassy-gridlover";
 ```
 
 Change the configurable variables values in `_config.scss` to your liking.
@@ -94,8 +94,8 @@ Outputs `font-size`and `line-height`.
 
 Accepts 2 arguments:
 
-* `$fontSize: $baseFontSize` Specifies the base font size (without unit, just a number).
-* `$rem: false` Outputs rem units if `true` (`false` by default).
+* `$fontSize` Specifies the base font size (without unit, just a number).
+* `$rem` Outputs rem units if `true` (`false` by default).
 
 ### Sassy-Gridlover heading
 
@@ -114,7 +114,7 @@ Accepts 2 arguments:
 	* `<h2>` &rarr; `$step: 2`
 	* `<h3>` &rarr; `$step: 1`
 	* `<h4>` &rarr; `$step: 0`
-* `$rem: false` Outputs rem units if `true` (`false` by default).
+* `$rem` Outputs rem units if `true` (`false` by default).
 
 ### Sassy-Gridlover margins
 
@@ -128,7 +128,7 @@ Outputs `margin-bottom` and `margin-top`.
 
 Accepts 1 argument:
 
-* `$rem: false` Outputs rem units if `true` (`false` by default).
+* `$rem` Outputs rem units if `true` (`false` by default).
 
 ## Example usage
 
