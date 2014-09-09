@@ -18,7 +18,7 @@ It's so much fun! :D
 
 **Sassy-Gridlover** consists of 3 configurable variables:
 
-```
+```scss
 $baseFontSize;
 $baseLineHeight;
 $scaleFactor;
@@ -26,7 +26,7 @@ $scaleFactor;
 
 and 3 mixins:
 
-```
+```scss
 @mixin sassy-gridlover-body();
 @mixin sassy-gridlover-heading();
 @mixin sassy-gridlover-margins();
@@ -38,7 +38,7 @@ and 3 mixins:
 
 Import `_sassy-gridlover.scss` to your main style sheet.
 
-```
+```scss
 @import "sassy-gridlover";
 ```
 
@@ -46,7 +46,7 @@ Change the configurable variables values in `_config.scss` to your liking.
 
 ### _config.scss
 
-```
+```scss
 // Scale factor variables.
 // Don't change these variables!
 $minorSecond: 1.067;
@@ -88,7 +88,7 @@ To use in `<body>`.
 
 Outputs `font-size`and `line-height`.
 
-```
+```scss
 @mixin sassy-gridlover-body($fontSize: $baseFontSize, $rem: false)
 ```
 
@@ -103,7 +103,7 @@ To use in headings `<h1> - <h4>`.
 
 Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
 
-```
+```scss
 @mixin sassy-gridlover-heading($step, $rem: false)
 ```
 
@@ -122,7 +122,7 @@ To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 
 Outputs `margin-bottom` and `margin-top`.
 
-```
+```scss
 @mixin sassy-gridlover-margins($rem: false)
 ```
 
@@ -134,7 +134,7 @@ Accepts 1 argument:
 
 ###SCSS
 
-```
+```scss
 @import "sassy-gridlover.scss";
 
 body {
@@ -161,7 +161,7 @@ p, ul, ol, pre, table, blockquote {
 
 ###CSS OUTPUT
 
-```
+```css
 body {
 	font-size: 18px;
 	line-height: 22px;
