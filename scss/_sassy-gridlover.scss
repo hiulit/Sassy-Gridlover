@@ -8,7 +8,7 @@
 	@if $exponent > 1 {
 		@for $i from 2 through $exponent {
 			$value: $value * $base; } }
-	// Negitive intergers get divided. A number divided by itself is 1
+	// Negative intergers get divided. A number divided by itself is 1
 	@if $exponent < 1 {
 		@for $i from 0 through -$exponent {
 			$value: $value / $base; } }
@@ -16,9 +16,9 @@
 	@return $value;
 }
 
-// All the gridlover-xxx mixins are based on the Gridlover app http://www.gridlover.net/app/
+// All the sassy-gridlover-xxx mixins are based on the Gridlover app http://www.gridlover.net/app/
 
-// $rem -> true/false (if you want to use rem units aswell as pixels)
+// $rem -> true/false (if you want to use rem units as well as pixels)
 
 @mixin sassy-gridlover-body($fontSize: $baseFontSize, $rem: false) {
 	font-size: $fontSize + px;
