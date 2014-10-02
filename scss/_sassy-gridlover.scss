@@ -1,24 +1,24 @@
 @import "config";
 
-// @function exponent() taken from Sassy-math https://github.com/Team-Sass/Sassy-math
+// @function exponent() taken from Sassy-math https://github.com/Team-Sass/Sassy-math.
 @function exponent($base, $exponent) {
-	// Reset value
+	// Resets value.
 	$value: $base;
-	// Positive intergers get multiplied
+	// Positive intergers get multiplied.
 	@if $exponent > 1 {
 		@for $i from 2 through $exponent {
 			$value: $value * $base; } }
-	// Negative intergers get divided. A number divided by itself is 1
+	// Negatives intergers get divided. A number divided by itself is 1.
 	@if $exponent < 1 {
 		@for $i from 0 through -$exponent {
 			$value: $value / $base; } }
-	// Return the last value written
+	// Return the last value written.
 	@return $value;
 }
 
 // All the sassy-gridlover-xxx mixins are based on the Gridlover app http://www.gridlover.net/app/
 
-// $rem -> true/false (if you want to use rem units as well as pixels)
+// $rem --> true/false (if you want to use rem units as well as pixels)
 
 @mixin sassy-gridlover-body($fontSize: $baseFontSize, $rem: false) {
 	font-size: $fontSize + px;
@@ -30,10 +30,10 @@
 	}
 }
 
-// h1 -> $step: 3
-// h2 -> $step: 2
-// h3 -> $step: 1
-// h4 -> $step: 0
+// h1 --> $step: 3
+// h2 --> $step: 2
+// h3 --> $step: 1
+// h4 --> $step: 0
 @mixin sassy-gridlover-heading($step, $rem: false) {
 	$fontSize: $baseFontSize;
 	$scale: $scaleFactor;
