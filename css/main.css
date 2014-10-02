@@ -1,51 +1,33 @@
 body {
-  font-size: 18px;
-  line-height: 22px;
-  font-size: 1.125rem;
-  line-height: 1.375rem; }
+  font-size: 1em;
+  line-height: 1em; }
 
 h1 {
-  font-size: 76px;
-  line-height: 88px;
-  margin-bottom: 22px;
-  margin-top: 44px;
-  font-size: 4.75rem;
-  line-height: 5.5rem;
-  margin-bottom: 1.375rem;
-  margin-top: 2.75rem; }
+  font-size: 3.375em;
+  line-height: 4em;
+  margin-bottom: 1em;
+  margin-top: 2em; }
 
 h2 {
-  font-size: 47px;
-  line-height: 66px;
-  margin-bottom: 22px;
-  margin-top: 44px;
-  font-size: 2.9375rem;
-  line-height: 4.125rem;
-  margin-bottom: 1.375rem;
-  margin-top: 2.75rem; }
+  font-size: 2.25em;
+  line-height: 3em;
+  margin-bottom: 1em;
+  margin-top: 2em; }
 
 h3 {
-  font-size: 29px;
-  line-height: 44px;
-  margin-bottom: 22px;
-  margin-top: 22px;
-  font-size: 1.8125rem;
-  line-height: 2.75rem;
-  margin-bottom: 1.375rem;
-  margin-top: 1.375rem; }
+  font-size: 1.5em;
+  line-height: 2em;
+  margin-bottom: 1em;
+  margin-top: 1em; }
 
 h4 {
-  font-size: 18px;
-  line-height: 22px;
-  margin-bottom: 22px;
-  margin-top: 22px;
-  font-size: 1.125rem;
-  line-height: 1.375rem;
-  margin-bottom: 1.375rem;
-  margin-top: 1.375rem; }
+  font-size: 1em;
+  line-height: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em; }
 
 p, ul, ol, pre, table, blockquote {
-  margin-bottom: 22px;
-  margin-top: 22px;
-  margin-bottom: 1.375rem;
-  margin-top: 1.375rem; }
+  margin-bottom: 1em;
+  margin-top: 1em; }
+
+/*# sourceMappingURL=main.css.map */
