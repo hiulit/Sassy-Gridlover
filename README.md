@@ -14,6 +14,15 @@ Go play around with the awesome [Gridlover app](http://www.gridlover.net/app/)!
 
 It's so much fun! :D
 
+## Installation
+
+Install Sassy-Gridlover via bower
+
+```
+$ bower install sassy-gridlover
+```
+or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the repository and include the `sassy-gridlover` folder to your Sass directory.
+
 ## Getting started
 
 **Sassy-Gridlover** consists of 3 configurable variables:
