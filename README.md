@@ -215,6 +215,10 @@ p, ul, ol, pre, table, blockquote {
 	margin-top: 1.375rem; }
 ```
 
+## To-Do
+
+* Support em. There's a [branch](https://github.com/hiulit/Sassy-Gridlover/tree/em-support) for that matter.
+
 ## Inspiration and alternatives
 
 * [Gridlover app](http://www.gridlover.net/app/) - The tool to establish a typographic system with modular scale and vertical rhythm.
