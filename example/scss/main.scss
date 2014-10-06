@@ -1,4 +1,4 @@
-@import "sassy-gridlover.scss";
+@import "../../sassy-gridlover/sassy-gridlover.scss";
 
 body {
 	@include sassy-gridlover-body($baseFontSize, true);
