@@ -16,7 +16,7 @@ It's so much fun! :D
 
 ## Installation
 
-Install Sassy-Gridlover via bower
+Install **Sassy-Gridlover** via bower
 
 ```bash
 $ bower install sassy-gridlover
