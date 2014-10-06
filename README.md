@@ -18,7 +18,7 @@ It's so much fun! :D
 
 Install Sassy-Gridlover via bower
 
-```
+```bash
 $ bower install sassy-gridlover
 ```
 or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the repository and include the `sassy-gridlover` folder to your Sass directory.
