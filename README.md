@@ -234,7 +234,7 @@ p, ul, ol, pre, table, blockquote {
 
 * Released stable version.
 
-### v.0.1.0 (September 2nd 2014)
+### v0.1.0 (September 2nd 2014)
 
 * Initial commit
 
