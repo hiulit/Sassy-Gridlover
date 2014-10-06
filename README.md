@@ -228,6 +228,16 @@ p, ul, ol, pre, table, blockquote {
 
 * Support em. There's a [branch](https://github.com/hiulit/Sassy-Gridlover/tree/em-support) for that matter.
 
+## Changelog
+
+### v1.0.0 (October 6th 2014)
+
+* Released stable version.
+
+### v.0.1.0 (September 2nd 2014)
+
+* Initial commit
+
 ## Inspiration and alternatives
 
 * [Gridlover app](http://www.gridlover.net/app/) - The tool to establish a typographic system with modular scale and vertical rhythm.
