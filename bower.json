@@ -1,0 +1,13 @@
+{
+	"name": "sassy-gridlover",
+	"version": "1.0.0",
+	"main": [
+		"sassy-gridlover/_config.scss",
+		"sassy-gridlover/_sassy-gridlover.scss"
+	],
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"components"
+	]
+}
