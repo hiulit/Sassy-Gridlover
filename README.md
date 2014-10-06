@@ -233,11 +233,11 @@ p, ul, ol, pre, table, blockquote {
 ### v1.0.0 (October 6th 2014)
 
 * Released stable version.
-* Added bower installation support
+* Added bower installation support.
 
 ### v0.1.0 (September 2nd 2014)
 
-* Initial commit
+* Initial commit.
 
 ## Inspiration and alternatives
 
