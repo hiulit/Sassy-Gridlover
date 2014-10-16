@@ -20,13 +20,13 @@
 
 // $rem --> true/false (if you want to use rem units as well as pixels)
 
-@mixin sassy-gridlover-body($fontSize: $baseFontSize, $rem: false) {
-	font-size: $fontSize + px;
-	line-height: round(($fontSize * $baseLineHeight)) + px;
-	// Outputs rem units if 'true'
+@mixin sassy-gridlover-body($font-size: $base-font-size, $rem: false) {
+	font-size: $font-size + px;
+	line-height: round(($font-size * $base-line-height)) + px;
+	// Outputs rem units if 'true'.
 	@if($rem == true) {
-		font-size: ($fontSize / $defaultFontSize) + rem;
-		line-height: round(($fontSize * $baseLineHeight)) / $defaultFontSize + rem;
+		font-size: ($font-size / $default-font-size) + rem;
+		line-height: round(($font-size * $base-line-height)) / $default-font-size + rem;
 	}
 }
 
@@ -35,40 +35,40 @@
 // h3 --> $step: 1
 // h4 --> $step: 0
 @mixin sassy-gridlover-heading($step, $rem: false) {
-	$fontSize: $baseFontSize;
-	$scale: $scaleFactor;
-	$computedFontSize: round($fontSize * exponent($scale, $step));
-	$lineHeight: round($fontSize * $baseLineHeight);
-	$lines: ceil($computedFontSize / $lineHeight);
-	font-size: $computedFontSize + px;
-	line-height: $lineHeight * $lines + px;
-	margin-bottom: $lineHeight + px;
+	$font-size: $base-font-size;
+	$scale: $scale-factor;
+	$computed-font-size: round($font-size * exponent($scale, $step));
+	$line-height: round($font-size * $base-line-height);
+	$lines: ceil($computed-font-size / $line-height);
+	font-size: $computed-font-size + px;
+	line-height: $line-height * $lines + px;
+	margin-bottom: $line-height + px;
 	@if($step > 1) {
-		margin-top: $lineHeight * 2 + px;
+		margin-top: $line-height * 2 + px;
 	}
 	@else {
-		margin-top: $lineHeight + px;
+		margin-top: $line-height + px;
 	}
-	// Outputs rem units if 'true'
+	// Outputs rem units if 'true'.
 	@if($rem == true) {
-		font-size: $computedFontSize / $defaultFontSize + rem;
-		line-height: ($lineHeight * $lines) / $defaultFontSize + rem;
-		margin-bottom: $lineHeight / $defaultFontSize + rem;
+		font-size: $computed-font-size / $default-font-size + rem;
+		line-height: ($line-height * $lines) / $default-font-size + rem;
+		margin-bottom: $line-height / $default-font-size + rem;
 		@if($step > 1) {
-			margin-top: ($lineHeight * 2) / $defaultFontSize + rem;
+			margin-top: ($line-height * 2) / $default-font-size + rem;
 		}
 		@else {
-			margin-top: $lineHeight / $defaultFontSize + rem;
+			margin-top: $line-height / $default-font-size + rem;
 		}
 	}
 }
 
 @mixin sassy-gridlover-margins($rem: false) {
-	margin-bottom: round($baseFontSize * $baseLineHeight) + px;
-	margin-top: round($baseFontSize * $baseLineHeight) + px;
-	// Outputs rem units if 'true'
+	margin-bottom: round($base-font-size * $base-line-height) + px;
+	margin-top: round($base-font-size * $base-line-height) + px;
+	// Outputs rem units if 'true'.
 	@if($rem == true) {
-		margin-bottom: round($baseFontSize * $baseLineHeight) / $defaultFontSize + rem;
-		margin-top: round($baseFontSize * $baseLineHeight) / $defaultFontSize + rem;
+		margin-bottom: round($base-font-size * $base-line-height) / $default-font-size + rem;
+		margin-top: round($base-font-size * $base-line-height) / $default-font-size + rem;
 	}
 }
