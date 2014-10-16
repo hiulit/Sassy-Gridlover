@@ -28,9 +28,9 @@ or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the 
 **Sassy-Gridlover** consists of 3 configurable variables:
 
 ```scss
-$baseFontSize;
-$baseLineHeight;
-$scaleFactor;
+$base-font-size;
+$base-line-height;
+$scale-factor;
 ```
 
 and 3 mixins:
@@ -41,7 +41,7 @@ and 3 mixins:
 @mixin sassy-gridlover-margins();
 ```
 
-*These are the 3 functionalities of the [Gridlover app](http://www.gridlover.net/app/)* that you (should) have been playing with.
+*These are the 3 functionalities of the [Gridlover app](http://www.gridlover.net/app/) that you (should) have been playing with*.
 
 ## Setup
 
@@ -82,9 +82,9 @@ $defaultFontSize: 16;
 
 // Configurable variables.
 // Ok... You can change these variables! :D
-$baseFontSize: 18;
-$baseLineHeight: 1.2;
-$scaleFactor: $goldenSection;
+$base-font-size: 18 !default;
+$base-line-height: 1.2 !default;
+$scale-factor: $goldenSection !default;
 ```
 
 ## Mixins
@@ -98,12 +98,12 @@ To use in `<body>`.
 Outputs `font-size`and `line-height`.
 
 ```scss
-@mixin sassy-gridlover-body($fontSize: $baseFontSize, $rem: false)
+@mixin sassy-gridlover-body($font-size: $base-font-size, $rem: false)
 ```
 
 Accepts 2 arguments:
 
-* `$fontSize`: Specifies the base font size (without unit, just a number).
+* `$font-size`: Specifies the base font size (without unit, just a number).
 * `$rem`: Outputs rem units if `true` (`false` by default).
 
 ### Sassy-Gridlover heading
@@ -147,7 +147,7 @@ Accepts 1 argument:
 @import "sassy-gridlover.scss";
 
 body {
-	@include sassy-gridlover-body($baseFontSize, true);
+	@include sassy-gridlover-body($base-font-size, true);
 }
 
 h1 {
