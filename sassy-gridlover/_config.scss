@@ -24,6 +24,6 @@ $default-font-size: 16;
 
 // Configurable variables.
 // Ok... You can change these variables! :D
-$base-font-size: 18;
-$base-line-height: 1.2;
-$scale-factor: $golden-section;
+$base-font-size: 18 !default;
+$base-line-height: 1.2 !default;
+$scale-factor: $golden-section !default;
