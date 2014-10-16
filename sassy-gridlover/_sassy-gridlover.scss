@@ -2,6 +2,11 @@
 
 // @function exponent() taken from Sassy-math https://github.com/Team-Sass/Sassy-math.
 @function exponent($base, $exponent) {
+	// Thanks to @HugoGiraudel https://github.com/hiulit/Sassy-Gridlover/issues/4
+	@if pow(2, 2) == 4 {
+		@return pow($base, $exponent);
+	}
+
 	// Resets value.
 	$value: $base;
 	// Positive intergers get multiplied.
