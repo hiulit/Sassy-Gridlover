@@ -20,10 +20,10 @@ $double-octave: 4;
 
 // Default font size.
 // Don't change this variable!
-$default-font-size: 16;
+$sgl-default-font-size: 16;
 
 // Configurable variables.
 // Ok... You can change these variables! :D
-$base-font-size: 18 !default;
-$base-line-height: 1.2 !default;
-$scale-factor: $golden-section !default;
+$sgl-base-font-size: 18 !default;
+$sgl-base-line-height: 1.2 !default;
+$sgl-scale-factor: $golden-section !default;

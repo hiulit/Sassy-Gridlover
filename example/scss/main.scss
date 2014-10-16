@@ -1,7 +1,7 @@
 @import "../../sassy-gridlover/sassy-gridlover.scss";
 
 body {
-	@include sassy-gridlover-body($base-font-size, true);
+	@include sassy-gridlover-body($sgl-base-font-size, true);
 }
 
 h1 {
