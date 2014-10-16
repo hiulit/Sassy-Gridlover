@@ -28,9 +28,9 @@ or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the 
 **Sassy-Gridlover** consists of 3 configurable variables:
 
 ```scss
-$base-font-size;
-$base-line-height;
-$scale-factor;
+$sgl-base-font-size;
+$sgl-base-line-height;
+$sgl-scale-factor;
 ```
 
 and 3 mixins:
@@ -82,9 +82,9 @@ $defaultFontSize: 16;
 
 // Configurable variables.
 // Ok... You can change these variables! :D
-$base-font-size: 18 !default;
-$base-line-height: 1.2 !default;
-$scale-factor: $goldenSection !default;
+$sgl-base-font-size: 18 !default;
+$sgl-base-line-height: 1.2 !default;
+$sgl-scale-factor: $goldenSection !default;
 ```
 
 ## Mixins
@@ -98,7 +98,7 @@ To use in `<body>`.
 Outputs `font-size`and `line-height`.
 
 ```scss
-@mixin sassy-gridlover-body($font-size: $base-font-size, $rem: false)
+@mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $rem: false)
 ```
 
 Accepts 2 arguments:
@@ -147,7 +147,7 @@ Accepts 1 argument:
 @import "sassy-gridlover.scss";
 
 body {
-	@include sassy-gridlover-body($base-font-size, true);
+	@include sassy-gridlover-body($sgl-base-font-size, true);
 }
 
 h1 {
