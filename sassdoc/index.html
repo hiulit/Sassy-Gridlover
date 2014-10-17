@@ -1,0 +1,1316 @@
+<!doctype html>
+
+
+
+
+<html lang="en">
+<head>
+  
+  <meta charset="utf-8" />
+
+<title>Sassy-Gridlover - v1.0.0</title>
+<link rel="stylesheet" href="assets/css/main.css" />
+<link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
+<meta name="viewport" content="width=device-width">
+<meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible">
+
+<!-- Thanks to Sass-lang.com for the icons -->
+<link href="http://sass-lang.com/favicon.ico" rel="shortcut icon">
+
+</head>
+<body>
+
+  
+  <aside class="sidebar" role="nav">
+    
+  <div class="sidebar__header">
+  <h1 class="sidebar__title">
+    
+      <a href="https://github.com/hiulit/Sassy-Gridlover">Sassy-Gridlover - v1.0.0</a>
+    
+  </h1>
+</div>
+
+<div class="sidebar__body">
+  
+  
+    <button type="button" class="btn-toggle  js-btn-toggle" data-alt="Open all">Close all</button>
+
+    
+    
+      <p class="sidebar__item  sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p>
+
+      
+      
+        <div>
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="sassy-gridlover-body" data-type="mixin">
+              <a href="#mixin-sassy-gridlover-body">sassy-gridlover-body
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="sassy-gridlover-heading" data-type="mixin">
+              <a href="#mixin-sassy-gridlover-heading">sassy-gridlover-heading
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="sassy-gridlover-margins" data-type="mixin">
+              <a href="#mixin-sassy-gridlover-margins">sassy-gridlover-margins
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        
+      
+        
+
+        
+        
+
+        
+        
+          <p class="sidebar__item  sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p>
+
+          
+          
+            <ul class="list-unstyled">
+            <li class="sidebar__item  sassdoc__item" data-name="sgl-base-font-size" data-type="variable">
+              <a href="#variable-sgl-base-font-size">sgl-base-font-size
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="sgl-base-line-height" data-type="variable">
+              <a href="#variable-sgl-base-line-height">sgl-base-line-height
+              
+              
+              </a>
+            </li>
+            
+          
+            
+            <li class="sidebar__item  sassdoc__item" data-name="sgl-scale-factor" data-type="variable">
+              <a href="#variable-sgl-scale-factor">sgl-scale-factor
+              
+              
+              </a>
+            </li>
+            </ul>
+          
+        
+        </div>
+      
+
+    
+  
+</div>
+
+
+  </aside>
+
+  
+  <article class="main" role="main">
+
+    
+    <header class="header" role="banner">
+  <div class="container">
+  
+    <div class="header__description">
+      <p>Super easy to use Sass mixins to establish a typographic system with modular scale and vertical rhythm. Based on the Gridlover app <a href="http://www.gridlover.net/app/">http://www.gridlover.net/app/</a></p>
+
+    </div>
+  
+
+    <div class="sassdoc__searchbar  searchbar">
+       <label for="js-search-input" class="visually-hidden">Search</label>
+       <div class="searchbar__form" id="js-search">
+         <input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search" />
+         <ul class="searchbar__suggestions" id="js-search-suggestions"></ul>
+       </div>
+     </div>
+  </div>
+</header>
+
+
+    <div class="container">
+    
+
+  
+  
+
+    
+    
+      <section class="main__section">
+        <h1 class="main__heading" id="undefined">General</h1>
+
+        
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="undefined-mixin">
+              <h2 class="main__heading--secondary">mixins</h2>
+
+              
+              
+                <section class="main__item  item" id="mixin-sassy-gridlover-body">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-sassy-gridlover-body">sassy-gridlover-body</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $rem: false) { 
+	font-size: $font-size * 1px;
+	line-height: round(($font-size * $sgl-base-line-height)) * 1px;
+	@if($rem == true) {
+		font-size: ($font-size / $SGL_DEFAULT_FONT_SIZE) * 1rem;
+		line-height: round(($font-size * $sgl-base-line-height)) / $SGL_DEFAULT_FONT_SIZE * 1rem;
+	}
+ }"
+    data-collapsed="@mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $rem: false) { ... }"><code>@mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $rem: false) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>To use in the <code>&lt;body&gt;</code>.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$font-size</code></th>
+          <td data-label="desc"><p>Base font size</p>
+</td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            <code>$sgl-base-font-size</code>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$rem</code></th>
+          <td data-label="desc"><p>Outputs rem units if <code>true</code></p>
+</td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">body {
+	@include sassy-gridlover-body($sgl-base-font-size, true);
+}</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-sgl-base-line-height"><code>sgl-base-line-height</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-sassy-gridlover-heading">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-sassy-gridlover-heading">sassy-gridlover-heading</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin sassy-gridlover-heading($step, $rem: false) { 
+	$font-size: $sgl-base-font-size;
+	$scale: $sgl-scale-factor;
+	$computed-font-size: round($font-size * exponent($scale, $step));
+	$line-height: round($font-size * $sgl-base-line-height);
+	$lines: ceil($computed-font-size / $line-height);
+	font-size: $computed-font-size * 1px;
+	line-height: $line-height * $lines * 1px;
+	margin-bottom: $line-height * 1px;
+	@if($step &gt; 1) {
+		margin-top: $line-height * 2 * 1px;
+	}
+	@else {
+		margin-top: $line-height * 1px;
+	}
+	@if($rem == true) {
+		font-size: $computed-font-size / $SGL_DEFAULT_FONT_SIZE * 1rem;
+		line-height: ($line-height * $lines) / $SGL_DEFAULT_FONT_SIZE * 1rem;
+		margin-bottom: $line-height / $SGL_DEFAULT_FONT_SIZE * 1rem;
+		@if($step &gt; 1) {
+			margin-top: ($line-height * 2) / $SGL_DEFAULT_FONT_SIZE * 1rem;
+		}
+		@else {
+			margin-top: $line-height / $SGL_DEFAULT_FONT_SIZE * 1rem;
+		}
+	}
+ }"
+    data-collapsed="@mixin sassy-gridlover-heading($step, $rem: false) { ... }"><code>@mixin sassy-gridlover-heading($step, $rem: false) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>To use in headings <code>&lt;h1&gt; - &lt;h4&gt;</code>.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$step</code></th>
+          <td data-label="desc"><p><code>&lt;h1&gt;</code> &rarr; <code>$step: 3</code><br><code>&lt;h2&gt;</code> &rarr; <code>$step: 2</code><br><code>&lt;h3&gt;</code> &rarr; <code>$step: 1</code><br><code>&lt;h4&gt;</code> &rarr; <code>$step: 0</code></p>
+</td>
+          <td data-label="type">
+          
+            Number
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$rem</code></th>
+          <td data-label="desc"><p>Outputs rem units if <code>true</code></p>
+</td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">h1 {
+	@include sassy-gridlover-heading(3, true);
+}
+h2 {
+	@include sassy-gridlover-heading(2, true);
+}
+h3 {
+	@include sassy-gridlover-heading(1, true);
+}
+h4 {
+	@include sassy-gridlover-heading(0, true);
+}</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-sgl-base-font-size"><code>sgl-base-font-size</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#variable-sgl-scale-factor"><code>sgl-scale-factor</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#variable-sgl-base-line-height"><code>sgl-base-line-height</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="mixin-sassy-gridlover-margins">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#mixin-sassy-gridlover-margins">sassy-gridlover-margins</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@mixin sassy-gridlover-margins($rem: false) { 
+	margin-bottom: round($sgl-base-font-size * $sgl-base-line-height) * 1px;
+	margin-top: round($sgl-base-font-size * $sgl-base-line-height) * 1px;
+	@if($rem == true) {
+		margin-bottom: round($sgl-base-font-size * $sgl-base-line-height) / $SGL_DEFAULT_FONT_SIZE * 1rem;
+		margin-top: round($sgl-base-font-size * $sgl-base-line-height) / $SGL_DEFAULT_FONT_SIZE * 1rem;
+	}
+ }"
+    data-collapsed="@mixin sassy-gridlover-margins($rem: false) { ... }"><code>@mixin sassy-gridlover-margins($rem: false) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>To use in <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;blockquote&gt;</code>, etc.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$rem</code></th>
+          <td data-label="desc"><p>Outputs rem units if <code>true</code></p>
+</td>
+          <td data-label="type">
+          
+            Boolean
+          
+          </td>
+          <td data-label="default">
+          
+            <code>false</code>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-scss">p, ul, ol, pre, table, blockquote {
+	@include sassy-gridlover-margins(true);
+}</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+  
+    
+      
+      <h3 class="item__sub-heading">Requires</h3>
+      <ul class="list-unstyled">
+    
+
+    
+      <li>
+        <a href="#variable-sgl-base-font-size"><code>sgl-base-font-size</code></a>
+        
+      </li>
+    
+  
+
+
+
+  
+    
+
+    
+      <li>
+        <a href="#variable-sgl-base-line-height"><code>sgl-base-line-height</code></a>
+        
+      </li>
+    
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+          
+          
+
+          
+          
+            <section class="main__sub-section" id="undefined-variable">
+              <h2 class="main__heading--secondary">variables</h2>
+
+              
+              
+                <section class="main__item  item" id="variable-sgl-base-font-size">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-sgl-base-font-size">sgl-base-font-size</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$sgl-base-font-size: 18 !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Base font size</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Number</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-sassy-gridlover-heading"><code>sassy-gridlover-heading</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-sassy-gridlover-margins"><code>sassy-gridlover-margins</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-sgl-base-line-height">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-sgl-base-line-height">sgl-base-line-height</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$sgl-base-line-height: 1.2 !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Base line height</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Number</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-sassy-gridlover-body"><code>sassy-gridlover-body</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-sassy-gridlover-heading"><code>sassy-gridlover-heading</code></a></li>
+  
+
+
+
+  
+
+    
+
+    <li><a href="#mixin-sassy-gridlover-margins"><code>sassy-gridlover-margins</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="variable-sgl-scale-factor">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#variable-sgl-scale-factor">sgl-scale-factor</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+<div class="relative  clear">
+  <pre class="item__code  language-scss"><code>$sgl-scale-factor: $GOLDEN_SECTION !default;</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>Scale factor</p>
+</div>
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Type</h3>
+
+  <p>
+  
+    <code>Number</code>
+  
+  </p>
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+  
+
+    
+      
+      <h3 class="item__sub-heading">Used by</h3>
+      <ul class="list-unstyled  list-inline">
+    
+
+    <li><a href="#mixin-sassy-gridlover-heading"><code>sassy-gridlover-heading</code></a></li>
+  
+
+
+
+
+</ul>
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+
+  
+
+
+
+</section>
+              
+            </section>
+          
+        
+
+      </section>
+    
+
+  
+
+
+    </div>
+
+    
+    
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      
+        <div class="footer__project-info  project-info">
+          <!-- Name and URL -->
+          
+            <a class="project-info__name" href="https://github.com/hiulit/Sassy-Gridlover">Sassy-Gridlover</a>
+          
+
+          <!-- Version -->
+          <span class="project-info__version"> - v1.0.0</span>
+
+          <!-- License -->
+          
+          <span class="project-info__license">, under
+            
+              Unlicense
+            
+            </span>
+          
+        </div>
+      
+
+      
+        <span class="footer__watermark">Built with <a href="https://github.com/SassDoc/sassdoc">SassDoc</a>.</span>
+      
+    </div>
+  </footer>
+
+
+  </article>
+
+
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script>
+<script src="assets/js/main.min.js"></script>
+
+</body>
+</html>
