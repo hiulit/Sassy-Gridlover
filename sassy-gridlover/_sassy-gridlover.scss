@@ -6,7 +6,6 @@
 	@if pow(2, 2) == 4 {
 		@return pow($base, $exponent);
 	}
-
 	// Resets value.
 	$value: $base;
 	// Positive intergers get multiplied.
@@ -23,22 +22,52 @@
 
 // All the sassy-gridlover-xxx mixins are based on the Gridlover app http://www.gridlover.net/app/
 
-// $rem --> true/false (if you want to use rem units as well as pixels)
-
+/**
+ * To use in the `<body>`.
+ *
+ * @param {number} $font-size ($sgl-base-font-size) - Base font size
+ *
+ * @param {Boolean} $rem (false) - Outputs rem units if `true`
+ * 
+ * @example scss
+ * body {
+ * 	@include sassy-gridlover-body($sgl-base-font-size, true);
+ * }
+ */
 @mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $rem: false) {
 	font-size: $font-size * 1px;
 	line-height: round(($font-size * $sgl-base-line-height)) * 1px;
-	// Outputs rem units if 'true'.
 	@if($rem == true) {
 		font-size: ($font-size / $SGL_DEFAULT_FONT_SIZE) * 1rem;
 		line-height: round(($font-size * $sgl-base-line-height)) / $SGL_DEFAULT_FONT_SIZE * 1rem;
 	}
 }
 
-// h1 --> $step: 3
-// h2 --> $step: 2
-// h3 --> $step: 1
-// h4 --> $step: 0
+/**
+ * To use in headings `<h1> - <h4>`.
+ *
+ * @param {number} $step -
+ * `<h1>` &rarr; `$step: 3`  
+ * `<h2>` &rarr; `$step: 2`  
+ * `<h3>` &rarr; `$step: 1`  
+ * `<h4>` &rarr; `$step: 0`
+ *
+ * @param {Boolean} $rem (false) - Outputs rem units if `true`
+ *
+ * @example scss
+ * h1 {
+ * 	@include sassy-gridlover-heading(3, true);
+ * }
+ * h2 {
+ * 	@include sassy-gridlover-heading(2, true);
+ * }
+ * h3 {
+ * 	@include sassy-gridlover-heading(1, true);
+ * }
+ * h4 {
+ * 	@include sassy-gridlover-heading(0, true);
+ * }
+ */
 @mixin sassy-gridlover-heading($step, $rem: false) {
 	$font-size: $sgl-base-font-size;
 	$scale: $sgl-scale-factor;
@@ -54,7 +83,6 @@
 	@else {
 		margin-top: $line-height * 1px;
 	}
-	// Outputs rem units if 'true'.
 	@if($rem == true) {
 		font-size: $computed-font-size / $SGL_DEFAULT_FONT_SIZE * 1rem;
 		line-height: ($line-height * $lines) / $SGL_DEFAULT_FONT_SIZE * 1rem;
@@ -68,10 +96,19 @@
 	}
 }
 
+/**
+ * To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
+ *
+ * @param {Boolean} $rem (false) - Outputs rem units if `true`
+ *
+ * @example scss
+ * p, ul, ol, pre, table, blockquote {
+ * 	@include sassy-gridlover-margins(true);
+ * }
+ */
 @mixin sassy-gridlover-margins($rem: false) {
 	margin-bottom: round($sgl-base-font-size * $sgl-base-line-height) * 1px;
 	margin-top: round($sgl-base-font-size * $sgl-base-line-height) * 1px;
-	// Outputs rem units if 'true'.
 	@if($rem == true) {
 		margin-bottom: round($sgl-base-font-size * $sgl-base-line-height) / $SGL_DEFAULT_FONT_SIZE * 1rem;
 		margin-top: round($sgl-base-font-size * $sgl-base-line-height) / $SGL_DEFAULT_FONT_SIZE * 1rem;
