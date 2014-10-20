@@ -241,6 +241,8 @@
     data-collapsed="@mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $rem: false) { ... }"><code>@mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $rem: false) { ... }</code></pre>
 
   
+    <a href="https://github.com/hiulit/Sassy-Gridlover/tree/master/sassy-gridlover/_sassy-gridlover.scss#L44-L52" class="item__source-link" target="_blank">View source</a>
+  
 </div>
 
 
@@ -254,6 +256,7 @@
   <h3 class="item__sub-heading">Description</h3>
 
   <div class="item__description"><p>To use in the <code>&lt;body&gt;</code>.</p>
+<p>Outputs <code>font-size</code>and <code>line-height</code>.</p>
 </div>
 
 
@@ -325,6 +328,16 @@
     
     <pre class="example__code"><code class="language-scss">body {
 	@include sassy-gridlover-body($sgl-base-font-size, true);
+}</code></pre>
+  </div>
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-css">body {
+    font-size: 18px;
+    line-height: 22px;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
 }</code></pre>
   </div>
   
@@ -474,6 +487,8 @@
     data-collapsed="@mixin sassy-gridlover-heading($step, $rem: false) { ... }"><code>@mixin sassy-gridlover-heading($step, $rem: false) { ... }</code></pre>
 
   
+    <a href="https://github.com/hiulit/Sassy-Gridlover/tree/master/sassy-gridlover/_sassy-gridlover.scss#L127-L154" class="item__source-link" target="_blank">View source</a>
+  
 </div>
 
 
@@ -487,6 +502,7 @@
   <h3 class="item__sub-heading">Description</h3>
 
   <div class="item__description"><p>To use in headings <code>&lt;h1&gt; - &lt;h4&gt;</code>.</p>
+<p>Outputs <code>font-size</code>, <code>line-height</code>, <code>margin-bottom</code> and <code>margin-top</code>.</p>
 </div>
 
 
@@ -509,7 +525,10 @@
       
         <tr class="item__parameter">
           <th scope="row" data-label="name"><code>$step</code></th>
-          <td data-label="desc"><p><code>&lt;h1&gt;</code> &rarr; <code>$step: 3</code><br><code>&lt;h2&gt;</code> &rarr; <code>$step: 2</code><br><code>&lt;h3&gt;</code> &rarr; <code>$step: 1</code><br><code>&lt;h4&gt;</code> &rarr; <code>$step: 0</code></p>
+          <td data-label="desc"><p><code>&lt;h1&gt;</code> &rarr; <code>$step: 3</code></p>
+<p><code>&lt;h2&gt;</code> &rarr; <code>$step: 2</code></p>
+<p><code>&lt;h3&gt;</code> &rarr; <code>$step: 1</code></p>
+<p><code>&lt;h4&gt;</code> &rarr; <code>$step: 0</code></p>
 </td>
           <td data-label="type">
           
@@ -567,6 +586,53 @@ h3 {
 }
 h4 {
 	@include sassy-gridlover-heading(0, true);
+}</code></pre>
+  </div>
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-css">h1 {
+    font-size: 76px;
+    line-height: 88px;
+    margin-bottom: 22px;
+    margin-top: 44px;
+    font-size: 4.75rem;
+    line-height: 5.5rem;
+    margin-bottom: 1.375rem;
+    margin-top: 2.75rem;
+}
+
+h2 {
+    font-size: 47px;
+    line-height: 66px;
+    margin-bottom: 22px;
+    margin-top: 44px;
+    font-size: 2.9375rem;
+    line-height: 4.125rem;
+    margin-bottom: 1.375rem;
+    margin-top: 2.75rem;
+}
+
+h3 {
+    font-size: 29px;
+    line-height: 44px;
+    margin-bottom: 22px;
+    margin-top: 22px;
+    font-size: 1.8125rem;
+    line-height: 2.75rem;
+    margin-bottom: 1.375rem;
+    margin-top: 1.375rem;
+}
+
+h4 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 22px;
+    margin-top: 22px;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    margin-bottom: 1.375rem;
+    margin-top: 1.375rem;
 }</code></pre>
   </div>
   
@@ -713,6 +779,8 @@ h4 {
     data-collapsed="@mixin sassy-gridlover-margins($rem: false) { ... }"><code>@mixin sassy-gridlover-margins($rem: false) { ... }</code></pre>
 
   
+    <a href="https://github.com/hiulit/Sassy-Gridlover/tree/master/sassy-gridlover/_sassy-gridlover.scss#L174-L182" class="item__source-link" target="_blank">View source</a>
+  
 </div>
 
 
@@ -726,6 +794,7 @@ h4 {
   <h3 class="item__sub-heading">Description</h3>
 
   <div class="item__description"><p>To use in <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;blockquote&gt;</code>, etc.</p>
+<p>Outputs <code>margin-bottom</code> and <code>margin-top</code>.</p>
 </div>
 
 
@@ -781,6 +850,16 @@ h4 {
     
     <pre class="example__code"><code class="language-scss">p, ul, ol, pre, table, blockquote {
 	@include sassy-gridlover-margins(true);
+}</code></pre>
+  </div>
+  
+  <div class="item__example  example">
+    
+    <pre class="example__code"><code class="language-css">p, ul, ol, pre, table, blockquote {
+   margin-bottom: 22px;
+   margin-top: 22px;
+   margin-bottom: 1.375rem;
+   margin-top: 1.375rem;
 }</code></pre>
   </div>
   
@@ -902,6 +981,8 @@ h4 {
 <div class="relative  clear">
   <pre class="item__code  language-scss"><code>$sgl-base-font-size: 18 !default;</code></pre>
 
+  
+    <a href="https://github.com/hiulit/Sassy-Gridlover/tree/master/sassy-gridlover/_config.scss" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1029,6 +1110,8 @@ h4 {
 <div class="relative  clear">
   <pre class="item__code  language-scss"><code>$sgl-base-line-height: 1.2 !default;</code></pre>
 
+  
+    <a href="https://github.com/hiulit/Sassy-Gridlover/tree/master/sassy-gridlover/_config.scss" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
@@ -1165,6 +1248,8 @@ h4 {
 <div class="relative  clear">
   <pre class="item__code  language-scss"><code>$sgl-scale-factor: $GOLDEN_SECTION !default;</code></pre>
 
+  
+    <a href="https://github.com/hiulit/Sassy-Gridlover/tree/master/sassy-gridlover/_config.scss" class="item__source-link" target="_blank">View source</a>
   
 </div>
 
