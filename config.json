@@ -1,3 +1,8 @@
 {
-	"package": "package.json"
+	"basePath": "https://github.com/hiulit/Sassy-Gridlover/tree/master/sassy-gridlover",
+	"package": "package.json",
+	"theme": "default",
+	"groups": {
+		"undefined": "General"
+	}
 }
