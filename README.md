@@ -95,7 +95,7 @@ By default, all the mixins will only output `px`. But you can also choose to out
 
 To use in `<body>`.
 
-Outputs `font-size`and `line-height`.
+Outputs `font-size` and `line-height`.
 
 ```scss
 @mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $rem: false)
@@ -251,8 +251,8 @@ Thanks to:
 
 * [Gridlover app](http://www.gridlover.net/app/) - Created by [Tuomas Jomppanen](http://twitter.com/tuomasj) & [Ville Vanninen](http://twitter.com/sakamies).
 * [Sassy-math](https://github.com/Team-Sass/Sassy-math) [&copy; 2012](https://github.com/Team-Sass/Sassy-math#license) - For the `@function exponent()`. Created by [Sam Richard](https://github.com/Snugug), [Mario Valencia](https://github.com/sultancillo) and [Scott Kellum](https://github.com/scottkellum)
-
-And Marc Mintel ([@marcmintel](https://twitter.com/marcmintel)) for his amazing article on how to [Write Sass plugins like a pro](https://medium.com/@marcmintel/write-sass-plugins-like-a-pro-c765ecf3af27).
+* Marc Mintel ([@marcmintel](https://twitter.com/marcmintel)) for his amazing article on how to [Write Sass plugins like a pro](https://medium.com/@marcmintel/write-sass-plugins-like-a-pro-c765ecf3af27).
+* Hugo Giraudel ([@hugogiraudel](hugogiraudel)) for helping with issues and [SassDoc](http://sassdoc.com/).
 
 ## Unlicense
 
