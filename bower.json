@@ -27,10 +27,10 @@
 		{
 			"name": "hiulit",
 			"email": "hiulit@gmail.com",
-			"homepeage": "https://github.com/hiulit"
+			"homepage": "https://github.com/hiulit"
 		}
 	],
-	"homepeage": "https://github.com/hiulit/Sassy-Gridlover",
+	"homepage": "https://github.com/hiulit/Sassy-Gridlover",
 	"repository": {
 		"type": "git",
 		"url": "git@github.com:hiulit/Sassy-Gridlover.git"
