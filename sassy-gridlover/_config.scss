@@ -25,21 +25,17 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 // Configurable variables.
 // Ok... You can change these variables! :D
 
-/**
- * Base font size
- *
- * @type number
- */
+/// Base font size
+///
+/// @type number
 $sgl-base-font-size: 18 !default;
-/**
- * Base line height
- *
- * @type number
- */
+
+/// Base line height
+///
+/// @type number
 $sgl-base-line-height: 1.2 !default;
-/**
- * Scale factor
- *
- * @type number
- */
+
+/// Scale factor
+///
+/// @type number
 $sgl-scale-factor: $GOLDEN_SECTION !default;

@@ -1,47 +1,38 @@
 @import "config";
 
-// @function exponent() taken from Sassy-math https://github.com/Team-Sass/Sassy-math.
 @function exponent($base, $exponent) {
-	// Thanks to @HugoGiraudel https://github.com/hiulit/Sassy-Gridlover/issues/4
 	@if pow(2, 2) == 4 {
 		@return pow($base, $exponent);
 	}
-	// Resets value.
 	$value: $base;
-	// Positive intergers get multiplied.
 	@if $exponent > 1 {
 		@for $i from 2 through $exponent {
 			$value: $value * $base; } }
-	// Negatives intergers get divided. A number divided by itself is 1.
 	@if $exponent < 1 {
 		@for $i from 0 through -$exponent {
 			$value: $value / $base; } }
-	// Return the last value written.
 	@return $value;
 }
 
-// All the sassy-gridlover-xxx mixins are based on the Gridlover app http://www.gridlover.net/app/
+/// To use in the `<body>`.
+///
+/// Outputs `font-size` and `line-height`.
+///
+/// @param {number} $font-size [$sgl-base-font-size] - Base font size
+/// @param {Boolean} $rem [false] - Outputs rem units if `true`
+///
+/// @example scss
+/// body {
+/// 	@include sassy-gridlover-body($sgl-base-font-size, true);
+/// }
+/// @example css
+/// body {
+///     font-size: 18px;
+///     line-height: 22px;
+///     font-size: 1.125rem;
+///     line-height: 1.375rem;
+/// }
 
-/**
- * To use in the `<body>`.
- *
- * Outputs `font-size` and `line-height`.
- *
- * @param {number} $font-size ($sgl-base-font-size) - Base font size
- * @param {Boolean} $rem (false) - Outputs rem units if `true`
- *
- * @example scss
- * body {
- * 	@include sassy-gridlover-body($sgl-base-font-size, true);
- * }
- * @example css
- * body {
- *     font-size: 18px;
- *     line-height: 22px;
- *     font-size: 1.125rem;
- *     line-height: 1.375rem;
- * }
- */
 @mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $rem: false) {
 	font-size: $font-size * 1px;
 	line-height: round(($font-size * $sgl-base-line-height)) * 1px;
@@ -51,80 +42,79 @@
 	}
 }
 
-/**
- * To use in headings `<h1> - <h4>`.
- *
- * Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
- *
- * @param {number} $step -
- * `<h1>` &rarr; `$step: 3`
- *
- * `<h2>` &rarr; `$step: 2`
- *
- * `<h3>` &rarr; `$step: 1`
- *
- * `<h4>` &rarr; `$step: 0`
- *
- * @param {Boolean} $rem (false) - Outputs rem units if `true`
- *
- * @example scss
- * h1 {
- * 	@include sassy-gridlover-heading(3, true);
- * }
- * h2 {
- * 	@include sassy-gridlover-heading(2, true);
- * }
- * h3 {
- * 	@include sassy-gridlover-heading(1, true);
- * }
- * h4 {
- * 	@include sassy-gridlover-heading(0, true);
- * }
- * @example css
- * h1 {
- *     font-size: 76px;
- *     line-height: 88px;
- *     margin-bottom: 22px;
- *     margin-top: 44px;
- *     font-size: 4.75rem;
- *     line-height: 5.5rem;
- *     margin-bottom: 1.375rem;
- *     margin-top: 2.75rem;
- * }
- *
- * h2 {
- *     font-size: 47px;
- *     line-height: 66px;
- *     margin-bottom: 22px;
- *     margin-top: 44px;
- *     font-size: 2.9375rem;
- *     line-height: 4.125rem;
- *     margin-bottom: 1.375rem;
- *     margin-top: 2.75rem;
- * }
- *
- * h3 {
- *     font-size: 29px;
- *     line-height: 44px;
- *     margin-bottom: 22px;
- *     margin-top: 22px;
- *     font-size: 1.8125rem;
- *     line-height: 2.75rem;
- *     margin-bottom: 1.375rem;
- *     margin-top: 1.375rem;
- * }
- *
- * h4 {
- *     font-size: 18px;
- *     line-height: 22px;
- *     margin-bottom: 22px;
- *     margin-top: 22px;
- *     font-size: 1.125rem;
- *     line-height: 1.375rem;
- *     margin-bottom: 1.375rem;
- *     margin-top: 1.375rem;
- * }
- */
+/// To use in headings `<h1> - <h4>`.
+///
+/// Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
+///
+/// @param {number} $step -
+/// `<h1>` &rarr; `$step: 3`
+///
+/// `<h2>` &rarr; `$step: 2`
+///
+/// `<h3>` &rarr; `$step: 1`
+///
+/// `<h4>` &rarr; `$step: 0`
+///
+/// @param {Boolean} $rem [false] - Outputs rem units if `true`
+///
+/// @example scss
+/// h1 {
+/// 	@include sassy-gridlover-heading(3, true);
+/// }
+/// h2 {
+/// 	@include sassy-gridlover-heading(2, true);
+/// }
+/// h3 {
+/// 	@include sassy-gridlover-heading(1, true);
+/// }
+/// h4 {
+/// 	@include sassy-gridlover-heading(0, true);
+/// }
+/// @example css
+/// h1 {
+///     font-size: 76px;
+///     line-height: 88px;
+///     margin-bottom: 22px;
+///     margin-top: 44px;
+///     font-size: 4.75rem;
+///     line-height: 5.5rem;
+///     margin-bottom: 1.375rem;
+///     margin-top: 2.75rem;
+/// }
+///
+/// h2 {
+///     font-size: 47px;
+///     line-height: 66px;
+///     margin-bottom: 22px;
+///     margin-top: 44px;
+///     font-size: 2.9375rem;
+///     line-height: 4.125rem;
+///     margin-bottom: 1.375rem;
+///     margin-top: 2.75rem;
+/// }
+///
+/// h3 {
+///     font-size: 29px;
+///     line-height: 44px;
+///     margin-bottom: 22px;
+///     margin-top: 22px;
+///     font-size: 1.8125rem;
+///     line-height: 2.75rem;
+///     margin-bottom: 1.375rem;
+///     margin-top: 1.375rem;
+/// }
+///
+/// h4 {
+///     font-size: 18px;
+///     line-height: 22px;
+///     margin-bottom: 22px;
+///     margin-top: 22px;
+///     font-size: 1.125rem;
+///     line-height: 1.375rem;
+///     margin-bottom: 1.375rem;
+///     margin-top: 1.375rem;
+/// }
+
 @mixin sassy-gridlover-heading($step, $rem: false) {
 	$font-size: $sgl-base-font-size;
 	$scale: $sgl-scale-factor;
@@ -153,25 +143,24 @@
 	}
 }
 
-/**
- * To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
- * 
- * Outputs `margin-bottom` and `margin-top`.
- *
- * @param {Boolean} $rem (false) - Outputs rem units if `true`
- *
- * @example scss
- * p, ul, ol, pre, table, blockquote {
- * 	@include sassy-gridlover-margins(true);
- * }
- * @example css
- * p, ul, ol, pre, table, blockquote {
- *    margin-bottom: 22px;
- *    margin-top: 22px;
- *    margin-bottom: 1.375rem;
- *    margin-top: 1.375rem;
- * }
- */
+/// To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
+///
+/// Outputs `margin-bottom` and `margin-top`.
+///
+/// @param {Boolean} $rem [false] - Outputs rem units if `true`
+///
+/// @example scss
+/// p, ul, ol, pre, table, blockquote {
+/// 	@include sassy-gridlover-margins(true);
+/// }
+/// @example css
+/// p, ul, ol, pre, table, blockquote {
+///    margin-bottom: 22px;
+///    margin-top: 22px;
+///    margin-bottom: 1.375rem;
+///    margin-top: 1.375rem;
+/// }
+
 @mixin sassy-gridlover-margins($rem: false) {
 	margin-bottom: round($sgl-base-font-size * $sgl-base-line-height) * 1px;
 	margin-top: round($sgl-base-font-size * $sgl-base-line-height) * 1px;
