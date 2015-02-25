@@ -232,7 +232,7 @@ p, ul, ol, pre, table, blockquote {
 
 ### v1.2.0 (February 25th 2015)
 
-* Upgraded to SassDoc v2.1.0
+* Upgraded to [SassDoc](http://sassdoc.com/) v2.1.0
 
 ### v1.1.0 (October 20th 2014)
 
