@@ -1,29 +1,46 @@
-// Scale factor variables.
-// Don't change these variables!
-$minorSecond: 1.067;
-$majorSecond: 1.125;
-$minorThird: 1.2;
-$majorThird: 1.25;
-$perfectFourth: 1.333;
-$augmentedFourth: 1.414;
-$perfectFifth: 1.5;
-$minorSixth: 1.6;
-$goldenSection: 1.618;
-$majorSixth: 1.667;
-$minorSeventh: 1.778;
-$majorSeventh: 1.875;
-$octave: 2;
-$majorTenth: 2.5;
-$majorEleventh: 2.667;
-$majorTwelfth: 3;
-$doubleOctave: 4;
+// Scale factor constants.
+// Don't change them ever!
+$MINOR_SECOND: 1.067;
+$MAJOR_SECOND: 1.125;
+$MINOR_THIRD: 1.2;
+$MAJOR_THIRD: 1.25;
+$PERFECT_FOURTH: 1.333;
+$AUGMENTED_FOURTH: 1.414;
+$PERFECT_FIFTH: 1.5;
+$MINOR_SIXTH: 1.6;
+$GOLDEN_SECTION: 1.618;
+$MAJOR_SIXTH: 1.667;
+$MINOR_SEVENTH: 1.778;
+$MAJOR_SEVENTH: 1.875;
+$OCTAVE: 2;
+$MAJOR_TENTH: 2.5;
+$MAJOR_ELEVENTH: 2.667;
+$MAJOR_TWELFTH: 3;
+$DOUBLE_OCTAVE: 4;
 
 // Default font size.
-// Don't change this variable!
-$defaultFontSize: 16;
+// Don't change it ever!
+$SGL_DEFAULT_FONT_SIZE: 16;
 
 // Configurable variables.
 // Ok... You can change these variables! :D
-$baseFontSize: 16;
-$baseLineHeight: 1;
-$scaleFactor: $perfectFifth;
+
+/// Base unit
+///
+/// @type string
+$sgl-base-unit: "pxrem" !default;
+
+/// Base font size
+///
+/// @type number
+$sgl-base-font-size: 18 !default;
+
+/// Base line height
+///
+/// @type number
+$sgl-base-line-height: 1.2 !default;
+
+/// Scale factor
+///
+/// @type number
+$sgl-scale-factor: $GOLDEN_SECTION !default;
