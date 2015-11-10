@@ -1,31 +1,25 @@
 @import "../../sassy-gridlover/sassy-gridlover.scss";
 
 body {
-<<<<<<< HEAD:example/scss/main.scss
-	@include sassy-gridlover-body($sgl-base-font-size, true);
-=======
 	@include sassy-gridlover-body($sgl-base-font-size, "rem");
->>>>>>> refs/remotes/origin/em-support:scss/main.scss
 }
 
 h1 {
 	@include sassy-gridlover-heading(3, "em");
 }
+
 h2 {
 	@include sassy-gridlover-heading(2, "px");
 }
+
 h3 {
 	@include sassy-gridlover-heading(1, "pxrem");
 }
+
 h4 {
 	@include sassy-gridlover-heading(0);
 }
 
 p, ul, ol, pre, table, blockquote {
-<<<<<<< HEAD:example/scss/main.scss
-	@include sassy-gridlover-margins(true);
-}
-=======
 	@include sassy-gridlover-margins();
 }
->>>>>>> refs/remotes/origin/em-support:scss/main.scss

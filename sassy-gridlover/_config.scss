@@ -25,6 +25,11 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 // Configurable variables.
 // Ok... You can change these variables! :D
 
+/// Base unit
+///
+/// @type string
+$sgl-base-unit: "pxrem" !default;
+
 /// Base font size
 ///
 /// @type number
