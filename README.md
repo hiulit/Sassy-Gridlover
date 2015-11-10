@@ -30,7 +30,7 @@ or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the 
 ```scss
 $sgl-base-font-size;
 $sgl-base-line-height;
-$sgl-base-unit
+$sgl-base-unit;
 $sgl-scale-factor;
 ```
 
