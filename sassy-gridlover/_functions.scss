@@ -1,4 +1,3 @@
-
 // EXPONENT
 // @see https://github.com/Team-Sass/Sassy-math.
 
@@ -23,10 +22,6 @@
 
     @return $value;
 }
-
-
-
-
 
 // CASTING A STRING TO A NUMBER
 // @see http://hugogiraudel.com/2014/01/15/sass-string-to-number/
@@ -91,10 +86,6 @@
 
     @return if($minus, $result * -1, $result);
 }
-
-
-
-
 
 // UNIT MANAGER
 // @see https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
