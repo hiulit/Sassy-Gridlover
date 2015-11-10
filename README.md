@@ -25,11 +25,12 @@ or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the 
 
 ## Getting started
 
-**Sassy-Gridlover** consists of 3 configurable variables:
+**Sassy-Gridlover** consists of 4 configurable variables:
 
 ```scss
 $sgl-base-font-size;
 $sgl-base-line-height;
+$sgl-base-unit
 $sgl-scale-factor;
 ```
 
@@ -82,9 +83,26 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 
 // Configurable variables.
 // Ok... You can change these variables! :D
+
+/// Base font size
+///
+/// @type number
 $sgl-base-font-size: 18 !default;
+
+/// Base line height
+///
+/// @type number
 $sgl-base-line-height: 1.2 !default;
-$sgl-scale-factor: $GOLDEN-SECTION !default;
+
+/// Base unit
+///
+/// @type string
+$sgl-base-unit: "pxrem" !default;
+
+/// Scale factor
+///
+/// @type number
+$sgl-scale-factor: $GOLDEN_SECTION !default;
 ```
 
 ## Mixins
