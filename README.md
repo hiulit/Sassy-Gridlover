@@ -248,6 +248,10 @@ p, ul, ol, pre, table, blockquote {
 
 ## Changelog
 
+### v.1.3.0 (November 11th 2015)
+
+* Added [em support](https://github.com/hiulit/Sassy-Gridlover/pull/7).
+
 ### v1.2.0 (February 25th 2015)
 
 * Upgraded to [SassDoc](http://sassdoc.com/) v2.1.0
