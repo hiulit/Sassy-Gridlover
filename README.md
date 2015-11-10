@@ -116,13 +116,13 @@ To use in `<body>`.
 Outputs `font-size` and `line-height`.
 
 ```scss
-@mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $rem: false)
+@mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit)
 ```
 
 Accepts 2 arguments:
 
-* `$font-size`: Specifies the base font size (without unit, just a number).
-* `$rem`: Outputs rem units if `true` (`false` by default).
+* `$font-size`: Base font size (without unit, just a number).
+* `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
 
 ### Sassy-Gridlover heading
 
@@ -131,17 +131,18 @@ To use in headings `<h1> - <h4>`.
 Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
 
 ```scss
-@mixin sassy-gridlover-heading($step, $rem: false)
+@mixin sassy-gridlover-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
 ```
 
-Accepts 2 arguments:
+Accepts 3 arguments:
 
 * `$step`:
 	* `<h1>` &rarr; `$step: 3`
 	* `<h2>` &rarr; `$step: 2`
 	* `<h3>` &rarr; `$step: 1`
 	* `<h4>` &rarr; `$step: 0`
-* `$rem`: Outputs rem units if `true` (`false` by default).
+* `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
+* `$base-value`: Optionally call with a different base font size when using em.
 
 ### Sassy-Gridlover margins
 
@@ -150,12 +151,13 @@ To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 Outputs `margin-bottom` and `margin-top`.
 
 ```scss
-@mixin sassy-gridlover-margins($rem: false)
+@mixin sassy-gridlover-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
 ```
 
-Accepts 1 argument:
+Accepts 2 argument:
 
-* `$rem`: Outputs rem units if `true` (`false` by default).
+* `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
+* `$base-value`: Optionally call with a different base font size when using em.
 
 ## Example usage
 
@@ -165,24 +167,27 @@ Accepts 1 argument:
 @import "sassy-gridlover.scss";
 
 body {
-	@include sassy-gridlover-body($sgl-base-font-size, true);
+	@include sassy-gridlover-body($sgl-base-font-size, "rem");
 }
 
 h1 {
-	@include sassy-gridlover-heading(3, true);
+	@include sassy-gridlover-heading(3, "em");
 }
+
 h2 {
-	@include sassy-gridlover-heading(2, true);
+	@include sassy-gridlover-heading(2, "px");
 }
+
 h3 {
-	@include sassy-gridlover-heading(1, true);
+	@include sassy-gridlover-heading(1, "pxrem");
 }
+
 h4 {
-	@include sassy-gridlover-heading(0, true);
+	@include sassy-gridlover-heading(0);
 }
 
 p, ul, ol, pre, table, blockquote {
-	@include sassy-gridlover-margins(true);
+	@include sassy-gridlover-margins();
 }
 ```
 
@@ -190,30 +195,23 @@ p, ul, ol, pre, table, blockquote {
 
 ```css
 body {
-	font-size: 18px;
-	line-height: 22px;
 	font-size: 1.125rem;
-	line-height: 1.375rem; }
+	line-height: 1.375rem;
+}
 
 h1 {
-	font-size: 76px;
-	line-height: 88px;
-	margin-bottom: 22px;
-	margin-top: 44px;
-	font-size: 4.75rem;
-	line-height: 5.5rem;
-	margin-bottom: 1.375rem;
-	margin-top: 2.75rem; }
+	font-size: 4.22222em;
+	line-height: 1.15789em;
+	margin-bottom: 0.28947em;
+	margin-top: 0.57895em;
+}
 
 h2 {
 	font-size: 47px;
 	line-height: 66px;
 	margin-bottom: 22px;
 	margin-top: 44px;
-	font-size: 2.9375rem;
-	line-height: 4.125rem;
-	margin-bottom: 1.375rem;
-	margin-top: 2.75rem; }
+}
 
 h3 {
 	font-size: 29px;
@@ -223,7 +221,8 @@ h3 {
 	font-size: 1.8125rem;
 	line-height: 2.75rem;
 	margin-bottom: 1.375rem;
-	margin-top: 1.375rem; }
+	margin-top: 1.375rem;
+}
 
 h4 {
 	font-size: 18px;
@@ -233,13 +232,15 @@ h4 {
 	font-size: 1.125rem;
 	line-height: 1.375rem;
 	margin-bottom: 1.375rem;
-	margin-top: 1.375rem; }
+	margin-top: 1.375rem;
+}
 
 p, ul, ol, pre, table, blockquote {
 	margin-bottom: 22px;
 	margin-top: 22px;
 	margin-bottom: 1.375rem;
-	margin-top: 1.375rem; }
+	margin-top: 1.375rem;
+}
 ```
 
 ## To-Do

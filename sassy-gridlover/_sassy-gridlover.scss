@@ -53,31 +53,31 @@
 /// `<h4>` &rarr; `$step: 0`
 ///
 /// @param {string} $unit [$sgl-base-unit] - Unit to output
-/// @param {number} $base-value [$sgl-base-font-size] - Optionally call with a different base when using em
+/// @param {number} $base-value [$sgl-base-font-size] - Optionally call with a different base font size when using em
 ///
 /// @example scss
 /// h1 {
-/// 	@include sassy-gridlover-heading(3, true);
+/// 	@include sassy-gridlover-heading(3, "em");
 /// }
+///
 /// h2 {
-/// 	@include sassy-gridlover-heading(2, true);
+/// 	@include sassy-gridlover-heading(2, "px");
 /// }
+///
 /// h3 {
-/// 	@include sassy-gridlover-heading(1, true);
+/// 	@include sassy-gridlover-heading(1, "pxrem");
 /// }
+///
 /// h4 {
-/// 	@include sassy-gridlover-heading(0, true);
+/// 	@include sassy-gridlover-heading(0);
 /// }
+///
 /// @example css
 /// h1 {
-///     font-size: 76px;
-///     line-height: 88px;
-///     margin-bottom: 22px;
-///     margin-top: 44px;
-///     font-size: 4.75rem;
-///     line-height: 5.5rem;
-///     margin-bottom: 1.375rem;
-///     margin-top: 2.75rem;
+///     font-size: 4.22222em;
+///     line-height: 1.15789em;
+///     margin-bottom: 0.28947em;
+///     margin-top: 0.57895em;
 /// }
 ///
 /// h2 {
@@ -85,10 +85,6 @@
 ///     line-height: 66px;
 ///     margin-bottom: 22px;
 ///     margin-top: 44px;
-///     font-size: 2.9375rem;
-///     line-height: 4.125rem;
-///     margin-bottom: 1.375rem;
-///     margin-top: 2.75rem;
 /// }
 ///
 /// h3 {
@@ -153,11 +149,11 @@
 /// Outputs `margin-bottom` and `margin-top`.
 ///
 /// @param {string} $unit [$sgl-base-unit] - Unit to output
-/// @param {number} $base-value [$sgl-base-font-size] - Optionally call with a different base when using em
+/// @param {number} $base-value [$sgl-base-font-size] - Optionally call with a different base font size when using em
 ///
 /// @example scss
 /// p, ul, ol, pre, table, blockquote {
-/// 	@include sassy-gridlover-margins(true);
+/// 	@include sassy-gridlover-margins();
 /// }
 /// @example css
 /// p, ul, ol, pre, table, blockquote {
