@@ -1,21 +1,18 @@
 body {
   font-size: 1.125rem;
-  line-height: 1.375rem;
-}
+  line-height: 1.375rem; }
 
 h1 {
   font-size: 4.22222em;
   line-height: 1.15789em;
   margin-bottom: 0.28947em;
-  margin-top: 0.57895em;
-}
+  margin-top: 0.57895em; }
 
 h2 {
   font-size: 47px;
   line-height: 66px;
   margin-bottom: 22px;
-  margin-top: 44px;
-}
+  margin-top: 44px; }
 
 h3 {
   font-size: 29px;
@@ -25,8 +22,7 @@ h3 {
   font-size: 1.8125rem;
   line-height: 2.75rem;
   margin-bottom: 1.375rem;
-  margin-top: 1.375rem;
-}
+  margin-top: 1.375rem; }
 
 h4 {
   font-size: 18px;
@@ -36,12 +32,12 @@ h4 {
   font-size: 1.125rem;
   line-height: 1.375rem;
   margin-bottom: 1.375rem;
-  margin-top: 1.375rem;
-}
+  margin-top: 1.375rem; }
 
 p, ul, ol, pre, table, blockquote {
   margin-bottom: 22px;
   margin-top: 22px;
   margin-bottom: 1.375rem;
-  margin-top: 1.375rem;
-}
+  margin-top: 1.375rem; }
+
+/*# sourceMappingURL=main.css.map */
