@@ -249,9 +249,13 @@ p, ul, ol, pre, table, blockquote {
 
 ## Changelog
 
-### v.1.3.0 (November 11th 2015)
+### v2.0.0 (November 11th 2015)
+
+**NOTE:** This release contains breaking changes!
 
 * Added [em support](https://github.com/hiulit/Sassy-Gridlover/pull/7).
+* Added @param {string} $unit [$sgl-base-unit] - Unit to output
+* ~~@param {Boolean} $rem [false] - Outputs rem units if `true`~~ **Deprecated**
 
 ### v1.2.0 (February 25th 2015)
 
