@@ -243,10 +243,6 @@ p, ul, ol, pre, table, blockquote {
 }
 ```
 
-## To-Do
-
-* Support em. There's a [branch](https://github.com/hiulit/Sassy-Gridlover/tree/em-support) for that matter.
-
 ## Changelog
 
 ### v2.0.0 (November 11th 2015)
