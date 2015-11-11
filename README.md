@@ -107,7 +107,7 @@ $sgl-scale-factor: $GOLDEN_SECTION !default;
 
 ## Mixins
 
-By default, all the mixins will output `rem`. But you can also choose to output `px`, `em`, `pxrem`.
+By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em`, `pxrem`.
 
 ### Sassy-Gridlover body
 
@@ -154,7 +154,7 @@ Outputs `margin-bottom` and `margin-top`.
 @mixin sassy-gridlover-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
 ```
 
-Accepts 2 argument:
+Accepts 2 arguments:
 
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
 * `$base-value`: Optionally call with a different base font size when using em.
