@@ -1,0 +1,108 @@
+// EXPONENT
+// @see https://github.com/at-import/Sassy-math/blob/master/sass/math.scss
+
+@function sgl-exponent($base, $exponent) {
+    // reset value
+    $value: $base;
+    // positive intergers get multiplied
+    @if $exponent > 1 {
+        @for $i from 2 through $exponent {
+            $value: $value * $base; } }
+    // negitive intergers get divided. A number divided by itself is 1
+    @if $exponent < 1 {
+        @for $i from 0 through -$exponent {
+            $value: $value / $base; } }
+    // return the last value written
+    @return $value; 
+}
+
+// CASTING A STRING TO A NUMBER
+// @see http://hugogiraudel.com/2014/01/15/sass-string-to-number/
+
+@function sgl-length($number, $unit) {
+    $strings: 'px' 'cm' 'mm' '%' 'ch' 'pica' 'in' 'em' 'rem' 'pt' 'pc' 'ex' 'vw' 'vh' 'vmin' 'vmax';
+    $units:   1px  1cm  1mm  1%  1ch  1pica  1in  1em  1rem  1pt  1pc  1ex  1vw  1vh  1vmin  1vmax;
+    $index: index($strings, $unit);
+
+    @if not $index {
+        @warn "Invalid unit `#{$unit}`.";
+        @return false;
+    }
+
+    @return $number * nth($units, $index);
+}
+
+@function sgl-number($string) {
+    // Matrices
+    $strings: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
+    $numbers:  0   1   2   3   4   5   6   7   8   9;
+
+    // Result
+    $result: 0;
+    $divider: 0;
+    $minus: false;
+
+    // Looping through all characters
+    @for $i from 1 through str-length($string) {
+        $character: str-slice($string, $i, $i);
+        $index: index($strings, $character);
+
+        @if $character == '-' {
+            $minus: true;
+        }
+
+        @else if $character == '.' {
+            $divider: 1;
+        }
+
+        @else {
+            @if not $index {
+                $result: if($minus, $result * -1, $result);
+                @return sgl-length($result, str-slice($string, $i));
+            }
+
+            $number: nth($numbers, $index);
+
+            @if $divider == 0 {
+                $result: $result * 10;
+            }
+
+            @else {
+                // Move the decimal dot to the left
+                $divider: $divider * 10;
+                $number: $number / $divider;
+            }
+
+            $result: $result + $number;
+        }
+    }
+
+    @return if($minus, $result * -1, $result);
+}
+
+// UNIT MANAGER
+// @see https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
+
+@function sgl-strip-unit($num) {
+    @return $num / ($num * 0 + 1);
+}
+
+@function sgl-convert($unit, $value, $base-value: $SGL_DEFAULT_FONT_SIZE) {
+    $value: sgl-strip-unit($value) / sgl-strip-unit($base-value) * sgl-number(1 + $unit);
+
+    @if ($value == (0 + $unit)) {
+        $value: 0;
+    }
+
+    @return $value;
+}
+
+// REM AND EM CALCULATOR
+
+@function sgl-em-calc($value, $base-value: $SGL_DEFAULT_FONT_SIZE) {
+    @return sgl-convert("em", $value, $base-value);
+}
+
+@function sgl-rem-calc($value, $base-value: $SGL_DEFAULT_FONT_SIZE) {
+    @return sgl-convert("rem", $value, $base-value);
+}

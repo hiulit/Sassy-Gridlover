@@ -25,20 +25,21 @@ or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the 
 
 ## Getting started
 
-**Sassy-Gridlover** consists of 3 configurable variables:
+**Sassy-Gridlover** consists of 4 configurable variables:
 
 ```scss
 $sgl-base-font-size;
 $sgl-base-line-height;
+$sgl-base-unit;
 $sgl-scale-factor;
 ```
 
 and 3 mixins:
 
 ```scss
-@mixin sassy-gridlover-body();
-@mixin sassy-gridlover-heading();
-@mixin sassy-gridlover-margins();
+@mixin sgl-body();
+@mixin sgl-heading();
+@mixin sgl-margins();
 ```
 
 *These are the 3 functionalities of the [Gridlover app](http://www.gridlover.net/app/) that you (should) have been playing with*.
@@ -82,14 +83,31 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 
 // Configurable variables.
 // Ok... You can change these variables! :D
+
+/// Base font size
+///
+/// @type number
 $sgl-base-font-size: 18 !default;
+
+/// Base line height
+///
+/// @type number
 $sgl-base-line-height: 1.2 !default;
-$sgl-scale-factor: $GOLDEN-SECTION !default;
+
+/// Base unit
+///
+/// @type string
+$sgl-base-unit: "pxrem" !default;
+
+/// Scale factor
+///
+/// @type number
+$sgl-scale-factor: $GOLDEN_SECTION !default;
 ```
 
 ## Mixins
 
-By default, all the mixins will only output `px`. But you can also choose to output `rem`.
+By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em`, `pxrem`.
 
 ### Sassy-Gridlover body
 
@@ -98,13 +116,13 @@ To use in `<body>`.
 Outputs `font-size` and `line-height`.
 
 ```scss
-@mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $rem: false)
+@mixin sgl-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit)
 ```
 
 Accepts 2 arguments:
 
-* `$font-size`: Specifies the base font size (without unit, just a number).
-* `$rem`: Outputs rem units if `true` (`false` by default).
+* `$font-size`: Base font size (without unit, just a number).
+* `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
 
 ### Sassy-Gridlover heading
 
@@ -113,17 +131,18 @@ To use in headings `<h1> - <h4>`.
 Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
 
 ```scss
-@mixin sassy-gridlover-heading($step, $rem: false)
+@mixin sgl-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
 ```
 
-Accepts 2 arguments:
+Accepts 3 arguments:
 
 * `$step`:
 	* `<h1>` &rarr; `$step: 3`
 	* `<h2>` &rarr; `$step: 2`
 	* `<h3>` &rarr; `$step: 1`
 	* `<h4>` &rarr; `$step: 0`
-* `$rem`: Outputs rem units if `true` (`false` by default).
+* `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
+* `$base-value`: Optionally call with a different base font size when using em.
 
 ### Sassy-Gridlover margins
 
@@ -132,12 +151,13 @@ To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 Outputs `margin-bottom` and `margin-top`.
 
 ```scss
-@mixin sassy-gridlover-margins($rem: false)
+@mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
 ```
 
-Accepts 1 argument:
+Accepts 2 arguments:
 
-* `$rem`: Outputs rem units if `true` (`false` by default).
+* `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
+* `$base-value`: Optionally call with a different base font size when using em.
 
 ## Example usage
 
@@ -147,24 +167,27 @@ Accepts 1 argument:
 @import "sassy-gridlover.scss";
 
 body {
-	@include sassy-gridlover-body($sgl-base-font-size, true);
+	@include sgl-body($sgl-base-font-size, "rem");
 }
 
 h1 {
-	@include sassy-gridlover-heading(3, true);
+	@include sgl-heading(3, "em");
 }
+
 h2 {
-	@include sassy-gridlover-heading(2, true);
+	@include sgl-heading(2, "px");
 }
+
 h3 {
-	@include sassy-gridlover-heading(1, true);
+	@include sgl-heading(1, "pxrem");
 }
+
 h4 {
-	@include sassy-gridlover-heading(0, true);
+	@include sgl-heading(0);
 }
 
 p, ul, ol, pre, table, blockquote {
-	@include sassy-gridlover-margins(true);
+	@include sgl-margins();
 }
 ```
 
@@ -172,30 +195,23 @@ p, ul, ol, pre, table, blockquote {
 
 ```css
 body {
-	font-size: 18px;
-	line-height: 22px;
 	font-size: 1.125rem;
-	line-height: 1.375rem; }
+	line-height: 1.375rem;
+}
 
 h1 {
-	font-size: 76px;
-	line-height: 88px;
-	margin-bottom: 22px;
-	margin-top: 44px;
-	font-size: 4.75rem;
-	line-height: 5.5rem;
-	margin-bottom: 1.375rem;
-	margin-top: 2.75rem; }
+	font-size: 4.22222em;
+	line-height: 1.15789em;
+	margin-bottom: 0.28947em;
+	margin-top: 0.57895em;
+}
 
 h2 {
 	font-size: 47px;
 	line-height: 66px;
 	margin-bottom: 22px;
 	margin-top: 44px;
-	font-size: 2.9375rem;
-	line-height: 4.125rem;
-	margin-bottom: 1.375rem;
-	margin-top: 2.75rem; }
+}
 
 h3 {
 	font-size: 29px;
@@ -205,7 +221,8 @@ h3 {
 	font-size: 1.8125rem;
 	line-height: 2.75rem;
 	margin-bottom: 1.375rem;
-	margin-top: 1.375rem; }
+	margin-top: 1.375rem;
+}
 
 h4 {
 	font-size: 18px;
@@ -215,24 +232,37 @@ h4 {
 	font-size: 1.125rem;
 	line-height: 1.375rem;
 	margin-bottom: 1.375rem;
-	margin-top: 1.375rem; }
+	margin-top: 1.375rem;
+}
 
 p, ul, ol, pre, table, blockquote {
 	margin-bottom: 22px;
 	margin-top: 22px;
 	margin-bottom: 1.375rem;
-	margin-top: 1.375rem; }
+	margin-top: 1.375rem;
+}
 ```
-
-## To-Do
-
-* Support em. There's a [branch](https://github.com/hiulit/Sassy-Gridlover/tree/em-support) for that matter.
 
 ## Changelog
 
+### v3.0.0 (June 28th 2016)
+
+**NOTE:** This release contains breaking changes!
+
+* Added `sgl-` prefix to all functions so they don't collide with other functions with the same name from other frameworks [#9](https://github.com/hiulit/Sassy-Gridlover/issues/9).
+* Changed mixins' `sassy-gridlover-` prefix for `sgl-`.
+
+### v2.0.0 (November 11th 2015)
+
+**NOTE:** This release contains breaking changes!
+
+* Added [em support](https://github.com/hiulit/Sassy-Gridlover/pull/7).
+* Added @param {string} $unit [$sgl-base-unit] - Unit to output
+* ~~@param {Boolean} $rem [false] - Outputs rem units if `true`~~ **Deprecated**
+
 ### v1.2.0 (February 25th 2015)
 
-* Upgraded to SassDoc v2.1.0
+* Upgraded to [SassDoc](http://sassdoc.com/) v2.1.0
 
 ### v1.1.0 (October 20th 2014)
 
@@ -265,6 +295,7 @@ Thanks to:
 * [Sassy-math](https://github.com/Team-Sass/Sassy-math) [&copy; 2012](https://github.com/Team-Sass/Sassy-math#license) - For the `@function exponent()`. Created by [Sam Richard](https://github.com/Snugug), [Mario Valencia](https://github.com/sultancillo) and [Scott Kellum](https://github.com/scottkellum)
 * Marc Mintel ([@marcmintel](https://twitter.com/marcmintel)) for his amazing article on how to [Write Sass plugins like a pro](https://medium.com/@marcmintel/write-sass-plugins-like-a-pro-c765ecf3af27).
 * Hugo Giraudel ([@hugogiraudel](https://twitter.com/hugogiraudel)) for helping with issues and [SassDoc](http://sassdoc.com/).
+* Walid Mokrani ([@walmokrani](https://github.com/walmokrani)) for helping with [adding em support](https://github.com/hiulit/Sassy-Gridlover/pull/7).
 
 ## Unlicense
 
