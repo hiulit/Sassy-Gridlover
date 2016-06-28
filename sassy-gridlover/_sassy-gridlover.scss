@@ -112,7 +112,7 @@
 @mixin sassy-gridlover-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size) {
     $font-size: $sgl-base-font-size;
     $scale: $sgl-scale-factor;
-    $computed-font-size: round($font-size * exponent($scale, $step));
+    $computed-font-size: round($font-size * sgl-exponent($scale, $step));
     $line-height: round($font-size * $sgl-base-line-height);
     $lines: ceil($computed-font-size / $line-height);
     $computed-line-height: $line-height * $lines;

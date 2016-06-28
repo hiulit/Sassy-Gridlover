@@ -1,7 +1,7 @@
 // EXPONENT
 // @see https://github.com/at-import/Sassy-math/blob/master/sass/math.scss
 
-@function exponent($base, $exponent) {
+@function sgl-exponent($base, $exponent) {
     // reset value
     $value: $base;
     // positive intergers get multiplied
@@ -17,7 +17,7 @@
 }
 
 @function pow($base, $exponent) {
-    @return exponent($base, $exponent);
+    @return sgl-exponent($base, $exponent);
 }
 
 // CASTING A STRING TO A NUMBER
