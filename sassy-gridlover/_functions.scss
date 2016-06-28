@@ -1,26 +1,23 @@
 // EXPONENT
-// @see https://github.com/Team-Sass/Sassy-math.
+// @see https://github.com/at-import/Sassy-math/blob/master/sass/math.scss
 
 @function exponent($base, $exponent) {
-    @if pow(2, 2) == 4 {
-        @return pow($base, $exponent);
-    }
-
+    // reset value
     $value: $base;
-
+    // positive intergers get multiplied
     @if $exponent > 1 {
         @for $i from 2 through $exponent {
-            $value: $value * $base;
-        }
-    }
-
+            $value: $value * $base; } }
+    // negitive intergers get divided. A number divided by itself is 1
     @if $exponent < 1 {
         @for $i from 0 through -$exponent {
-            $value: $value / $base;
-        }
-    }
+            $value: $value / $base; } }
+    // return the last value written
+    @return $value; 
+}
 
-    @return $value;
+@function pow($base, $exponent) {
+    @return exponent($base, $exponent);
 }
 
 // CASTING A STRING TO A NUMBER
