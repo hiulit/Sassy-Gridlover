@@ -37,9 +37,9 @@ $sgl-scale-factor;
 and 3 mixins:
 
 ```scss
-@mixin sassy-gridlover-body();
-@mixin sassy-gridlover-heading();
-@mixin sassy-gridlover-margins();
+@mixin sgl-body();
+@mixin sgl-heading();
+@mixin sgl-margins();
 ```
 
 *These are the 3 functionalities of the [Gridlover app](http://www.gridlover.net/app/) that you (should) have been playing with*.
@@ -116,7 +116,7 @@ To use in `<body>`.
 Outputs `font-size` and `line-height`.
 
 ```scss
-@mixin sassy-gridlover-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit)
+@mixin sgl-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit)
 ```
 
 Accepts 2 arguments:
@@ -131,7 +131,7 @@ To use in headings `<h1> - <h4>`.
 Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
 
 ```scss
-@mixin sassy-gridlover-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
+@mixin sgl-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
 ```
 
 Accepts 3 arguments:
@@ -151,7 +151,7 @@ To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 Outputs `margin-bottom` and `margin-top`.
 
 ```scss
-@mixin sassy-gridlover-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
+@mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
 ```
 
 Accepts 2 arguments:
@@ -167,27 +167,27 @@ Accepts 2 arguments:
 @import "sassy-gridlover.scss";
 
 body {
-	@include sassy-gridlover-body($sgl-base-font-size, "rem");
+	@include sgl-body($sgl-base-font-size, "rem");
 }
 
 h1 {
-	@include sassy-gridlover-heading(3, "em");
+	@include sgl-heading(3, "em");
 }
 
 h2 {
-	@include sassy-gridlover-heading(2, "px");
+	@include sgl-heading(2, "px");
 }
 
 h3 {
-	@include sassy-gridlover-heading(1, "pxrem");
+	@include sgl-heading(1, "pxrem");
 }
 
 h4 {
-	@include sassy-gridlover-heading(0);
+	@include sgl-heading(0);
 }
 
 p, ul, ol, pre, table, blockquote {
-	@include sassy-gridlover-margins();
+	@include sgl-margins();
 }
 ```
 
