@@ -245,6 +245,13 @@ p, ul, ol, pre, table, blockquote {
 
 ## Changelog
 
+### v3.0.0 (June 28th 2016)
+
+**NOTE:** This release contains breaking changes!
+
+* Added `sgl-` prefix to all functions so they don't collide with other functions with the same name from other frameworks. [#9](https://github.com/hiulit/Sassy-Gridlover/issues/9)
+* Changed mixins' `sassy-gridlover-` prefix for `sgl-`.
+
 ### v2.0.0 (November 11th 2015)
 
 **NOTE:** This release contains breaking changes!
