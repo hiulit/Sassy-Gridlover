@@ -101,10 +101,12 @@
     @return $value;
 }
 
-@function em-calc($value, $base-value: $SGL_DEFAULT_FONT_SIZE) {
+// REM AND EM CALCULATOR
+
+@function sgl-em-calc($value, $base-value: $SGL_DEFAULT_FONT_SIZE) {
     @return _convert("em", $value, $base-value);
 }
 
-@function rem-calc($value, $base-value: $SGL_DEFAULT_FONT_SIZE) {
+@function sgl-rem-calc($value, $base-value: $SGL_DEFAULT_FONT_SIZE) {
     @return _convert("rem", $value, $base-value);
 }

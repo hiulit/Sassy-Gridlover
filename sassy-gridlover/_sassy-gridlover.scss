@@ -29,13 +29,13 @@
     }
 
     @if($unit == "rem" or $unit == "pxrem") {
-        font-size: rem-calc($font-size);
-        line-height: rem-calc($line-height);
+        font-size: sgl-rem-calc($font-size);
+        line-height: sgl-rem-calc($line-height);
     }
 
     @if($unit == "em") {
-        font-size: em-calc($font-size, $SGL_DEFAULT_FONT_SIZE);
-        line-height: em-calc($line-height, $font-size);
+        font-size: sgl-em-calc($font-size, $SGL_DEFAULT_FONT_SIZE);
+        line-height: sgl-em-calc($line-height, $font-size);
     }
 }
 
@@ -130,17 +130,17 @@
     }
 
     @if ($unit == "rem" or $unit == "pxrem") {
-        font-size: rem-calc($computed-font-size);
-        line-height: rem-calc($computed-line-height);
-        margin-bottom: rem-calc($line-height);
-        margin-top: rem-calc($margin-top);
+        font-size: sgl-rem-calc($computed-font-size);
+        line-height: sgl-rem-calc($computed-line-height);
+        margin-bottom: sgl-rem-calc($line-height);
+        margin-top: sgl-rem-calc($margin-top);
     }
 
     @if ($unit == "em") {
-        font-size: em-calc($computed-font-size, $base-value);
-        line-height: em-calc($computed-line-height, $computed-font-size);
-        margin-bottom: em-calc($line-height, $computed-font-size);
-        margin-top: em-calc($margin-top, $computed-font-size);
+        font-size: sgl-em-calc($computed-font-size, $base-value);
+        line-height: sgl-em-calc($computed-line-height, $computed-font-size);
+        margin-bottom: sgl-em-calc($line-height, $computed-font-size);
+        margin-top: sgl-em-calc($margin-top, $computed-font-size);
     }
 }
 
@@ -172,12 +172,12 @@
     }
 
     @if($unit == "rem" or $unit == "pxrem") {
-        margin-bottom: rem-calc($margin);
-        margin-top: rem-calc($margin);
+        margin-bottom: sgl-rem-calc($margin);
+        margin-top: sgl-rem-calc($margin);
     }
 
     @if($unit == "em") {
-        margin-bottom: em-calc($margin, $base-value);
-        margin-top: em-calc($margin, $base-value);
+        margin-bottom: sgl-em-calc($margin, $base-value);
+        margin-top: sgl-em-calc($margin, $base-value);
     }
 }
