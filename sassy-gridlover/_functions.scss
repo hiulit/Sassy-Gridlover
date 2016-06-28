@@ -16,10 +16,6 @@
     @return $value; 
 }
 
-@function pow($base, $exponent) {
-    @return sgl-exponent($base, $exponent);
-}
-
 // CASTING A STRING TO A NUMBER
 // @see http://hugogiraudel.com/2014/01/15/sass-string-to-number/
 
