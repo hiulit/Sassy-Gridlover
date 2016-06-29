@@ -53,6 +53,7 @@ Import `_sassy-gridlover.scss` to your main style sheet.
 ```
 
 Change the configurable variables values in `_config.scss` to your liking.
+Although I'd encourage you not to change them directly here. I'd rather declare them in your `_config.scss` or the like.
 
 ### _config.scss
 
@@ -83,23 +84,52 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 
 // Configurable variables.
 // Ok... You can change these variables! :D
+// Although I'd encourage you not to change them directly here.
+// I'd rather declare them in your `_config.scss` or the like.
 
-/// Base font size
+/// Enables/disables **Debug mode** (`true`/`false`).
+///
+/// Outputs background lines imitating a notebook's sheet.
+///
+/// Place it in your own `_config.scss` or the like.
+///
+/// @example scss
+/// 	$sgl-debug-mode: true;
+///
+/// @example css
+/// 	html {
+/// 		background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
+/// 		background-position: left -1px;
+/// 		background-repeat: repeat;
+///  		background-size: 22px 22px;
+/// 	}
+/// 
+/// 	body {
+/// 		box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3);
+/// 		margin: 0 auto;
+/// 		max-width: 75%;
+/// 		padding: 22px;
+/// 	}
+/// 
+/// @type boolean
+$sgl-debug-mode: false !default;
+
+/// Base font size.
 ///
 /// @type number
 $sgl-base-font-size: 18 !default;
 
-/// Base line height
+/// Base line height.
 ///
 /// @type number
 $sgl-base-line-height: 1.2 !default;
 
-/// Base unit
+/// Base unit ("px", "em", "rem", "pxrem").
 ///
 /// @type string
 $sgl-base-unit: "pxrem" !default;
 
-/// Scale factor
+/// Scale factor.
 ///
 /// @type number
 $sgl-scale-factor: $GOLDEN_SECTION !default;
