@@ -25,9 +25,10 @@ or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the 
 
 ## Getting started
 
-**Sassy-Gridlover** consists of 4 configurable variables:
+**Sassy-Gridlover** consists of 5 configurable variables:
 
 ```scss
+$sgl-debug-mode;
 $sgl-base-font-size;
 $sgl-base-line-height;
 $sgl-base-unit;
