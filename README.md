@@ -139,7 +139,7 @@ $sgl-scale-factor: $GOLDEN_SECTION !default;
 
 ## Mixins
 
-By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em`, `pxrem`.
+By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em`, `rem`.
 
 ### Sassy-Gridlover body
 
