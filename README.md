@@ -137,6 +137,10 @@ $sgl-base-unit: "pxrem" !default;
 $sgl-scale-factor: $GOLDEN_SECTION !default;
 ```
 
+## Debug mode
+
+Set `$sgl-debug-mode` to `true` (`false` by default) to output background lines imitating a notebook's sheet.
+
 ## Mixins
 
 By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em`, `rem`.
@@ -276,6 +280,10 @@ p, ul, ol, pre, table, blockquote {
 ```
 
 ## Changelog
+
+### v3.1.0 (June 29th 2016)
+
+* Added [debug mode](#debug-mode).
 
 ### v3.0.0 (June 28th 2016)
 
