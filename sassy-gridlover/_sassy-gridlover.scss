@@ -69,7 +69,7 @@
 /// `<h4>` &rarr; `$step: 0`
 ///
 /// @param {string} $unit [$sgl-base-unit] - Unit to output
-/// @param {number} $base-value [$sgl-base-font-size] - Optionally call with a different base font size when using em
+/// @param {number} $base-value [$sgl-base-font-size] - Optional call with a different base font size when using em
 ///
 /// @example scss
 /// h1 {
@@ -165,7 +165,7 @@
 /// Outputs `margin-bottom` and `margin-top`.
 ///
 /// @param {string} $unit [$sgl-base-unit] - Unit to output
-/// @param {number} $base-value [$sgl-base-font-size] - Optionally call with a different base font size when using em
+/// @param {number} $base-value [$sgl-base-font-size] - Optional call with a different base font size when using em
 ///
 /// @example scss
 /// p, ul, ol, pre, table, blockquote {

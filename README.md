@@ -174,7 +174,7 @@ Accepts 3 arguments:
 	* `<h3>` &rarr; `$step: 1`
 	* `<h4>` &rarr; `$step: 0`
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
-* `$base-value`: Optionally call with a different base font size when using em.
+* `$base-value`: Optional call with a different base font size when using em.
 
 ### Sassy-Gridlover margins
 
@@ -189,7 +189,7 @@ Outputs `margin-bottom` and `margin-top`.
 Accepts 2 arguments:
 
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
-* `$base-value`: Optionally call with a different base font size when using em.
+* `$base-value`: Optional call with a different base font size when using em.
 
 ## Example usage
 
