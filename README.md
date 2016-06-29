@@ -25,9 +25,10 @@ or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the 
 
 ## Getting started
 
-**Sassy-Gridlover** consists of 4 configurable variables:
+**Sassy-Gridlover** consists of 5 configurable variables:
 
 ```scss
+$sgl-debug-mode;
 $sgl-base-font-size;
 $sgl-base-line-height;
 $sgl-base-unit;
@@ -53,6 +54,8 @@ Import `_sassy-gridlover.scss` to your main style sheet.
 ```
 
 Change the configurable variables values in `_config.scss` to your liking.
+
+Although I'd encourage you not to change them directly here. I'd rather declare them in your `_config.scss` or the like.
 
 ### _config.scss
 
@@ -83,31 +86,64 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 
 // Configurable variables.
 // Ok... You can change these variables! :D
+// Although I'd encourage you not to change them directly here.
+// I'd rather declare them in your `_config.scss` or the like.
 
-/// Base font size
+/// Enables/disables **Debug mode** (`true`/`false`).
+///
+/// Outputs background lines imitating a notebook's sheet.
+///
+/// Place it in your own `_config.scss` or the like.
+///
+/// @example scss
+/// 	$sgl-debug-mode: true;
+///
+/// @example css
+/// 	html {
+/// 		background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
+/// 		background-position: left -1px;
+/// 		background-repeat: repeat;
+///  		background-size: 22px 22px;
+/// 	}
+/// 
+/// 	body {
+/// 		box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3);
+/// 		margin: 0 auto;
+/// 		max-width: 75%;
+/// 		padding: 22px;
+/// 	}
+/// 
+/// @type boolean
+$sgl-debug-mode: false !default;
+
+/// Base font size.
 ///
 /// @type number
 $sgl-base-font-size: 18 !default;
 
-/// Base line height
+/// Base line height.
 ///
 /// @type number
 $sgl-base-line-height: 1.2 !default;
 
-/// Base unit
+/// Base unit (`px`, `em`, `rem`, `pxrem`).
 ///
 /// @type string
 $sgl-base-unit: "pxrem" !default;
 
-/// Scale factor
+/// Scale factor.
 ///
 /// @type number
 $sgl-scale-factor: $GOLDEN_SECTION !default;
 ```
 
+## Debug mode
+
+Set `$sgl-debug-mode` to `true` (`false` by default) to output background lines imitating a notebook's sheet.
+
 ## Mixins
 
-By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em`, `pxrem`.
+By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em`, `rem`.
 
 ### Sassy-Gridlover body
 
@@ -142,7 +178,7 @@ Accepts 3 arguments:
 	* `<h3>` &rarr; `$step: 1`
 	* `<h4>` &rarr; `$step: 0`
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
-* `$base-value`: Optionally call with a different base font size when using em.
+* `$base-value`: Optional call with a different base font size when using em.
 
 ### Sassy-Gridlover margins
 
@@ -157,7 +193,7 @@ Outputs `margin-bottom` and `margin-top`.
 Accepts 2 arguments:
 
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
-* `$base-value`: Optionally call with a different base font size when using em.
+* `$base-value`: Optional call with a different base font size when using em.
 
 ## Example usage
 
@@ -245,6 +281,10 @@ p, ul, ol, pre, table, blockquote {
 
 ## Changelog
 
+### v3.1.0 (June 29th 2016)
+
+* Added [debug mode](#debug-mode).
+
 ### v3.0.0 (June 28th 2016)
 
 **NOTE:** This release contains breaking changes!
@@ -292,7 +332,7 @@ p, ul, ol, pre, table, blockquote {
 Thanks to:
 
 * [Gridlover app](http://www.gridlover.net/app/) - Created by [Tuomas Jomppanen](http://twitter.com/tuomasj) & [Ville Vanninen](http://twitter.com/sakamies).
-* [Sassy-math](https://github.com/Team-Sass/Sassy-math) [&copy; 2012](https://github.com/Team-Sass/Sassy-math#license) - For the `@function exponent()`. Created by [Sam Richard](https://github.com/Snugug), [Mario Valencia](https://github.com/sultancillo) and [Scott Kellum](https://github.com/scottkellum)
+* [Sassy-math](https://github.com/Team-Sass/Sassy-math) [&copy; 2012](https://github.com/Team-Sass/Sassy-math#license) - For the `@function exponent()`. Created by [Sam Richard](https://github.com/Snugug), [Mario Valencia](https://github.com/sultancillo) and [Scott Kellum](https://github.com/scottkellum).
 * Marc Mintel ([@marcmintel](https://twitter.com/marcmintel)) for his amazing article on how to [Write Sass plugins like a pro](https://medium.com/@marcmintel/write-sass-plugins-like-a-pro-c765ecf3af27).
 * Hugo Giraudel ([@hugogiraudel](https://twitter.com/hugogiraudel)) for helping with issues and [SassDoc](http://sassdoc.com/).
 * Walid Mokrani ([@walmokrani](https://github.com/walmokrani)) for helping with [adding em support](https://github.com/hiulit/Sassy-Gridlover/pull/7).
