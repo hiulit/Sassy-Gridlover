@@ -60,8 +60,8 @@ Although I'd encourage you not to change them directly here. I'd rather declare 
 ### _config.scss
 
 ```scss
-/// Scale factor constants.
-/// Don't change them ever!
+// Scale factor constants.
+// Don't change them ever!
 $MINOR_SECOND: 1.067;
 $MAJOR_SECOND: 1.125;
 $MINOR_THIRD: 1.2;
@@ -80,22 +80,23 @@ $MAJOR_ELEVENTH: 2.667;
 $MAJOR_TWELFTH: 3;
 $DOUBLE_OCTAVE: 4;
 
-/// Default font size.
-/// Don't change it ever!
+// Default font size.
+// Don't change it ever!
 $SGL_DEFAULT_FONT_SIZE: 16;
 
-/// Configurable variables.
-/// Ok... You can change these variables! :D
-/// Although I'd encourage you not to change them directly here.
-/// I'd rather declare them in your `_variables.scss`, `_config.scss` or the like.
+// Configurable variables.
+// Ok... You can change these variables! :D
+// Although I'd encourage you not to change them directly here.
+// I'd rather declare them in your `_variables.scss`, `_config.scss` or the like.
 
 /// Enables/disables **Debug mode** (`true`/`false`).
 ///
 /// Outputs background lines imitating a notebook's sheet.
 ///
 /// Declare it in your own `_variables.scss`, `_config.scss` or the like.
-/// Basically, it must be declared before the `@import "sassy-gridlover"`.
 ///
+/// Basically, it must be declared before the `@import "sassy-gridlover"`.
+/// 
 /// @example scss
 /// 	$sgl-debug-mode: true;
 ///
