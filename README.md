@@ -55,13 +55,13 @@ Import `_sassy-gridlover.scss` to your main style sheet.
 
 Change the configurable variables values in `_config.scss` to your liking.
 
-Although I'd encourage you not to change them directly here. I'd rather declare them in your `_config.scss` or the like.
+Although I'd encourage you not to change them directly here. I'd rather declare them in your `_variables.scss`, `_config.scss` or the like.
 
 ### _config.scss
 
 ```scss
-// Scale factor constants.
-// Don't change them ever!
+/// Scale factor constants.
+/// Don't change them ever!
 $MINOR_SECOND: 1.067;
 $MAJOR_SECOND: 1.125;
 $MINOR_THIRD: 1.2;
@@ -80,20 +80,20 @@ $MAJOR_ELEVENTH: 2.667;
 $MAJOR_TWELFTH: 3;
 $DOUBLE_OCTAVE: 4;
 
-// Default font size.
-// Don't change it ever!
+/// Default font size.
+/// Don't change it ever!
 $SGL_DEFAULT_FONT_SIZE: 16;
 
-// Configurable variables.
-// Ok... You can change these variables! :D
-// Although I'd encourage you not to change them directly here.
-// I'd rather declare them in your `_config.scss` or the like.
+/// Configurable variables.
+/// Ok... You can change these variables! :D
+/// Although I'd encourage you not to change them directly here.
+/// I'd rather declare them in your `_variables.scss`, `_config.scss` or the like.
 
 /// Enables/disables **Debug mode** (`true`/`false`).
 ///
 /// Outputs background lines imitating a notebook's sheet.
 ///
-/// Place it in your own `_variables.scss`, `_config.scss` or the like.
+/// Declare it in your own `_variables.scss`, `_config.scss` or the like.
 /// Basically, it must be declared before the `@import "sassy-gridlover"`.
 ///
 /// @example scss
@@ -142,7 +142,7 @@ $sgl-scale-factor: $GOLDEN_SECTION !default;
 
 Set `$sgl-debug-mode` to `true` (`false` by default) to output background lines imitating a notebook's sheet.
 
-Place it in your own `_variables.scss`, `_config.scss` or the like.  
+Declare it in your own `_variables.scss`, `_config.scss` or the like.  
 Basically, it must be declared before the `@import "sassy-gridlover"`.
 
 ## Mixins
