@@ -55,13 +55,13 @@ Import `_sassy-gridlover.scss` to your main style sheet.
 
 Change the configurable variables values in `_config.scss` to your liking.
 
-Although I'd encourage you not to change them directly here. I'd rather declare them in your `_config.scss` or the like.
+Although I'd encourage you not to change them directly here. I'd rather declare them in your `_variables.scss`, `_config.scss` or the like.
 
 ### _config.scss
 
 ```scss
-// Scale factor constants.
-// Don't change them ever!
+/// Scale factor constants.
+/// Don't change them ever!
 $MINOR_SECOND: 1.067;
 $MAJOR_SECOND: 1.125;
 $MINOR_THIRD: 1.2;
@@ -80,20 +80,21 @@ $MAJOR_ELEVENTH: 2.667;
 $MAJOR_TWELFTH: 3;
 $DOUBLE_OCTAVE: 4;
 
-// Default font size.
-// Don't change it ever!
+/// Default font size.
+/// Don't change it ever!
 $SGL_DEFAULT_FONT_SIZE: 16;
 
-// Configurable variables.
-// Ok... You can change these variables! :D
-// Although I'd encourage you not to change them directly here.
-// I'd rather declare them in your `_config.scss` or the like.
+/// Configurable variables.
+/// Ok... You can change these variables! :D
+/// Although I'd encourage you not to change them directly here.
+/// I'd rather declare them in your `_variables.scss`, `_config.scss` or the like.
 
 /// Enables/disables **Debug mode** (`true`/`false`).
 ///
 /// Outputs background lines imitating a notebook's sheet.
 ///
-/// Place it in your own `_config.scss` or the like.
+/// Declare it in your own `_variables.scss`, `_config.scss` or the like.
+/// Basically, it must be declared before the `@import "sassy-gridlover"`.
 ///
 /// @example scss
 /// 	$sgl-debug-mode: true;
@@ -140,6 +141,9 @@ $sgl-scale-factor: $GOLDEN_SECTION !default;
 ## Debug mode
 
 Set `$sgl-debug-mode` to `true` (`false` by default) to output background lines imitating a notebook's sheet.
+
+Declare it in your own `_variables.scss`, `_config.scss` or the like.  
+Basically, it must be declared before the `@import "sassy-gridlover"`.
 
 ## Mixins
 
@@ -281,6 +285,10 @@ p, ul, ol, pre, table, blockquote {
 
 ## Changelog
 
+### v3.1.1 (July 13th 2016)
+
+* Fixed decimals on line heights when using `em` [#12](https://github.com/hiulit/Sassy-Gridlover/issues/12).
+
 ### v3.1.0 (June 29th 2016)
 
 * Added [debug mode](#debug-mode).
@@ -336,6 +344,7 @@ Thanks to:
 * Marc Mintel ([@marcmintel](https://twitter.com/marcmintel)) for his amazing article on how to [Write Sass plugins like a pro](https://medium.com/@marcmintel/write-sass-plugins-like-a-pro-c765ecf3af27).
 * Hugo Giraudel ([@hugogiraudel](https://twitter.com/hugogiraudel)) for helping with issues and [SassDoc](http://sassdoc.com/).
 * Walid Mokrani ([@walmokrani](https://github.com/walmokrani)) for helping with [adding em support](https://github.com/hiulit/Sassy-Gridlover/pull/7).
+* Takeru Suzuki (terkel)[https://github.com/terkel] - For the `@function decimal-xxx`.
 
 ## Unlicense
 
