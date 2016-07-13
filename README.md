@@ -93,7 +93,8 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 ///
 /// Outputs background lines imitating a notebook's sheet.
 ///
-/// Place it in your own `_config.scss` or the like.
+/// Place it in your own `_variables.scss`, `_config.scss` or the like.
+/// Basically, it must be declared before the `@import "sassy-gridlover"`.
 ///
 /// @example scss
 /// 	$sgl-debug-mode: true;
@@ -140,6 +141,9 @@ $sgl-scale-factor: $GOLDEN_SECTION !default;
 ## Debug mode
 
 Set `$sgl-debug-mode` to `true` (`false` by default) to output background lines imitating a notebook's sheet.
+
+Place it in your own `_variables.scss`, `_config.scss` or the like.  
+Basically, it must be declared before the `@import "sassy-gridlover"`.
 
 ## Mixins
 
@@ -281,6 +285,10 @@ p, ul, ol, pre, table, blockquote {
 
 ## Changelog
 
+### v3.1.1 (July 13th 2016)
+
+* Fixed decimals on line heights when using `em` [#12](https://github.com/hiulit/Sassy-Gridlover/issues/12).
+
 ### v3.1.0 (June 29th 2016)
 
 * Added [debug mode](#debug-mode).
@@ -336,6 +344,7 @@ Thanks to:
 * Marc Mintel ([@marcmintel](https://twitter.com/marcmintel)) for his amazing article on how to [Write Sass plugins like a pro](https://medium.com/@marcmintel/write-sass-plugins-like-a-pro-c765ecf3af27).
 * Hugo Giraudel ([@hugogiraudel](https://twitter.com/hugogiraudel)) for helping with issues and [SassDoc](http://sassdoc.com/).
 * Walid Mokrani ([@walmokrani](https://github.com/walmokrani)) for helping with [adding em support](https://github.com/hiulit/Sassy-Gridlover/pull/7).
+* Takeru Suzuki (terkel)[https://github.com/terkel] - For the `@function decimal-xxx`.
 
 ## Unlicense
 
