@@ -39,19 +39,19 @@
 @mixin sgl-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit) {
     $line-height: round(($font-size * $sgl-base-line-height));
 
-    @if($unit == "px" or $unit == "pxrem") {
+    @if ($unit == "px" or $unit == "pxrem") {
         font-size: $font-size * 1px;
         line-height: $line-height * 1px;
     }
 
-    @if($unit == "rem" or $unit == "pxrem") {
+    @if ($unit == "rem" or $unit == "pxrem") {
         font-size: sgl-rem-calc($font-size);
         line-height: sgl-rem-calc($line-height);
     }
 
-    @if($unit == "em") {
-        font-size: sgl-em-calc($font-size, $SGL_DEFAULT_FONT_SIZE);
-        line-height: sgl-em-calc($line-height, $font-size);
+    @if ($unit == "em") {
+        font-size: decimal-ceil(sgl-em-calc($font-size, $SGL_DEFAULT_FONT_SIZE), 5);
+        line-height: decimal-ceil(sgl-em-calc($line-height, $font-size), 5);
     }
 }
 
@@ -134,7 +134,7 @@
     $computed-line-height: $line-height * $lines;
 
     $margin-top: $line-height;
-    @if($step > 1) {
+    @if ($step > 1) {
         $margin-top: $line-height * 2;
     }
 
@@ -153,10 +153,10 @@
     }
 
     @if ($unit == "em") {
-        font-size: sgl-em-calc($computed-font-size, $base-value);
-        line-height: sgl-em-calc($computed-line-height, $computed-font-size);
-        margin-bottom: sgl-em-calc($line-height, $computed-font-size);
-        margin-top: sgl-em-calc($margin-top, $computed-font-size);
+        font-size: decimal-ceil(sgl-em-calc($computed-font-size, $base-value), 5);
+        line-height: decimal-ceil(sgl-em-calc($computed-line-height, $computed-font-size), 5);
+        margin-bottom: decimal-ceil(sgl-em-calc($line-height, $computed-font-size), 5);
+        margin-top: decimal-ceil(sgl-em-calc($margin-top, $computed-font-size), 5);
     }
 }
 
@@ -182,18 +182,18 @@
 @mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size) {
     $margin: round($base-value * $sgl-base-line-height);
 
-    @if($unit == "px" or $unit == "pxrem") {
+    @if ($unit == "px" or $unit == "pxrem") {
         margin-bottom: $margin * 1px;
         margin-top: $margin * 1px;
     }
 
-    @if($unit == "rem" or $unit == "pxrem") {
+    @if ($unit == "rem" or $unit == "pxrem") {
         margin-bottom: sgl-rem-calc($margin);
         margin-top: sgl-rem-calc($margin);
     }
 
-    @if($unit == "em") {
-        margin-bottom: sgl-em-calc($margin, $base-value);
-        margin-top: sgl-em-calc($margin, $base-value);
+    @if ($unit == "em") {
+        margin-bottom: decimal-ceil(sgl-em-calc($margin, $base-value), 5);
+        margin-top: decimal-ceil(sgl-em-calc($margin, $base-value), 5);
     }
 }
