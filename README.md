@@ -345,7 +345,7 @@ Thanks to:
 * Marc Mintel ([@marcmintel](https://twitter.com/marcmintel)) for his amazing article on how to [Write Sass plugins like a pro](https://medium.com/@marcmintel/write-sass-plugins-like-a-pro-c765ecf3af27).
 * Hugo Giraudel ([@hugogiraudel](https://twitter.com/hugogiraudel)) for helping with issues and [SassDoc](http://sassdoc.com/).
 * Walid Mokrani ([@walmokrani](https://github.com/walmokrani)) for helping with [adding em support](https://github.com/hiulit/Sassy-Gridlover/pull/7).
-* Takeru Suzuki (terkel)[https://github.com/terkel] - For the `@function decimal-xxx`.
+* Takeru Suzuki ([@terkel](https://github.com/terkel)) - For the `@function decimal-xxx`.
 
 ## Unlicense
 
