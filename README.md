@@ -286,6 +286,15 @@ p, ul, ol, pre, table, blockquote {
 
 ## Changelog
 
+### v3.1.3 (August 9th 2016)
+
+* Published Sassy-Gridlover as an [npm package](https://www.npmjs.com/package/sassy-gridlover).
+
+### v3.1.2 (August 9th 2016)
+
+* ~~Published Sassy-Gridlover as an [npm package](https://www.npmjs.com/package/sassy-gridlover).~~
+* Failed at publishing the npm package xD.
+
 ### v3.1.1 (July 13th 2016)
 
 * Fixed decimals on line heights when using `em` [#12](https://github.com/hiulit/Sassy-Gridlover/issues/12).
