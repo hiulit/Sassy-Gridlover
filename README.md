@@ -286,6 +286,15 @@ p, ul, ol, pre, table, blockquote {
 
 ## Changelog
 
+### v3.1.3 (August 9th 2016)
+
+* Published Sassy-Gridlover as an [npm package](https://www.npmjs.com/package/sassy-gridlover).
+
+### v3.1.2 (August 9th 2016)
+
+* ~~Published Sassy-Gridlover as an [npm package](https://www.npmjs.com/package/sassy-gridlover).~~
+* Failed at publishing the npm package xD.
+
 ### v3.1.1 (July 13th 2016)
 
 * Fixed decimals on line heights when using `em` [#12](https://github.com/hiulit/Sassy-Gridlover/issues/12).
@@ -345,7 +354,7 @@ Thanks to:
 * Marc Mintel ([@marcmintel](https://twitter.com/marcmintel)) for his amazing article on how to [Write Sass plugins like a pro](https://medium.com/@marcmintel/write-sass-plugins-like-a-pro-c765ecf3af27).
 * Hugo Giraudel ([@hugogiraudel](https://twitter.com/hugogiraudel)) for helping with issues and [SassDoc](http://sassdoc.com/).
 * Walid Mokrani ([@walmokrani](https://github.com/walmokrani)) for helping with [adding em support](https://github.com/hiulit/Sassy-Gridlover/pull/7).
-* Takeru Suzuki (terkel)[https://github.com/terkel] - For the `@function decimal-xxx`.
+* Takeru Suzuki ([@terkel](https://github.com/terkel)) - For the `@function decimal-xxx`.
 
 ## Unlicense
 
