@@ -1,0 +1,34 @@
+@mixin sgl-show-grid($sgl-base-font-size, $sgl-base-line-height) {
+    html {
+        background-image: linear-gradient(hsla(200, 100%, 50%, .3) 1px, transparent 1px);
+        background-position: left top;
+        background-size: round(($sgl-base-font-size * $sgl-base-line-height)) * 1px round(($sgl-base-font-size * $sgl-base-line-height)) * 1px;
+    }
+
+    body {
+        box-shadow: 1px 0px 0px hsla(200, 100%, 50%, .3), -1px 0px 0px hsla(200, 100%, 50%, .3);
+        margin: 0 auto;
+        max-width: 75%;
+    }
+}
+
+@mixin sgl-show-margins($line-height) {
+    position: relative;
+    &:before,
+    &:after {
+        content: "";
+        display: block;
+        height: $line-height * 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+    &:before {
+        background: hsla(200, 100%, 50%, .3) url("../../sassy-gridlover/assets/marginTop.svg") 51% top repeat-y;
+        top: - $line-height * 1px;
+    }
+    &:after {
+        background: hsla(200, 100%, 50%, .3) url("../../sassy-gridlover/assets/marginBottom.svg") 49% bottom repeat-y;
+        bottom: - $line-height * 1px;
+    }
+}

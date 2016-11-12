@@ -1,20 +1,9 @@
 @import "config";
 @import "functions";
+@import "debug-mode";
 
 @if($sgl-debug-mode == true) {
-    html {
-        background-image: linear-gradient(to bottom, hsla(200, 100%, 50%, .3) 1px, transparent 1px);
-        background-position: left -1px;
-        background-repeat: repeat;
-        background-size: round(($sgl-base-font-size * $sgl-base-line-height)) * 1px round(($sgl-base-font-size * $sgl-base-line-height)) * 1px;
-    }
-
-    body {
-        box-shadow: 1px 0px 0px hsla(200, 100%, 50%, .3), -1px 0px 0px hsla(200, 100%, 50%, .3);
-        margin: 0 auto;
-        max-width: 75%;
-        padding: round(($sgl-base-font-size * $sgl-base-line-height)) * 1px;
-    }
+    @include sgl-show-grid($sgl-base-font-size, $sgl-base-line-height);
 }
 
 /// To use in the `<body>`.
@@ -37,6 +26,7 @@
 /// }
 
 @mixin sgl-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit) {
+    
     $line-height: round(($font-size * $sgl-base-line-height));
 
     @if ($unit == "px" or $unit == "pxrem") {
@@ -126,16 +116,28 @@
 /// }
 
 @mixin sgl-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size) {
+    
     $font-size: $sgl-base-font-size;
     $scale: $sgl-scale-factor;
     $computed-font-size: round($font-size * sgl-exponent($scale, $step));
     $line-height: round($font-size * $sgl-base-line-height);
     $lines: ceil($computed-font-size / $line-height);
     $computed-line-height: $line-height * $lines;
-
     $margin-top: $line-height;
+
+    @if($sgl-debug-mode == true) {
+        @include sgl-show-margins($line-height);
+    }
+
     @if ($step > 1) {
         $margin-top: $line-height * 2;
+
+        @if($sgl-debug-mode == true) {
+            &:before {
+                height: $line-height * 2 * 1px; 
+                top: - $line-height * 2 * 1px;
+            }
+        }
     }
 
     @if ($unit == "px" or $unit == "pxrem") {
@@ -181,6 +183,10 @@
 
 @mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size) {
     $margin: round($base-value * $sgl-base-line-height);
+
+    @if ($sgl-debug-mode == true) {
+        @include sgl-show-margins($margin);
+    }
 
     @if ($unit == "px" or $unit == "pxrem") {
         margin-bottom: $margin * 1px;
