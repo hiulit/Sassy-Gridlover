@@ -123,41 +123,46 @@
     $line-height: round($font-size * $sgl-base-line-height);
     $lines: ceil($computed-font-size / $line-height);
     $computed-line-height: $line-height * $lines;
+    $margin-bottom: $line-height;
     $margin-top: $line-height;
 
-    @if($sgl-debug-mode == true) {
-        @include sgl-show-margins($line-height);
+    @if ($step == 3) {
+        $margin-bottom: $line-height * 2;
+        $margin-top: $line-height;
     }
 
-    @if ($step > 1) {
-        $margin-top: $line-height * 2;
+    @if ($step == 2) {
+        $margin-bottom: $line-height;
+        $margin-top: $line-height;
+    }
 
-        @if($sgl-debug-mode == true) {
-            &:before {
-                height: $line-height * 2 * 1px; 
-                top: - $line-height * 2 * 1px;
-            }
-        }
+    @if ($step <= 1) {
+        $margin-bottom: 0;
+        $margin-top: $line-height;
+    }
+
+    @if($sgl-debug-mode == true) {
+        @include sgl-show-margins($margin-bottom, $margin-top);
     }
 
     @if ($unit == "px" or $unit == "pxrem") {
         font-size: $computed-font-size * 1px;
         line-height: $computed-line-height * 1px;
-        margin-bottom: $line-height * 1px;
+        margin-bottom: $margin-bottom * 1px;
         margin-top: $margin-top * 1px;
     }
 
     @if ($unit == "rem" or $unit == "pxrem") {
         font-size: sgl-rem-calc($computed-font-size);
         line-height: sgl-rem-calc($computed-line-height);
-        margin-bottom: sgl-rem-calc($line-height);
+        margin-bottom: sgl-rem-calc($margin-bottom);
         margin-top: sgl-rem-calc($margin-top);
     }
 
     @if ($unit == "em") {
         font-size: decimal-ceil(sgl-em-calc($computed-font-size, $base-value), 5);
         line-height: decimal-ceil(sgl-em-calc($computed-line-height, $computed-font-size), 5);
-        margin-bottom: decimal-ceil(sgl-em-calc($line-height, $computed-font-size), 5);
+        margin-bottom: decimal-ceil(sgl-em-calc($margin-bottom, $computed-font-size), 5);
         margin-top: decimal-ceil(sgl-em-calc($margin-top, $computed-font-size), 5);
     }
 }
@@ -182,24 +187,27 @@
 /// }
 
 @mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size) {
+    
     $margin: round($base-value * $sgl-base-line-height);
+    $margin-bottom: $margin;
+    $margin-top: 0;
 
     @if ($sgl-debug-mode == true) {
-        @include sgl-show-margins($margin);
+        @include sgl-show-margins($margin-bottom, $margin-top);
     }
 
     @if ($unit == "px" or $unit == "pxrem") {
         margin-bottom: $margin * 1px;
-        margin-top: $margin * 1px;
+        margin-top: $margin-top;
     }
 
     @if ($unit == "rem" or $unit == "pxrem") {
         margin-bottom: sgl-rem-calc($margin);
-        margin-top: sgl-rem-calc($margin);
+        margin-top: $margin-top;
     }
 
     @if ($unit == "em") {
         margin-bottom: decimal-ceil(sgl-em-calc($margin, $base-value), 5);
-        margin-top: decimal-ceil(sgl-em-calc($margin, $base-value), 5);
+        margin-top: $margin-top;
     }
 }

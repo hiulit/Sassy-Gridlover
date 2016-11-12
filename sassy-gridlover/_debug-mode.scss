@@ -12,23 +12,24 @@
     }
 }
 
-@mixin sgl-show-margins($line-height) {
+@mixin sgl-show-margins($margin-bottom, $margin-top) {
     position: relative;
     &:before,
     &:after {
         content: "";
         display: block;
-        height: $line-height * 1px;
         left: 0;
         position: absolute;
         width: 100%;
     }
     &:before {
         background: hsla(200, 100%, 50%, .3) url("../../sassy-gridlover/assets/marginTop.svg") 51% top repeat-y;
-        top: - $line-height * 1px;
+        height: $margin-top * 1px;
+        top: - $margin-top * 1px;
     }
     &:after {
         background: hsla(200, 100%, 50%, .3) url("../../sassy-gridlover/assets/marginBottom.svg") 49% bottom repeat-y;
-        bottom: - $line-height * 1px;
+        bottom: - $margin-bottom * 1px;
+        height: $margin-bottom * 1px;
     }
 }
