@@ -1,17 +1,14 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Sassy-Gridlover - v3.1.3</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Sassy-Gridlover - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>Super easy to use Sass mixins to establish a typographic system with modular scale and vertical rhythm. Based on the Gridlover app.</p>
 "><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="https://github.com/hiulit/Sassy-Gridlover">Sassy-Gridlover - v3.1.3</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="sgl-debug-mode" data-type="variable"><a href="#undefined-variable-sgl-debug-mode">sgl-debug-mode</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="sgl-base-font-size" data-type="variable"><a href="#undefined-variable-sgl-base-font-size">sgl-base-font-size</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="sgl-base-line-height" data-type="variable"><a href="#undefined-variable-sgl-base-line-height">sgl-base-line-height</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="sgl-base-unit" data-type="variable"><a href="#undefined-variable-sgl-base-unit">sgl-base-unit</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="sgl-scale-factor" data-type="variable"><a href="#undefined-variable-sgl-scale-factor">sgl-scale-factor</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="sgl-body" data-type="mixin"><a href="#undefined-mixin-sgl-body">sgl-body</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="sgl-heading" data-type="mixin"><a href="#undefined-mixin-sgl-heading">sgl-heading</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="sgl-margins" data-type="mixin"><a href="#undefined-mixin-sgl-margins">sgl-margins</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="undefined-variable-sgl-debug-mode"><h3 class="item__heading"><a class="item__name" href="#variable-sgl-debug-mode">sgl-debug-mode</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$sgl-debug-mode: false !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Enables/disables <strong>Debug mode</strong> (<code>true</code>/<code>false</code>).</p><p>Outputs background lines imitating a notebook&#39;s sheet.</p><p>Declare it in your own <code>_variables.scss</code>, <code>_config.scss</code> or the like.</p><p>Basically, it must be declared before the <code>@import &quot;sassy-gridlover&quot;</code>.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Boolean</code></p><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>$sgl-debug-mode: true;</code></pre></div><div class="item__example example"><pre class="example__code language-css"><code>html {
-	background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
-	background-position: left -1px;
-	background-repeat: repeat;
-		background-size: 22px 22px;
+       background-image: linear-gradient(rgba(0, 170, 255, 0.3) 1px, transparent 1px);
+       background-position: left top;
+       background-size: 22px 22px;
 }
 
 body {
-	box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3);
-	margin: 0 auto;
-	max-width: 75%;
-	padding: 22px;
-}</code></pre></div></section><section class="main__item container item" id="undefined-variable-sgl-base-font-size"><h3 class="item__heading"><a class="item__name" href="#variable-sgl-base-font-size">sgl-base-font-size</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$sgl-base-font-size: 18 !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Base font size.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Number</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sgl-heading"><code>sgl-heading</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-sgl-base-line-height"><h3 class="item__heading"><a class="item__name" href="#variable-sgl-base-line-height">sgl-base-line-height</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$sgl-base-line-height: 1.2 !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Base line height.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Number</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sgl-body"><code>sgl-body</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sgl-heading"><code>sgl-heading</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sgl-margins"><code>sgl-margins</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-sgl-base-unit"><h3 class="item__heading"><a class="item__name" href="#variable-sgl-base-unit">sgl-base-unit</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$sgl-base-unit: &quot;pxrem&quot; !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Base unit (<code>px</code>, <code>em</code>, <code>rem</code>, <code>pxrem</code>).</p></div><h3 class="item__sub-heading">Type</h3><p><code>String</code></p></section><section class="main__item container item" id="undefined-variable-sgl-scale-factor"><h3 class="item__heading"><a class="item__name" href="#variable-sgl-scale-factor">sgl-scale-factor</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$sgl-scale-factor: $GOLDEN_SECTION !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Scale factor.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Number</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sgl-heading"><code>sgl-heading</code></a></li></ul></section></section><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-sgl-body"><h3 class="item__heading"><a class="item__name" href="#mixin-sgl-body">sgl-body</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin sgl-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit) { 
+       box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3);
+}</code></pre></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sgl-heading"><code>sgl-heading</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sgl-margins"><code>sgl-margins</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-sgl-base-font-size"><h3 class="item__heading"><a class="item__name" href="#variable-sgl-base-font-size">sgl-base-font-size</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$sgl-base-font-size: 18 !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Base font size.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Number</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sgl-heading"><code>sgl-heading</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-sgl-base-line-height"><h3 class="item__heading"><a class="item__name" href="#variable-sgl-base-line-height">sgl-base-line-height</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$sgl-base-line-height: 1.2 !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Base line height.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Number</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sgl-body"><code>sgl-body</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sgl-heading"><code>sgl-heading</code></a></li><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sgl-margins"><code>sgl-margins</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-sgl-base-unit"><h3 class="item__heading"><a class="item__name" href="#variable-sgl-base-unit">sgl-base-unit</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$sgl-base-unit: &quot;pxrem&quot; !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Base unit (<code>px</code>, <code>em</code>, <code>rem</code>, <code>pxrem</code>).</p></div><h3 class="item__sub-heading">Type</h3><p><code>String</code></p></section><section class="main__item container item" id="undefined-variable-sgl-scale-factor"><h3 class="item__heading"><a class="item__name" href="#variable-sgl-scale-factor">sgl-scale-factor</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$sgl-scale-factor: $GOLDEN_SECTION !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Scale factor.</p></div><h3 class="item__sub-heading">Type</h3><p><code>Number</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-sgl-heading"><code>sgl-heading</code></a></li></ul></section></section><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-sgl-body"><h3 class="item__heading"><a class="item__name" href="#mixin-sgl-body">sgl-body</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin sgl-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit) { 
+    
     $line-height: round(($font-size * $sgl-base-line-height));
 
     @if ($unit == &quot;px&quot; or $unit == &quot;pxrem&quot;) {
@@ -25,8 +22,8 @@ body {
     }
 
     @if ($unit == &quot;em&quot;) {
-        font-size: decimal-ceil(sgl-em-calc($font-size, $SGL_DEFAULT_FONT_SIZE), 5);
-        line-height: decimal-ceil(sgl-em-calc($line-height, $font-size), 5);
+        font-size: sgl-decimal-ceil(sgl-em-calc($font-size, $SGL_DEFAULT_FONT_SIZE), 5);
+        line-height: sgl-decimal-ceil(sgl-em-calc($line-height, $font-size), 5);
     }
  }" data-collapsed="@mixin sgl-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit) { ... }"><code>@mixin sgl-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>To use in the <code>&lt;body&gt;</code>.</p><p>Outputs <code>font-size</code> and <code>line-height</code>.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$font-size</code></th><td data-label="desc"><p>Base font size</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$sgl-base-font-size</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$unit</code></th><td data-label="desc"><p>Unit to output</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>$sgl-base-unit</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>body {
 	@include sgl-body($sgl-base-font-size, &quot;pxrem&quot;);
@@ -36,37 +33,54 @@ body {
     font-size: 1.125rem;
     line-height: 1.375rem;
 }</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-sgl-base-line-height"><code>sgl-base-line-height</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-sgl-heading"><h3 class="item__heading"><a class="item__name" href="#mixin-sgl-heading">sgl-heading</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin sgl-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size) { 
+    
     $font-size: $sgl-base-font-size;
     $scale: $sgl-scale-factor;
     $computed-font-size: round($font-size * sgl-exponent($scale, $step));
     $line-height: round($font-size * $sgl-base-line-height);
     $lines: ceil($computed-font-size / $line-height);
     $computed-line-height: $line-height * $lines;
-
+    $margin-bottom: $line-height;
     $margin-top: $line-height;
-    @if ($step &gt; 1) {
-        $margin-top: $line-height * 2;
+
+    @if ($step == 3) {
+        $margin-bottom: $line-height * 2;
+        $margin-top: $line-height;
+    }
+
+    @if ($step == 2) {
+        $margin-bottom: $line-height;
+        $margin-top: $line-height;
+    }
+
+    @if ($step &lt;= 1) {
+        $margin-bottom: 0;
+        $margin-top: $line-height;
+    }
+
+    @if($sgl-debug-mode == true) {
+        @include sgl-show-margins($margin-bottom, $margin-top, $computed-font-size);
     }
 
     @if ($unit == &quot;px&quot; or $unit == &quot;pxrem&quot;) {
         font-size: $computed-font-size * 1px;
         line-height: $computed-line-height * 1px;
-        margin-bottom: $line-height * 1px;
+        margin-bottom: $margin-bottom * 1px;
         margin-top: $margin-top * 1px;
     }
 
     @if ($unit == &quot;rem&quot; or $unit == &quot;pxrem&quot;) {
         font-size: sgl-rem-calc($computed-font-size);
         line-height: sgl-rem-calc($computed-line-height);
-        margin-bottom: sgl-rem-calc($line-height);
+        margin-bottom: sgl-rem-calc($margin-bottom);
         margin-top: sgl-rem-calc($margin-top);
     }
 
     @if ($unit == &quot;em&quot;) {
-        font-size: decimal-ceil(sgl-em-calc($computed-font-size, $base-value), 5);
-        line-height: decimal-ceil(sgl-em-calc($computed-line-height, $computed-font-size), 5);
-        margin-bottom: decimal-ceil(sgl-em-calc($line-height, $computed-font-size), 5);
-        margin-top: decimal-ceil(sgl-em-calc($margin-top, $computed-font-size), 5);
+        font-size: sgl-decimal-ceil(sgl-em-calc($computed-font-size, $base-value), 5);
+        line-height: sgl-decimal-ceil(sgl-em-calc($computed-line-height, $computed-font-size), 5);
+        margin-bottom: sgl-decimal-ceil(sgl-em-calc($margin-bottom, $computed-font-size), 5);
+        margin-top: sgl-decimal-ceil(sgl-em-calc($margin-top, $computed-font-size), 5);
     }
  }" data-collapsed="@mixin sgl-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size) { ... }"><code>@mixin sgl-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>To use in headings <code>&lt;h1&gt; - &lt;h4&gt;</code>.</p><p>Outputs <code>font-size</code>, <code>line-height</code>, <code>margin-bottom</code> and <code>margin-top</code>.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$step</code></th><td data-label="desc"><p><code>&lt;h1&gt;</code> &rarr; <code>$step: 3</code></p><p><code>&lt;h2&gt;</code> &rarr; <code>$step: 2</code></p><p><code>&lt;h3&gt;</code> &rarr; <code>$step: 1</code></p><p><code>&lt;h4&gt;</code> &rarr; <code>$step: 0</code></p></td><td data-label="type"><code>Number</code></td><td data-label="default">&mdash;<span class="visually-hidden">none</span></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$unit</code></th><td data-label="desc"><p>Unit to output</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>$sgl-base-unit</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$base-value</code></th><td data-label="desc"><p>Optional call with a different base font size when using em</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$sgl-base-font-size</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>h1 {
 	@include sgl-heading(3, &quot;em&quot;);
@@ -116,22 +130,29 @@ h4 {
     line-height: 1.375rem;
     margin-bottom: 1.375rem;
     margin-top: 1.375rem;
-}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-sgl-base-font-size"><code>sgl-base-font-size</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-sgl-scale-factor"><code>sgl-scale-factor</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-sgl-base-line-height"><code>sgl-base-line-height</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-sgl-margins"><h3 class="item__heading"><a class="item__name" href="#mixin-sgl-margins">sgl-margins</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size) { 
+}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-sgl-base-font-size"><code>sgl-base-font-size</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-sgl-scale-factor"><code>sgl-scale-factor</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-sgl-base-line-height"><code>sgl-base-line-height</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-sgl-debug-mode"><code>sgl-debug-mode</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-sgl-margins"><h3 class="item__heading"><a class="item__name" href="#mixin-sgl-margins">sgl-margins</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size) { 
+    
     $margin: round($base-value * $sgl-base-line-height);
+    $margin-bottom: $margin;
+    $margin-top: 0;
+
+    @if ($sgl-debug-mode == true) {
+        @include sgl-show-margins($margin-bottom, $margin-top, $base-value);
+    }
 
     @if ($unit == &quot;px&quot; or $unit == &quot;pxrem&quot;) {
         margin-bottom: $margin * 1px;
-        margin-top: $margin * 1px;
+        margin-top: $margin-top;
     }
 
     @if ($unit == &quot;rem&quot; or $unit == &quot;pxrem&quot;) {
         margin-bottom: sgl-rem-calc($margin);
-        margin-top: sgl-rem-calc($margin);
+        margin-top: $margin-top;
     }
 
     @if ($unit == &quot;em&quot;) {
-        margin-bottom: decimal-ceil(sgl-em-calc($margin, $base-value), 5);
-        margin-top: decimal-ceil(sgl-em-calc($margin, $base-value), 5);
+        margin-bottom: sgl-decimal-ceil(sgl-em-calc($margin, $base-value), 5);
+        margin-top: $margin-top;
     }
  }" data-collapsed="@mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size) { ... }"><code>@mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size) { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>To use in <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;pre&gt;</code>, <code>&lt;table&gt;</code>, <code>&lt;blockquote&gt;</code>, etc.</p><p>Outputs <code>margin-bottom</code> and <code>margin-top</code>.</p></div><h3 class="item__sub-heading">Parameters</h3><table class="item__parameters"><thead><tr><th scope="col"><span class="visually-hidden">parameter</span>Name</th><th scope="col"><span class="visually-hidden">parameter</span>Description</th><th scope="col"><span class="visually-hidden">parameter</span>Type</th><th scope="col"><span class="visually-hidden">parameter</span>Default value</th></tr></thead><tbody><tr class="item__parameter"><th scope="row" data-label="name"><code>$unit</code></th><td data-label="desc"><p>Unit to output</p></td><td data-label="type"><code>String</code></td><td data-label="default"><code>$sgl-base-unit</code></td></tr><tr class="item__parameter"><th scope="row" data-label="name"><code>$base-value</code></th><td data-label="desc"><p>Optional call with a different base font size when using em</p></td><td data-label="type"><code>Number</code></td><td data-label="default"><code>$sgl-base-font-size</code></td></tr></tbody></table><h3 class="item__sub-heading">Example</h3><div class="item__example example"><pre class="example__code language-scss"><code>p, ul, ol, pre, table, blockquote {
 	@include sgl-margins();
@@ -140,4 +161,4 @@ h4 {
    margin-top: 22px;
    margin-bottom: 1.375rem;
    margin-top: 1.375rem;
-}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-sgl-base-line-height"><code>sgl-base-line-height</code></a></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><a class="project-info__name" href="https://github.com/hiulit/Sassy-Gridlover">Sassy-Gridlover</a><!-- Version --> <span class="project-info__version">- v3.1.3</span><!-- License --> <span class="project-info__license">, under Unlicense</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
+}</code></pre></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-sgl-base-line-height"><code>sgl-base-line-height</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-sgl-debug-mode"><code>sgl-debug-mode</code></a></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><a class="project-info__name" href="https://github.com/hiulit/Sassy-Gridlover">Sassy-Gridlover</a><!-- Version --> <span class="project-info__version">- v3.1.3</span><!-- License --> <span class="project-info__license">, under Unlicense</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
