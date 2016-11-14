@@ -147,15 +147,15 @@ $sgl-scale-factor: $GOLDEN_SECTION !default;
 Set `$sgl-debug-mode` to `true` (`false` by default) to output background lines imitating a notebook's sheet.
 
 Declare it in your own `_variables.scss`, `_config.scss` or the like.  
-Basically, it must be declared before the `@import "sassy-gridlover"`.
+Basically, **it must be declared before the `@import "sassy-gridlover"`**.
 
 ![Example of Sassy-Gridlover's debug mode](example/example.png)
 
 ## Mixins
 
-By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em`, `rem`.
+By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em` or `rem`.
 
-### Sassy-Gridlover body
+### Sassy-Gridlover body (sgl-body)
 
 To use in `<body>`.
 
@@ -170,7 +170,7 @@ Accepts 2 arguments:
 * `$font-size`: Base font size (without unit, just a number).
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
 
-### Sassy-Gridlover heading
+### Sassy-Gridlover heading (sgl-heading)
 
 To use in headings `<h1> - <h4>`.
 
@@ -190,7 +190,7 @@ Accepts 3 arguments:
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
 * `$base-value`: Optional call with a different base font size when using em.
 
-### Sassy-Gridlover margins
+### Sassy-Gridlover margins (sgl-margins)
 
 To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 
