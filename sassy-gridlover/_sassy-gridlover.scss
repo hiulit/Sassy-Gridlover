@@ -40,8 +40,8 @@
     }
 
     @if ($unit == "em") {
-        font-size: decimal-ceil(sgl-em-calc($font-size, $SGL_DEFAULT_FONT_SIZE), 5);
-        line-height: decimal-ceil(sgl-em-calc($line-height, $font-size), 5);
+        font-size: sgl-decimal-ceil(sgl-em-calc($font-size, $SGL_DEFAULT_FONT_SIZE), 5);
+        line-height: sgl-decimal-ceil(sgl-em-calc($line-height, $font-size), 5);
     }
 }
 
@@ -160,10 +160,10 @@
     }
 
     @if ($unit == "em") {
-        font-size: decimal-ceil(sgl-em-calc($computed-font-size, $base-value), 5);
-        line-height: decimal-ceil(sgl-em-calc($computed-line-height, $computed-font-size), 5);
-        margin-bottom: decimal-ceil(sgl-em-calc($margin-bottom, $computed-font-size), 5);
-        margin-top: decimal-ceil(sgl-em-calc($margin-top, $computed-font-size), 5);
+        font-size: sgl-decimal-ceil(sgl-em-calc($computed-font-size, $base-value), 5);
+        line-height: sgl-decimal-ceil(sgl-em-calc($computed-line-height, $computed-font-size), 5);
+        margin-bottom: sgl-decimal-ceil(sgl-em-calc($margin-bottom, $computed-font-size), 5);
+        margin-top: sgl-decimal-ceil(sgl-em-calc($margin-top, $computed-font-size), 5);
     }
 }
 
@@ -207,7 +207,7 @@
     }
 
     @if ($unit == "em") {
-        margin-bottom: decimal-ceil(sgl-em-calc($margin, $base-value), 5);
+        margin-bottom: sgl-decimal-ceil(sgl-em-calc($margin, $base-value), 5);
         margin-top: $margin-top;
     }
 }
