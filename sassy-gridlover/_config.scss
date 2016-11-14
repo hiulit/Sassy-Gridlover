@@ -33,7 +33,7 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 ///
 /// Declare it in your own `_variables.scss`, `_config.scss` or the like.
 ///
-/// Basically, it must be declared before the `@import "sassy-gridlover"`.
+/// Basically, **it must be declared before the** `@import "sassy-gridlover"`.
 /// 
 /// @example scss
 ///     $sgl-debug-mode: true;
