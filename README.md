@@ -149,6 +149,8 @@ Set `$sgl-debug-mode` to `true` (`false` by default) to output background lines 
 Declare it in your own `_variables.scss`, `_config.scss` or the like.  
 Basically, it must be declared before the `@import "sassy-gridlover"`.
 
+![Example of Sassy-Gridlover's debug mode](example/example.png)
+
 ## Mixins
 
 By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em`, `rem`.
