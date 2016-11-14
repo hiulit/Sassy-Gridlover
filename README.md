@@ -62,7 +62,7 @@ Import `_sassy-gridlover.scss` to your main style sheet.
 
 Change the configurable variables values in `_config.scss` to your liking.
 
-I'd encourage you **not to change them directly here**, though. I'd rather declare them in your `_variables.scss`, `_config.scss` or the like.
+I would encourage you **not to change them directly here**, though. It would be better to declare them in your `_variables.scss`, `_config.scss` or the like.
 
 ### _config.scss
 
