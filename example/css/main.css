@@ -30,12 +30,12 @@ h1:before, h1:after {
   width: 100%;
 }
 h1:before {
-  background: rgba(0, 170, 255, 0.3) url("../../sassy-gridlover/assets/marginTop.svg") 51% top repeat-y;
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
   height: 22px;
   top: -22px;
 }
 h1:after {
-  background: rgba(0, 170, 255, 0.3) url("../../sassy-gridlover/assets/marginBottom.svg") 49% bottom repeat-y;
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>\a') 49% bottom repeat-y;
   bottom: -44px;
   height: 44px;
 }
@@ -55,12 +55,12 @@ h2:before, h2:after {
   width: 100%;
 }
 h2:before {
-  background: rgba(0, 170, 255, 0.3) url("../../sassy-gridlover/assets/marginTop.svg") 51% top repeat-y;
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
   height: 22px;
   top: -22px;
 }
 h2:after {
-  background: rgba(0, 170, 255, 0.3) url("../../sassy-gridlover/assets/marginBottom.svg") 49% bottom repeat-y;
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>\a') 49% bottom repeat-y;
   bottom: -22px;
   height: 22px;
 }
@@ -84,12 +84,12 @@ h3:before, h3:after {
   width: 100%;
 }
 h3:before {
-  background: rgba(0, 170, 255, 0.3) url("../../sassy-gridlover/assets/marginTop.svg") 51% top repeat-y;
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
   height: 22px;
   top: -22px;
 }
 h3:after {
-  background: rgba(0, 170, 255, 0.3) url("../../sassy-gridlover/assets/marginBottom.svg") 49% bottom repeat-y;
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>\a') 49% bottom repeat-y;
   bottom: 0px;
   height: 0px;
 }
@@ -113,12 +113,12 @@ h4:before, h4:after {
   width: 100%;
 }
 h4:before {
-  background: rgba(0, 170, 255, 0.3) url("../../sassy-gridlover/assets/marginTop.svg") 51% top repeat-y;
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
   height: 22px;
   top: -22px;
 }
 h4:after {
-  background: rgba(0, 170, 255, 0.3) url("../../sassy-gridlover/assets/marginBottom.svg") 49% bottom repeat-y;
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>\a') 49% bottom repeat-y;
   bottom: 0px;
   height: 0px;
 }
@@ -138,12 +138,12 @@ p:before, p:after, ul:before, ul:after, ol:before, ol:after, pre:before, pre:aft
   width: 100%;
 }
 p:before, ul:before, ol:before, pre:before, table:before, blockquote:before {
-  background: rgba(0, 170, 255, 0.3) url("../../sassy-gridlover/assets/marginTop.svg") 51% top repeat-y;
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
   height: 0px;
   top: 0px;
 }
 p:after, ul:after, ol:after, pre:after, table:after, blockquote:after {
-  background: rgba(0, 170, 255, 0.3) url("../../sassy-gridlover/assets/marginBottom.svg") 49% bottom repeat-y;
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>\a') 49% bottom repeat-y;
   bottom: -22px;
   height: 22px;
 }
