@@ -1,55 +1,169 @@
 html {
-  background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
-  background-position: left -1px;
-  background-repeat: repeat;
-  background-size: 22px 22px; }
+  background-image: linear-gradient(rgba(0, 170, 255, 0.3) 1px, transparent 1px);
+  background-position: left top;
+  background-size: 22px 22px;
+}
 
 body {
   box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3);
-  margin: 0 auto;
-  max-width: 75%;
-  padding: 22px; }
+}
 
 body {
   font-size: 1.125rem;
-  line-height: 1.375rem; }
+  line-height: 1.375rem;
+}
 
 h1 {
+  position: relative;
   font-size: 4.22223em;
   line-height: 1.1579em;
-  margin-bottom: 0.28948em;
-  margin-top: 0.57895em; }
+  margin-bottom: 0.57895em;
+  margin-top: 0.28948em;
+}
+h1:before, h1:after {
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+h1:before {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
+  height: 22px;
+  top: -22px;
+  height: 1.375rem;
+  top: -1.375rem;
+}
+h1:after {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>\a') 49% bottom repeat-y;
+  bottom: -44px;
+  height: 44px;
+  bottom: -2.75rem;
+  height: 2.75rem;
+}
 
 h2 {
+  position: relative;
   font-size: 47px;
   line-height: 66px;
   margin-bottom: 22px;
-  margin-top: 44px; }
+  margin-top: 22px;
+}
+h2:before, h2:after {
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+h2:before {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
+  height: 22px;
+  top: -22px;
+  height: 1.375rem;
+  top: -1.375rem;
+}
+h2:after {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>\a') 49% bottom repeat-y;
+  bottom: -22px;
+  height: 22px;
+  bottom: -1.375rem;
+  height: 1.375rem;
+}
 
 h3 {
+  position: relative;
   font-size: 29px;
   line-height: 44px;
-  margin-bottom: 22px;
+  margin-bottom: 0px;
   margin-top: 22px;
   font-size: 1.8125rem;
   line-height: 2.75rem;
-  margin-bottom: 1.375rem;
-  margin-top: 1.375rem; }
+  margin-bottom: 0rem;
+  margin-top: 1.375rem;
+}
+h3:before, h3:after {
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+h3:before {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
+  height: 22px;
+  top: -22px;
+  height: 1.375rem;
+  top: -1.375rem;
+}
+h3:after {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>\a') 49% bottom repeat-y;
+  bottom: 0px;
+  height: 0px;
+  bottom: 0rem;
+  height: 0rem;
+}
 
 h4 {
+  position: relative;
   font-size: 18px;
   line-height: 22px;
-  margin-bottom: 22px;
+  margin-bottom: 0px;
   margin-top: 22px;
   font-size: 1.125rem;
   line-height: 1.375rem;
-  margin-bottom: 1.375rem;
-  margin-top: 1.375rem; }
+  margin-bottom: 0rem;
+  margin-top: 1.375rem;
+}
+h4:before, h4:after {
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+h4:before {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
+  height: 22px;
+  top: -22px;
+  height: 1.375rem;
+  top: -1.375rem;
+}
+h4:after {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>\a') 49% bottom repeat-y;
+  bottom: 0px;
+  height: 0px;
+  bottom: 0rem;
+  height: 0rem;
+}
 
 p, ul, ol, pre, table, blockquote {
+  position: relative;
   margin-bottom: 22px;
-  margin-top: 22px;
+  margin-top: 0;
   margin-bottom: 1.375rem;
-  margin-top: 1.375rem; }
+  margin-top: 0;
+}
+p:before, p:after, ul:before, ul:after, ol:before, ol:after, pre:before, pre:after, table:before, table:after, blockquote:before, blockquote:after {
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+p:before, ul:before, ol:before, pre:before, table:before, blockquote:before {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
+  height: 0px;
+  top: 0px;
+  height: 0rem;
+  top: 0rem;
+}
+p:after, ul:after, ol:after, pre:after, table:after, blockquote:after {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>\a') 49% bottom repeat-y;
+  bottom: -22px;
+  height: 22px;
+  bottom: -1.375rem;
+  height: 1.375rem;
+}
 
 /*# sourceMappingURL=main.css.map */

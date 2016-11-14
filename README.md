@@ -21,6 +21,13 @@ Install **Sassy-Gridlover** via bower
 ```bash
 $ bower install sassy-gridlover
 ```
+
+Install **Sassy-Gridlover** via npm
+
+```bash
+$ npm install sassy-gridlover
+```
+
 or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the repository and include the `sassy-gridlover` folder to your Sass directory.
 
 ## Getting started
@@ -55,7 +62,7 @@ Import `_sassy-gridlover.scss` to your main style sheet.
 
 Change the configurable variables values in `_config.scss` to your liking.
 
-Although I'd encourage you not to change them directly here. I'd rather declare them in your `_variables.scss`, `_config.scss` or the like.
+I would encourage you **not to change them directly here**, though. It would be better to declare them in your `_variables.scss`, `_config.scss` or the like.
 
 ### _config.scss
 
@@ -98,22 +105,18 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 /// Basically, it must be declared before the `@import "sassy-gridlover"`.
 /// 
 /// @example scss
-/// 	$sgl-debug-mode: true;
+///     $sgl-debug-mode: true;
 ///
 /// @example css
-/// 	html {
-/// 		background-image: linear-gradient(to bottom, rgba(0, 170, 255, 0.3) 1px, transparent 1px);
-/// 		background-position: left -1px;
-/// 		background-repeat: repeat;
-///  		background-size: 22px 22px;
-/// 	}
+///     html {
+///         background-image: linear-gradient(rgba(0, 170, 255, 0.3) 1px, transparent 1px);
+///         background-position: left top;
+///         background-size: 22px 22px;
+///     }
 /// 
-/// 	body {
-/// 		box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3);
-/// 		margin: 0 auto;
-/// 		max-width: 75%;
-/// 		padding: 22px;
-/// 	}
+///     body {
+///         box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3);
+///     }
 /// 
 /// @type boolean
 $sgl-debug-mode: false !default;
@@ -144,13 +147,15 @@ $sgl-scale-factor: $GOLDEN_SECTION !default;
 Set `$sgl-debug-mode` to `true` (`false` by default) to output background lines imitating a notebook's sheet.
 
 Declare it in your own `_variables.scss`, `_config.scss` or the like.  
-Basically, it must be declared before the `@import "sassy-gridlover"`.
+Basically, **it must be declared before the `@import "sassy-gridlover"`**.
+
+![Example of Sassy-Gridlover's debug mode](example/example.png)
 
 ## Mixins
 
-By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em`, `rem`.
+By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em` or `rem`.
 
-### Sassy-Gridlover body
+### Sassy-Gridlover body (sgl-body)
 
 To use in `<body>`.
 
@@ -165,7 +170,7 @@ Accepts 2 arguments:
 * `$font-size`: Base font size (without unit, just a number).
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
 
-### Sassy-Gridlover heading
+### Sassy-Gridlover heading (sgl-heading)
 
 To use in headings `<h1> - <h4>`.
 
@@ -185,7 +190,7 @@ Accepts 3 arguments:
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
 * `$base-value`: Optional call with a different base font size when using em.
 
-### Sassy-Gridlover margins
+### Sassy-Gridlover margins (sgl-margins)
 
 To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 
@@ -285,6 +290,19 @@ p, ul, ol, pre, table, blockquote {
 ```
 
 ## Changelog
+
+### v4.0.0 (November 14th 2016)
+
+**NOTE:** This release contains breaking changes!
+
+* Prefixed with `sgl-` some functions that were left behind in previous versions (so they don't collide with other functions with the same name from other frameworks [#9](https://github.com/hiulit/Sassy-Gridlover/issues/9)).
+* Changed some margins (to keep **Sassy-Gridlover** up to date with [Gridlover](http://www.gridlover.net/app/)'s margins changes).
+* Matched example HTML with [Gridlover](http://www.gridlover.net/app/)'s.
+* Refactored [debug mode](#debug-mode) (created `_debug-mode.css` with a couple of mixins: `sgl-show-grid` and `sgl-show-margins`).
+    * Removed `max-width` and `padding` from `<body>`.
+    * Fixed background lines styles.
+    * Added arrows to show margins directions.
+    * Now the [debug mode](#debug-mode) works with the different units (`px`, `em`, `rem`, `pxrem`).
 
 ### v3.1.3 (August 9th 2016)
 

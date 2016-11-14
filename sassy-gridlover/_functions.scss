@@ -1,7 +1,7 @@
 // ROUND A NUMBER TO SPECIFIED DIGITS
 // @see gist.github.com/terkel/4373420
 
-@function decimal-round($number, $digits: 0, $mode: round) {
+@function sgl-decimal-round($number, $digits: 0, $mode: round) {
     $n: 1;
     // $number must be a number
     @if type-of($number) != number {
@@ -31,12 +31,12 @@
     }
 }
 
-@function decimal-ceil($number, $digits: 0) {
-    @return decimal-round($number, $digits, ceil);
+@function sgl-decimal-ceil($number, $digits: 0) {
+    @return sgl-decimal-round($number, $digits, ceil);
 }
 
-@function decimal-floor($number, $digits: 0) {
-    @return decimal-round($number, $digits, floor);
+@function sgl-decimal-floor($number, $digits: 0) {
+    @return sgl-decimal-round($number, $digits, floor);
 }
 
 // EXPONENT
