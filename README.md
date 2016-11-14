@@ -291,6 +291,19 @@ p, ul, ol, pre, table, blockquote {
 
 ## Changelog
 
+### v4.0.0 (November 14th 2016)
+
+**NOTE:** This release contains breaking changes!
+
+* Prefixed with `sgl-` some functions that were left behind in previous versions (so they don't collide with other functions with the same name from other frameworks [#9](https://github.com/hiulit/Sassy-Gridlover/issues/9)).
+* Changed some margins (to keep **Sassy-Gridlover** up to date with [Gridlover](http://www.gridlover.net/app/)'s margins changes).
+* Matched example HTML with [Gridlover](http://www.gridlover.net/app/)'s.
+* Refactored [debug mode](#debug-mode) (created `_debug-mode.css` with a couple of mixins: `sgl-show-grid` and `sgl-show-margins`).
+    * Removed `max-width` and `padding` from `<body>`.
+    * Fixed background lines styles.
+    * Added arrows to show margins directions.
+    * Now the [debug mode](#debug-mode) works with the different units (`px`, `em`, `rem`, `pxrem`).
+
 ### v3.1.3 (August 9th 2016)
 
 * Published Sassy-Gridlover as an [npm package](https://www.npmjs.com/package/sassy-gridlover).
