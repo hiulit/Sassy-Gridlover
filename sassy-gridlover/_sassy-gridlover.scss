@@ -142,7 +142,7 @@
     }
 
     @if($sgl-debug-mode == true) {
-        @include sgl-show-margins($margin-bottom, $margin-top);
+        @include sgl-show-margins($margin-bottom, $margin-top, $computed-font-size);
     }
 
     @if ($unit == "px" or $unit == "pxrem") {
@@ -193,7 +193,7 @@
     $margin-top: 0;
 
     @if ($sgl-debug-mode == true) {
-        @include sgl-show-margins($margin-bottom, $margin-top);
+        @include sgl-show-margins($margin-bottom, $margin-top, $base-value);
     }
 
     @if ($unit == "px" or $unit == "pxrem") {

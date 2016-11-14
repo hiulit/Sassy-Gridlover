@@ -2,7 +2,7 @@
     html {
         background-image: linear-gradient(hsla(200, 100%, 50%, .3) 1px, transparent 1px);
         background-position: left top;
-        background-size: round(($sgl-base-font-size * $sgl-base-line-height)) * 1px round(($sgl-base-font-size * $sgl-base-line-height)) * 1px;
+        background-size: round($sgl-base-font-size * $sgl-base-line-height) * 1px round($sgl-base-font-size * $sgl-base-line-height) * 1px;
     }
 
     body {
@@ -10,7 +10,7 @@
     }
 }
 
-@mixin sgl-show-margins($margin-bottom, $margin-top) {
+@mixin sgl-show-margins($margin-bottom, $margin-top, $computed-font-size) {
     position: relative;
     &:before,
     &:after {
@@ -22,13 +22,39 @@
     }
     &:before {
         background: hsla(200, 100%, 50%, .3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
-        height: $margin-top * 1px;
-        top: - $margin-top * 1px;
+
+        @if == "px" or $sgl-base-unit == "pxrem") {
+            height: $margin-top * 1px;
+            top: - $margin-top * 1px;
+        }
+
+        @if ($sgl-base-unit == "rem" or $sgl-base-unit == "pxrem") {
+            height: sgl-rem-calc($margin-top);
+            top: - sgl-rem-calc($margin-top);
+        }
+
+        @if ($sgl-base-unit == "em") {
+            height: sgl-decimal-ceil(sgl-em-calc($margin-top, $computed-font-size), 5);
+            top: - sgl-decimal-ceil(sgl-em-calc($margin-top, $computed-font-size), 5);
+        }
     }
     &:after {
         background: hsla(200, 100%, 50%, .3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>
 ') 49% bottom repeat-y;
-        bottom: - $margin-bottom * 1px;
-        height: $margin-bottom * 1px;
+
+        @if ($sgl-base-unit == "px" or $sgl-base-unit == "pxrem") {
+            bottom: - $margin-bottom * 1px;
+            height: $margin-bottom * 1px;
+        }
+
+        @if ($sgl-base-unit == "rem" or $sgl-base-unit == "pxrem") {
+            bottom: - sgl-rem-calc($margin-bottom);
+            height: sgl-rem-calc($margin-bottom);
+        }
+
+        @if ($sgl-base-unit == "em") {
+            bottom: - sgl-decimal-ceil(sgl-em-calc($margin-bottom, $computed-font-size), 5);
+            height: sgl-decimal-ceil(sgl-em-calc($margin-bottom, $computed-font-size), 5);
+        }
     }
 }
