@@ -1,6 +1,6 @@
 {
 	"name": "Sassy-Gridlover",
-	"description": "Super easy to use Sass mixins to establish a typographic system with modular scale and vertical rhythm. Based on the Gridlover app http://www.gridlover.net/app/",
+	"description": "Super easy to use Sass mixins to establish a typographic system with modular scale and vertical rhythm. Based on the Gridlover app https://www.gridlover.net/try",
 	"tags": ["typography", "baseline", "modular", "scale", "vertical-rhythm", "mixins", "gridlover"],
 	"website": "https://github.com/hiulit/Sassy-Gridlover",
 	"docs": "http://hiulit.github.io/Sassy-Gridlover/sassdoc/"

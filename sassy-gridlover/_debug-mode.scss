@@ -1,16 +1,14 @@
-@mixin sgl-show-grid($sgl-base-font-size, $sgl-base-line-height) {
-    html {
-        background-image: linear-gradient(hsla(200, 100%, 50%, .3) 1px, transparent 1px);
-        background-position: left top;
-        background-size: round($sgl-base-font-size * $sgl-base-line-height) * 1px round($sgl-base-font-size * $sgl-base-line-height) * 1px;
-    }
+@mixin sgl-show-grid($line-height) {
+    background-image: linear-gradient(hsla(200, 100%, 50%, .3) 1px, transparent 1px);
+    background-position: left top;
+    background-size: $line-height * 1px $line-height * 1px;
 
     body {
         box-shadow: 1px 0px 0px hsla(200, 100%, 50%, .3), -1px 0px 0px hsla(200, 100%, 50%, .3);
     }
 }
 
-@mixin sgl-show-margins($margin-bottom, $margin-top, $computed-font-size) {
+@mixin sgl-show-margins($margin-bottom, $margin-top, $computed-font-size, $unit) {
     position: relative;
     &:before,
     &:after {
@@ -23,36 +21,35 @@
     &:before {
         background: hsla(200, 100%, 50%, .3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
 
-        @if ($sgl-base-unit == "px" or $sgl-base-unit == "pxrem") {
+        @if ($unit == "px" or $unit == "pxrem") {
             height: $margin-top * 1px;
             top: - $margin-top * 1px;
         }
 
-        @if ($sgl-base-unit == "rem" or $sgl-base-unit == "pxrem") {
-            height: sgl-rem-calc($margin-top);
-            top: - sgl-rem-calc($margin-top);
+        @if ($unit == "rem" or $unit == "pxrem") {
+            height: sgl-decimal-ceil(sgl-rem-calc($margin-top, $sgl-root-font-size), 5);
+            top: - sgl-decimal-ceil(sgl-rem-calc($margin-top, $sgl-root-font-size), 5);
         }
 
-        @if ($sgl-base-unit == "em") {
+        @if ($unit == "em") {
             height: sgl-decimal-ceil(sgl-em-calc($margin-top, $computed-font-size), 5);
             top: - sgl-decimal-ceil(sgl-em-calc($margin-top, $computed-font-size), 5);
         }
     }
     &:after {
-        background: hsla(200, 100%, 50%, .3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>
-') 49% bottom repeat-y;
+        background: hsla(200, 100%, 50%, .3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>') 49% bottom repeat-y;
 
-        @if ($sgl-base-unit == "px" or $sgl-base-unit == "pxrem") {
+        @if ($unit == "px" or $unit == "pxrem") {
             bottom: - $margin-bottom * 1px;
             height: $margin-bottom * 1px;
         }
 
-        @if ($sgl-base-unit == "rem" or $sgl-base-unit == "pxrem") {
-            bottom: - sgl-rem-calc($margin-bottom);
-            height: sgl-rem-calc($margin-bottom);
+        @if ($unit == "rem" or $unit == "pxrem") {
+            bottom: - sgl-decimal-ceil(sgl-rem-calc($margin-bottom, $sgl-root-font-size), 5);
+            height: sgl-decimal-ceil(sgl-rem-calc($margin-bottom, $sgl-root-font-size), 5);
         }
 
-        @if ($sgl-base-unit == "em") {
+        @if ($unit == "em") {
             bottom: - sgl-decimal-ceil(sgl-em-calc($margin-bottom, $computed-font-size), 5);
             height: sgl-decimal-ceil(sgl-em-calc($margin-bottom, $computed-font-size), 5);
         }
