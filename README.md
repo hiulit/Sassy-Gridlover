@@ -51,7 +51,7 @@ and 4 mixins:
 @mixin sgl-margins();
 ```
 
-*These are the 4 functionalities of the [Gridlover app](https://www.gridlover.net/try) that you (should) have been playing with*.
+*These are the 4 functionalities of the [Gridlover app](https://www.gridlover.net/try) that you (should) have been playing with* ;)
 
 ## Setup
 
@@ -322,9 +322,14 @@ blockquote {
 **NOTE:** This release contains breaking changes!
 
 * Refactored **Sassy-Gridlover** so it stays up to date with [Gridlover](https://www.gridlover.net/try). Now the base font size and line height is added to `<html>`instead of `<body>`.
-    * Added new mixin `sgl-html()`.
-    * `sgl-body`now  only accepts 1 argument `$unit: $sgl-base-unit` &rarr; `@mixin sgl-body($unit: $sgl-base-unit)`.
-    * ~~ `@mixin sgl-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit)` ~~ **Deprecated**
+    * Added a new mixin: `sgl-html()`.
+    * Created a global variable: `$sgl-root-font-size` (to rule them all!).
+    * `sgl-body()` now only accepts 1 argument `$unit: $sgl-base-unit` &rarr; `@mixin sgl-body($unit: $sgl-base-unit)`.
+    * ~~`@mixin sgl-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit)`~~ **Deprecated**
+    * Fixed some decimals on `rem` outputs.
+    * Simplified `sgl-show-grid()`. Now it goes inside `sgl-html()` and it only accepts 1 argument.
+    * Added `$unit` in `sgl-show-margins()` as a parameter for more flexibility.
+    * `$sgl-base-font-size:` has now `$SGL_DEFAULT_FONT_SIZE` as default.
 
 * Updated links to the [Gridlover app](https://www.gridlover.net/try).
 
