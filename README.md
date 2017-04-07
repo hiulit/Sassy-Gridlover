@@ -221,7 +221,7 @@ Accepts 2 arguments:
 
 ## Example usage
 
-###SCSS
+### SCSS
 
 ```scss
 @import "sassy-gridlover.scss";
@@ -251,7 +251,7 @@ p, ul, ol, pre, table, blockquote {
 }
 ```
 
-###CSS OUTPUT
+### CSS
 
 ```css
 html {
