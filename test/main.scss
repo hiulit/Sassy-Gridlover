@@ -1,0 +1,36 @@
+$sgl-debug-mode: true;
+
+@import "../sassy-gridlover/sassy-gridlover.scss";
+
+html {
+    @include sgl-html();
+}
+
+body {
+    @include sgl-body("pxrem");
+}
+
+h1 {
+    @include sgl-heading(3, "em");
+}
+
+h2 {
+    @include sgl-heading(2, "px");
+}
+
+h3 {
+    @include sgl-heading(1, "pxrem");
+}
+
+h4 {
+    @include sgl-heading(0);
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+    @include sgl-margins();
+}
