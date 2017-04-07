@@ -4,3 +4,4 @@ script:
 language: sass
 before_install:
  - gem install sass
+ - chmod +x test/main.scss
