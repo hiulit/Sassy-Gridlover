@@ -1,4 +1,4 @@
-Sassy-Gridlover
+Sassy-Gridlover [![Build Status](https://travis-ci.org/hiulit/Sassy-Gridlover.svg?branch=master)](https://travis-ci.org/hiulit/Sassy-Gridlover)
 ===============
 
 **Super easy to use Sass mixins** to establish a typographic system with modular scale and vertical rhythm.
@@ -317,6 +317,10 @@ blockquote {
 
 ## Changelog
 
+### v5.1.0 (April 7th 2017)
+
+* Added Travis CI
+
 ### v5.0.0 (April 7th 2017)
 
 **NOTE:** This release contains breaking changes!
@@ -415,6 +419,7 @@ Thanks to:
 * Hugo Giraudel ([@hugogiraudel](https://twitter.com/hugogiraudel)) for helping with issues and [SassDoc](http://sassdoc.com/).
 * Walid Mokrani ([@walmokrani](https://github.com/walmokrani)) for helping with [adding em support](https://github.com/hiulit/Sassy-Gridlover/pull/7).
 * Takeru Suzuki ([@terkel](https://github.com/terkel)) - For the `@function decimal-xxx`.
+* Matt Andrews ([@matthew-andrews](https://github.com/matthew-andrews)) - For his [Travis CI Sass Example](https://github.com/matthew-andrews/sass-example).
 
 ## Unlicense
 
