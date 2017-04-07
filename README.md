@@ -2,7 +2,7 @@ Sassy-Gridlover
 ===============
 
 **Super easy to use Sass mixins** to establish a typographic system with modular scale and vertical rhythm.
-Based on the [Gridlover app](http://www.gridlover.net/app/).
+Based on the [Gridlover app](https://www.gridlover.net/try).
 
 > Gridlover gives you adjustable css for font sizes, line heights and margins.
 > The default css output is for body, p and h1 - h4 headings, but you can of course apply your
@@ -10,7 +10,7 @@ adjusted values to any element by editing the css later.
 
 ## First of all
 
-Go play around with the awesome [Gridlover app](http://www.gridlover.net/app/)!
+Go play around with the awesome [Gridlover app](https://www.gridlover.net/try)!
 
 It's so much fun! :D
 
@@ -42,15 +42,16 @@ $sgl-base-unit;
 $sgl-scale-factor;
 ```
 
-and 3 mixins:
+and 4 mixins:
 
 ```scss
+@mixin sgl-html();
 @mixin sgl-body();
 @mixin sgl-heading();
 @mixin sgl-margins();
 ```
 
-*These are the 3 functionalities of the [Gridlover app](http://www.gridlover.net/app/) that you (should) have been playing with*.
+*These are the 4 functionalities of the [Gridlover app](https://www.gridlover.net/try) that you (should) have been playing with*.
 
 ## Setup
 
@@ -102,8 +103,8 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 ///
 /// Declare it in your own `_variables.scss`, `_config.scss` or the like.
 ///
-/// Basically, it must be declared before the `@import "sassy-gridlover"`.
-/// 
+/// Basically, **it must be declared before the** `@import "sassy-gridlover"`.
+///
 /// @example scss
 ///     $sgl-debug-mode: true;
 ///
@@ -111,20 +112,20 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 ///     html {
 ///         background-image: linear-gradient(rgba(0, 170, 255, 0.3) 1px, transparent 1px);
 ///         background-position: left top;
-///         background-size: 22px 22px;
+///         background-size: 19px 19px;
 ///     }
-/// 
+///
 ///     body {
 ///         box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3);
 ///     }
-/// 
+///
 /// @type boolean
 $sgl-debug-mode: false !default;
 
 /// Base font size.
 ///
 /// @type number
-$sgl-base-font-size: 18 !default;
+$sgl-base-font-size: $SGL_DEFAULT_FONT_SIZE !default;
 
 /// Base line height.
 ///
@@ -146,14 +147,28 @@ $sgl-scale-factor: $GOLDEN_SECTION !default;
 
 Set `$sgl-debug-mode` to `true` (`false` by default) to output background lines imitating a notebook's sheet.
 
-Declare it in your own `_variables.scss`, `_config.scss` or the like.  
+Declare it in your own `_variables.scss`, `_config.scss` or the like.
 Basically, **it must be declared before the `@import "sassy-gridlover"`**.
 
 ![Example of Sassy-Gridlover's debug mode](example/example.png)
 
 ## Mixins
 
-By default, all the mixins will output `pxrem`. But you can also choose to output `px`, `em` or `rem`.
+By default, all the mixins (except `sgl-html`) will output `pxrem`. But you can also choose to output `px`, `em` or `rem`.
+
+### Sassy-Gridlover html (sgl-html)
+
+To use in `<html>`.
+
+Outputs `font-size` and `line-height` always in `px`.
+
+```scss
+@mixin sgl-html($font-size: $sgl-base-font-size)
+```
+
+Accepts 1 argument:
+
+* `$font-size`: Base font size (without unit, just a number).
 
 ### Sassy-Gridlover body (sgl-body)
 
@@ -162,12 +177,11 @@ To use in `<body>`.
 Outputs `font-size` and `line-height`.
 
 ```scss
-@mixin sgl-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit)
+@mixin sgl-body($unit: $sgl-base-unit)
 ```
 
-Accepts 2 arguments:
+Accepts 1 argument:
 
-* `$font-size`: Base font size (without unit, just a number).
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
 
 ### Sassy-Gridlover heading (sgl-heading)
@@ -177,7 +191,7 @@ To use in headings `<h1> - <h4>`.
 Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
 
 ```scss
-@mixin sgl-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
+@mixin sgl-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-root-font-size)
 ```
 
 Accepts 3 arguments:
@@ -197,7 +211,7 @@ To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 Outputs `margin-bottom` and `margin-top`.
 
 ```scss
-@mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
+@mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-root-font-size)
 ```
 
 Accepts 2 arguments:
@@ -240,64 +254,87 @@ p, ul, ol, pre, table, blockquote {
 ###CSS OUTPUT
 
 ```css
+html {
+    font-size: 16px;
+    line-height: 19px;
+}
+
 body {
-	font-size: 1.125rem;
-	line-height: 1.375rem;
+    font-size: 16px;
+    line-height: 19px;
+    font-size: 1rem;
+    line-height: 1.1875rem;
 }
 
 h1 {
-	font-size: 4.22222em;
-	line-height: 1.15789em;
-	margin-bottom: 0.28947em;
-	margin-top: 0.57895em;
+    font-size: 4.25em;
+    line-height: 1.11765em;
+    margin-bottom: 0.55883em;
+    margin-top: 0.27942em;
 }
 
 h2 {
-	font-size: 47px;
-	line-height: 66px;
-	margin-bottom: 22px;
-	margin-top: 44px;
+  font-size: 42px;
+  line-height: 57px;
+  margin-bottom: 19px;
+  margin-top: 19px;
 }
 
 h3 {
-	font-size: 29px;
-	line-height: 44px;
-	margin-bottom: 22px;
-	margin-top: 22px;
-	font-size: 1.8125rem;
-	line-height: 2.75rem;
-	margin-bottom: 1.375rem;
-	margin-top: 1.375rem;
+    font-size: 26px;
+    line-height: 38px;
+    margin-bottom: 0px;
+    margin-top: 19px;
+    font-size: 1.625rem;
+    line-height: 2.375rem;
+    margin-bottom: 0rem;
+    margin-top: 1.1875rem;
 }
 
 h4 {
-	font-size: 18px;
-	line-height: 22px;
-	margin-bottom: 22px;
-	margin-top: 22px;
-	font-size: 1.125rem;
-	line-height: 1.375rem;
-	margin-bottom: 1.375rem;
-	margin-top: 1.375rem;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 0px;
+    margin-top: 19px;
+    font-size: 1rem;
+    line-height: 1.1875rem;
+    margin-bottom: 0rem;
+    margin-top: 1.1875rem;
 }
 
-p, ul, ol, pre, table, blockquote {
-	margin-bottom: 22px;
-	margin-top: 22px;
-	margin-bottom: 1.375rem;
-	margin-top: 1.375rem;
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+    margin-bottom: 19px;
+    margin-top: 0;
+    margin-bottom: 1.1875rem;
+    margin-top: 0;
 }
 ```
 
 ## Changelog
+
+### v5.0.0 (April 7th 2017)
+
+**NOTE:** This release contains breaking changes!
+
+* Refactored **Sassy-Gridlover** so it stays up to date with [Gridlover](https://www.gridlover.net/try). Now the base font size and line height is added to `<html>`instead of `<body>`.
+    * Added new mixin `sgl-html()`.
+    * `sgl-body`now  only accepts 1 argument `$unit: $sgl-base-unit` &rarr; `@mixin sgl-body($unit: $sgl-base-unit)`.
+    * ~~ `@mixin sgl-body($font-size: $sgl-base-font-size, $unit: $sgl-base-unit)` ~~ **Deprecated**
+
+* Updated links to the [Gridlover app](https://www.gridlover.net/try).
 
 ### v4.0.0 (November 14th 2016)
 
 **NOTE:** This release contains breaking changes!
 
 * Prefixed with `sgl-` some functions that were left behind in previous versions (so they don't collide with other functions with the same name from other frameworks [#9](https://github.com/hiulit/Sassy-Gridlover/issues/9)).
-* Changed some margins (to keep **Sassy-Gridlover** up to date with [Gridlover](http://www.gridlover.net/app/)'s margins changes).
-* Matched example HTML with [Gridlover](http://www.gridlover.net/app/)'s.
+* Changed some margins (to keep **Sassy-Gridlover** up to date with [Gridlover](https://www.gridlover.net/try)'s margins changes).
+* Matched HTML example with [Gridlover](https://www.gridlover.net/try)'s.
 * Refactored [debug mode](#debug-mode) (created `_debug-mode.css` with a couple of mixins: `sgl-show-grid` and `sgl-show-margins`).
     * Removed `max-width` and `padding` from `<body>`.
     * Fixed background lines styles.
@@ -359,7 +396,7 @@ p, ul, ol, pre, table, blockquote {
 
 ## Inspiration and alternatives
 
-* [Gridlover app](http://www.gridlover.net/app/) - The tool to establish a typographic system with modular scale and vertical rhythm.
+* [Gridlover app](https://www.gridlover.net/try) - The tool to establish a typographic system with modular scale and vertical rhythm.
 * [Knife](https://github.com/Pushplaybang/knife) - Nail vertical rhythm, modular scale, and REMs like a boss with this simple set of SASS/SCSS variables, functions and mixins.
 * [gridlover-mixin](https://github.com/sevenupcan/gridlover-mixin) - A mixin to generate modular scale and vertical rhythm for your typography.
 
@@ -367,7 +404,7 @@ p, ul, ol, pre, table, blockquote {
 
 Thanks to:
 
-* [Gridlover app](http://www.gridlover.net/app/) - Created by [Tuomas Jomppanen](http://twitter.com/tuomasj) & [Ville Vanninen](http://twitter.com/sakamies).
+* [Gridlover app](https://www.gridlover.net/try) - Created by [Tuomas Jomppanen](http://twitter.com/tuomasj) & [Ville Vanninen](http://twitter.com/sakamies).
 * [Sassy-math](https://github.com/Team-Sass/Sassy-math) [&copy; 2012](https://github.com/Team-Sass/Sassy-math#license) - For the `@function exponent()`. Created by [Sam Richard](https://github.com/Snugug), [Mario Valencia](https://github.com/sultancillo) and [Scott Kellum](https://github.com/scottkellum).
 * Marc Mintel ([@marcmintel](https://twitter.com/marcmintel)) for his amazing article on how to [Write Sass plugins like a pro](https://medium.com/@marcmintel/write-sass-plugins-like-a-pro-c765ecf3af27).
 * Hugo Giraudel ([@hugogiraudel](https://twitter.com/hugogiraudel)) for helping with issues and [SassDoc](http://sassdoc.com/).

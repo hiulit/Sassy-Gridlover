@@ -2,8 +2,12 @@ $sgl-debug-mode: true;
 
 @import "../../sassy-gridlover/sassy-gridlover.scss";
 
+html {
+    @include sgl-html();
+}
+
 body {
-	@include sgl-body($sgl-base-font-size, "rem");
+	@include sgl-body("pxrem");
 }
 
 h1 {
@@ -22,6 +26,11 @@ h4 {
 	@include sgl-heading(0);
 }
 
-p, ul, ol, pre, table, blockquote {
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
 	@include sgl-margins();
 }

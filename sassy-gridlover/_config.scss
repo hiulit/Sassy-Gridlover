@@ -34,7 +34,7 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 /// Declare it in your own `_variables.scss`, `_config.scss` or the like.
 ///
 /// Basically, **it must be declared before the** `@import "sassy-gridlover"`.
-/// 
+///
 /// @example scss
 ///     $sgl-debug-mode: true;
 ///
@@ -42,20 +42,20 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 /// 	html {
 ///         background-image: linear-gradient(rgba(0, 170, 255, 0.3) 1px, transparent 1px);
 ///         background-position: left top;
-///         background-size: 22px 22px;
+///         background-size: 19px 19px;
 /// 	}
-/// 
+///
 /// 	body {
 ///         box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3);
 /// 	}
-/// 
+///
 /// @type boolean
 $sgl-debug-mode: false !default;
 
 /// Base font size.
 ///
 /// @type number
-$sgl-base-font-size: 18 !default;
+$sgl-base-font-size: $SGL_DEFAULT_FONT_SIZE !default;
 
 /// Base line height.
 ///
