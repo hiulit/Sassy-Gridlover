@@ -486,6 +486,10 @@ blockquote {
 
 * Initial commit.
 
+## Authors
+
+* Me 😛 [hiulit](@hiulit).
+
 ## Inspiration and alternatives
 
 * [Gridlover app](https://www.gridlover.net/try) - The tool to establish a typographic system with modular scale and vertical rhythm.
