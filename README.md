@@ -5,23 +5,23 @@ Sassy-Gridlover [![Build Status](https://travis-ci.org/hiulit/Sassy-Gridlover.sv
 Based on the [Gridlover app](https://www.gridlover.net/try).
 
 > Gridlover gives you adjustable css for font sizes, line heights and margins.
-> The default css output is for body, p and h1 - h4 headings, but you can of course apply your adjusted values to any element by editing the css later.
+> The default css output is for html, body, headings, p, ul, ol, etc. but you can of course apply your adjusted values to any element by editing the css later.
 
 ## First of all
 
 Go play around with the awesome [Gridlover app](https://www.gridlover.net/try)!
 
-It's so much fun! :D
+It's so much fun! 😄
 
 ## Installation
 
-Install **Sassy-Gridlover** via bower
+Install **Sassy-Gridlover** via **bower**.
 
 ```bash
 $ bower install sassy-gridlover
 ```
 
-Install **Sassy-Gridlover** via npm
+Install **Sassy-Gridlover** via **npm**.
 
 ```bash
 $ npm install sassy-gridlover
@@ -94,8 +94,8 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 
 // Configurable variables.
 // Ok... You can change these variables! :D
-// Although I'd encourage you not to change them directly here.
-// I'd rather declare them in your `_variables.scss`, `_config.scss` or the like.
+// I would encourage you **not to change them directly here**, though.
+// It would be better to declare them in your `_variables.scss`, `_config.scss` or the like.
 
 /// Base font size.
 ///
@@ -491,7 +491,7 @@ Thanks to:
 * [Gridlover app](https://www.gridlover.net/try) - Created by [Tuomas Jomppanen](http://twitter.com/tuomasj) & [Ville Vanninen](http://twitter.com/sakamies).
 * [Sassy-math](https://github.com/Team-Sass/Sassy-math) [&copy; 2012](https://github.com/Team-Sass/Sassy-math#license) - For the `@function exponent()`. Created by [Sam Richard](https://github.com/Snugug), [Mario Valencia](https://github.com/sultancillo) and [Scott Kellum](https://github.com/scottkellum).
 * Marc Mintel ([@marcmintel](https://twitter.com/marcmintel)) for his amazing article on how to [Write Sass plugins like a pro](https://medium.com/@marcmintel/write-sass-plugins-like-a-pro-c765ecf3af27).
-* Hugo Giraudel ([@hugogiraudel](https://twitter.com/hugogiraudel)) for helping with issues and [SassDoc](http://sassdoc.com/).
+* Hugo Giraudel ([@hugogiraudel](https://twitter.com/hugogiraudel)) for helping with issues and setting up [SassDoc](http://sassdoc.com/).
 * Walid Mokrani ([@walmokrani](https://github.com/walmokrani)) for helping with [adding em support](https://github.com/hiulit/Sassy-Gridlover/pull/7).
 * Takeru Suzuki ([@terkel](https://github.com/terkel)) - For the `@function decimal-xxx`.
 * Matt Andrews ([@matthew-andrews](https://github.com/matthew-andrews)) - For his [Travis CI Sass Example](https://github.com/matthew-andrews/sass-example).
