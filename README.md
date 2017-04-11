@@ -488,7 +488,7 @@ blockquote {
 
 ## Authors
 
-* Me 😛 [hiulit](@hiulit).
+* Me 😛 [@hiulit](https://github.com/hiulit).
 
 ## Inspiration and alternatives
 
