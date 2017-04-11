@@ -264,7 +264,7 @@ Accepts 2 arguments:
 
 Outputs background lines imitating a notebook's sheet.
 
-Accpets 1 argument:
+Accepts 1 argument:
 
 * `$sgl-debug-mode`: `true` / `false`.
 
@@ -277,7 +277,7 @@ Basically, **it must be declared before the `@import "sassy-gridlover"`**.
 
 Outputs extra **reset styles**.
 
-Accpets 1 argument:
+Accepts 1 argument:
 
 * `$sgl-extras`: `true` / `false`.
 
