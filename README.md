@@ -5,8 +5,7 @@ Sassy-Gridlover [![Build Status](https://travis-ci.org/hiulit/Sassy-Gridlover.sv
 Based on the [Gridlover app](https://www.gridlover.net/try).
 
 > Gridlover gives you adjustable css for font sizes, line heights and margins.
-> The default css output is for body, p and h1 - h4 headings, but you can of course apply your
-adjusted values to any element by editing the css later.
+> The default css output is for body, p and h1 - h4 headings, but you can of course apply your adjusted values to any element by editing the css later.
 
 ## First of all
 
@@ -32,14 +31,15 @@ or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the 
 
 ## Getting started
 
-**Sassy-Gridlover** consists of 5 configurable variables:
+**Sassy-Gridlover** consists of 6 configurable variables:
 
 ```scss
-$sgl-debug-mode;
 $sgl-base-font-size;
 $sgl-base-line-height;
 $sgl-base-unit;
 $sgl-scale-factor;
+$sgl-debug-mode;
+$sgl-extras;
 ```
 
 and 4 mixins:
@@ -97,31 +97,6 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 // Although I'd encourage you not to change them directly here.
 // I'd rather declare them in your `_variables.scss`, `_config.scss` or the like.
 
-/// Enables/disables **Debug mode** (`true`/`false`).
-///
-/// Outputs background lines imitating a notebook's sheet.
-///
-/// Declare it in your own `_variables.scss`, `_config.scss` or the like.
-///
-/// Basically, **it must be declared before the** `@import "sassy-gridlover"`.
-///
-/// @example scss
-///     $sgl-debug-mode: true;
-///
-/// @example css
-///     html {
-///         background-image: linear-gradient(rgba(0, 170, 255, 0.3) 1px, transparent 1px);
-///         background-position: left top;
-///         background-size: 19px 19px;
-///     }
-///
-///     body {
-///         box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3);
-///     }
-///
-/// @type boolean
-$sgl-debug-mode: false !default;
-
 /// Base font size.
 ///
 /// @type number
@@ -141,26 +116,90 @@ $sgl-base-unit: "pxrem" !default;
 ///
 /// @type number
 $sgl-scale-factor: $GOLDEN_SECTION !default;
+
+/// Enables/disables **debug mode**.
+///
+/// Outputs background lines imitating a notebook's sheet.
+///
+/// Declare it in your own `_variables.scss`, `_config.scss` or the like.
+///
+/// Basically, **it must be declared before the** `@import "sassy-gridlover"`.
+///
+/// @example scss
+/// sgl-debug-mode: true;
+///
+/// @example css
+/// html {
+///     background-image: linear-gradient(rgba(0, 170, 255, 0.3) 1px, transparent 1px);
+///     background-position: left top;
+///     background-size: 19px 19px;
+/// }
+///
+/// html body {
+///     box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3);
+/// }
+///
+/// @type boolean
+$sgl-debug-mode: false !default;
+
+/// Styles to make sure everything is aligned.
+///
+/// Outputs extra **reset styles**.
+///
+/// Declare it in your own `_variables.scss`, `_config.scss` or the like.
+///
+/// Basically, **it must be declared before the** `@import "sassy-gridlover"`.
+///
+/// @example scss
+/// $sgl-extras: true;
+///
+/// @example css
+/// html ul ul,
+/// html ol ol,
+/// html ul ol,
+/// html ol ul {
+///   margin-bottom: 0;
+///   margin-top: 0;
+/// }
+/// html hr,
+/// html .hr {
+///   border: 1px solid;
+///   margin: -1px 0;
+/// }
+/// html a,
+/// html b,
+/// html i,
+/// html strong,
+/// html em,
+/// html small,
+/// html code {
+///   line-height: 0;
+/// }
+/// html sub,
+/// html sup {
+///   line-height: 0;
+///   position: relative;
+///   vertical-align: baseline;
+/// }
+/// html sup {
+///   top: -0.5em;
+/// }
+/// html sub {
+///   bottom: -0.25em;
+/// }
+/// @type boolean
+$sgl-extra: false !default;
 ```
-
-## Debug mode
-
-Set `$sgl-debug-mode` to `true` (`false` by default) to output background lines imitating a notebook's sheet.
-
-Declare it in your own `_variables.scss`, `_config.scss` or the like.
-Basically, **it must be declared before the `@import "sassy-gridlover"`**.
-
-![Example of Sassy-Gridlover's debug mode](example/example.png)
 
 ## Mixins
 
 By default, all the mixins (except `sgl-html`) will output `pxrem`. But you can also choose to output `px`, `em` or `rem`.
 
-### Sassy-Gridlover html (sgl-html)
+### `sgl-html()`
 
-To use in `<html>`.
+To be used on `<html>`.
 
-Outputs `font-size` and `line-height` always in `px`.
+Outputs `font-size` and `line-height` **always** in `px`.
 
 ```scss
 @mixin sgl-html($font-size: $sgl-base-font-size)
@@ -170,9 +209,9 @@ Accepts 1 argument:
 
 * `$font-size`: Base font size (without unit, just a number).
 
-### Sassy-Gridlover body (sgl-body)
+### `sgl-body()`
 
-To use in `<body>`.
+To be used on `<body>`.
 
 Outputs `font-size` and `line-height`.
 
@@ -184,9 +223,9 @@ Accepts 1 argument:
 
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
 
-### Sassy-Gridlover heading (sgl-heading)
+### `sgl-heading()`
 
-To use in headings `<h1> - <h4>`.
+To be used on headings `<h1> - <h6>`.
 
 Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
 
@@ -200,13 +239,15 @@ Accepts 3 arguments:
 	* `<h1>` &rarr; `$step: 3`
 	* `<h2>` &rarr; `$step: 2`
 	* `<h3>` &rarr; `$step: 1`
-	* `<h4>` &rarr; `$step: 0`
+    * `<h4>` &rarr; `$step: 0`
+    * `<h5>` &rarr; `$step: 0`
+	* `<h6>` &rarr; `$step: 0`
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
 * `$base-value`: Optional call with a different base font size when using em.
 
-### Sassy-Gridlover margins (sgl-margins)
+### `sgl-margins()`
 
-To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
+To be used on `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 
 Outputs `margin-bottom` and `margin-top`.
 
@@ -219,35 +260,71 @@ Accepts 2 arguments:
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
 * `$base-value`: Optional call with a different base font size when using em.
 
+## Debug mode
+
+Outputs background lines imitating a notebook's sheet.
+
+Accpets 1 argument:
+
+* `$sgl-debug-mode`: `true` / `false`.
+
+Declare it in your own `_variables.scss`, `_config.scss` or the like.
+Basically, **it must be declared before the `@import "sassy-gridlover"`**.
+
+![Example of Sassy-Gridlover's debug mode](example/example.png)
+
+## Extras
+
+Outputs extra **reset styles**.
+
+Accpets 1 argument:
+
+* `$sgl-extras`: `true` / `false`.
+
+Declare it in your own `_variables.scss`, `_config.scss` or the like.
+Basically, **it must be declared before the `@import "sassy-gridlover"`**.
+
 ## Example usage
 
 ### SCSS
 
 ```scss
-@import "sassy-gridlover.scss";
+$sgl-debug-mode: false;
+$sgl-extras: false;
+
+@import "../../sassy-gridlover/sassy-gridlover.scss";
+
+html {
+    @include sgl-html();
+}
 
 body {
-	@include sgl-body($sgl-base-font-size, "rem");
+    @include sgl-body("rem");
 }
 
 h1 {
-	@include sgl-heading(3, "em");
+    @include sgl-heading(3, "em");
 }
 
 h2 {
-	@include sgl-heading(2, "px");
+    @include sgl-heading(2, "px");
 }
 
 h3 {
-	@include sgl-heading(1, "pxrem");
+    @include sgl-heading(1, "pxrem");
 }
 
 h4 {
-	@include sgl-heading(0);
+    @include sgl-heading(0);
 }
 
-p, ul, ol, pre, table, blockquote {
-	@include sgl-margins();
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+    @include sgl-margins();
 }
 ```
 
@@ -260,8 +337,6 @@ html {
 }
 
 body {
-    font-size: 16px;
-    line-height: 19px;
     font-size: 1rem;
     line-height: 1.1875rem;
 }
@@ -274,10 +349,10 @@ h1 {
 }
 
 h2 {
-  font-size: 42px;
-  line-height: 57px;
-  margin-bottom: 19px;
-  margin-top: 19px;
+    font-size: 42px;
+    line-height: 57px;
+    margin-bottom: 19px;
+    margin-top: 19px;
 }
 
 h3 {
@@ -325,7 +400,7 @@ blockquote {
 
 **NOTE:** This release contains breaking changes!
 
-* Refactored **Sassy-Gridlover** so it stays up to date with [Gridlover](https://www.gridlover.net/try). Now the base font size and line height is added to `<html>`instead of `<body>`.
+* Refactored **Sassy-Gridlover** so it stays up to date with [Gridlover](https://www.gridlover.net/try). Now the base font size and line height are added to `<html>` instead of `<body>`.
     * Added a new mixin: `sgl-html()`.
     * Created a global variable: `$sgl-root-font-size` (to rule them all!).
     * `sgl-body()` now only accepts 1 argument `$unit: $sgl-base-unit` &rarr; `@mixin sgl-body($unit: $sgl-base-unit)`.

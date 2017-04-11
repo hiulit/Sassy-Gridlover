@@ -1,4 +1,5 @@
 $sgl-debug-mode: true;
+$sgl-extras: true;
 
 @import "../../sassy-gridlover/sassy-gridlover.scss";
 
@@ -7,7 +8,7 @@ html {
 }
 
 body {
-	@include sgl-body("pxrem");
+	@include sgl-body("rem");
 }
 
 h1 {
