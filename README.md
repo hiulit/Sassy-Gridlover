@@ -262,6 +262,8 @@ Accepts 2 arguments:
 
 ## Debug mode
 
+Enables/disables **debug mode**.
+
 Outputs background lines imitating a notebook's sheet.
 
 Accepts 1 argument:
@@ -274,6 +276,8 @@ Basically, **it must be declared before the `@import "sassy-gridlover"`**.
 ![Example of Sassy-Gridlover's debug mode](example/example.png)
 
 ## Extras
+
+Styles to make sure everything is aligned.
 
 Outputs extra **reset styles**.
 
@@ -391,6 +395,10 @@ blockquote {
 ```
 
 ## Changelog
+
+### v5.2.0 (April 11th 2017)
+
+* Added optional [extra reset styles](#extras) to make sure everything is aligned.
 
 ### v5.1.0 (April 7th 2017)
 
