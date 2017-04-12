@@ -288,6 +288,49 @@ Accepts 1 argument:
 Declare it in your own `_variables.scss`, `_config.scss` or the like.
 Basically, **it must be declared before the** `@import "sassy-gridlover"`.
 
+```scss
+@mixin sgl-extras() {
+    ul ul,
+    ol ol,
+    ul ol,
+    ol ul {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+    hr,
+    .hr {
+        border: 1px solid;
+        margin: -1px 0;
+    }
+
+    a,
+    b,
+    i,
+    strong,
+    em,
+    small,
+    code {
+        line-height: 0;
+    }
+
+    sub,
+    sup {
+        line-height: 0;
+        position: relative;
+        vertical-align: baseline;
+    }
+
+    sup {
+        top: -0.5em;
+    }
+
+    sub {
+        bottom: -0.25em;
+    }
+}
+```
+
 ## Example usage
 
 ### SCSS
