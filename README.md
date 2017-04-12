@@ -296,7 +296,7 @@ Basically, **it must be declared before the** `@import "sassy-gridlover"`.
 $sgl-debug-mode: false;
 $sgl-extras: false;
 
-@import "../../sassy-gridlover/sassy-gridlover.scss";
+@import "../../sassy-gridlover/sassy-gridlover";
 
 html {
     @include sgl-html();

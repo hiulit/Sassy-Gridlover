@@ -1,7 +1,7 @@
 $sgl-debug-mode: true;
 $sgl-extras: true;
 
-@import "../../sassy-gridlover/sassy-gridlover.scss";
+@import "../../sassy-gridlover/sassy-gridlover";
 
 html {
     @include sgl-html();
