@@ -4,8 +4,8 @@ Sassy-Gridlover [![Build Status](https://travis-ci.org/hiulit/Sassy-Gridlover.sv
 **Super easy to use Sass mixins** to establish a typographic system with modular scale and vertical rhythm.
 Based on the [Gridlover app](https://www.gridlover.net/try).
 
-> Gridlover gives you adjustable css for font sizes, line heights and margins.
-> The default css output is for html, body, headings, p, ul, ol, etc. but you can of course apply your adjusted values to any element by editing the css later.
+> Gridlover gives you adjustable CSS for font sizes, line heights and margins.
+> The default CSS output is for `html`, `body`, `h1`-`h6`, `p`, `ul`, `ol`, etc. but you can of course apply your adjusted values to any element by editing the CSS later.
 
 ## First of all
 
@@ -271,7 +271,7 @@ Accepts 1 argument:
 * `$sgl-debug-mode`: `true` / `false`.
 
 Declare it in your own `_variables.scss`, `_config.scss` or the like.
-Basically, **it must be declared before the `@import "sassy-gridlover"`**.
+Basically, **it must be declared before the** `@import "sassy-gridlover"`.
 
 ![Example of Sassy-Gridlover's debug mode](example/example.png)
 
@@ -286,7 +286,7 @@ Accepts 1 argument:
 * `$sgl-extras`: `true` / `false`.
 
 Declare it in your own `_variables.scss`, `_config.scss` or the like.
-Basically, **it must be declared before the `@import "sassy-gridlover"`**.
+Basically, **it must be declared before the** `@import "sassy-gridlover"`.
 
 ## Example usage
 
