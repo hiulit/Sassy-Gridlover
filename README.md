@@ -440,7 +440,7 @@ blockquote {
 
 ## Changelog
 
-### v5.2.0 (April 11th 2017)
+### v5.2.0 (April 12th 2017)
 
 * Added optional [extra reset styles](#extras) to make sure everything is aligned.
 
