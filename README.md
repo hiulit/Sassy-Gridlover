@@ -273,6 +273,8 @@ Accepts 1 argument:
 Declare it in your own `_variables.scss`, `_config.scss` or the like.
 Basically, **it must be declared before the** `@import "sassy-gridlover"`.
 
+### Example
+
 ![Example of Sassy-Gridlover's debug mode](example/example.png)
 
 ## Extras
