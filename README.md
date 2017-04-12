@@ -297,11 +297,13 @@ html ol ul {
     margin-bottom: 0;
     margin-top: 0;
 }
+
 html hr,
 html .hr {
     border: 1px solid;
     margin: -1px 0;
 }
+
 html a,
 html b,
 html i,
@@ -311,15 +313,18 @@ html small,
 html code {
     line-height: 0;
 }
+
 html sub,
 html sup {
     line-height: 0;
     position: relative;
     vertical-align: baseline;
 }
+
 html sup {
     top: -0.5em;
 }
+
 html sub {
     bottom: -0.25em;
 }
