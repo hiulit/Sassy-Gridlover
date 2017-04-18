@@ -443,7 +443,7 @@ blockquote {
 ### v5.2.0 (April 18th 2017)
 
 * Added optional [extra reset styles](#extras) to make sure everything is aligned.
-* Changed license to [MIT License](https://choosealicense.com/licenses/mit/)
+* Changed license to [MIT License](https://choosealicense.com/licenses/mit/).
 
 ### v5.1.0 (April 7th 2017)
 
