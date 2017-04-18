@@ -1,12 +1,13 @@
 @import "config";
 @import "functions";
 @import "debug-mode";
+@import "extras";
 
-/// To use in `<html>`.
+/// To use on `<html>`.
 ///
 /// Outputs `font-size` and `line-height`.
 ///
-/// @param {number} $font-size [$sgl-base-font-size] - Base font size
+/// @param {number} $font-size [$sgl-base-font-size] - Root font size
 ///
 /// @example scss
 /// html {
@@ -33,9 +34,12 @@
         @include sgl-show-grid($line-height);
     }
 
+    @if($sgl-extras == true) {
+        @include sgl-extras();
+    }
 }
 
-/// To use in `<body>`.
+/// To use on `<body>`.
 ///
 /// Outputs `font-size` and `line-height`.
 ///
@@ -74,7 +78,7 @@
     }
 }
 
-/// To use in headings `<h1> - <h4>`.
+/// To use on headings `<h1> - <h6>`.
 ///
 /// Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
 ///
@@ -87,7 +91,12 @@
 ///
 /// `<h4>` &rarr; `$step: 0`
 ///
+/// `<h5>` &rarr; `$step: 0`
+///
+/// `<h6>` &rarr; `$step: 0`
+///
 /// @param {string} $unit [$sgl-base-unit] - Unit to output (`px`, `em`, `rem`, `pxrem`)
+///
 /// @param {number} $base-value [$sgl-base-font-size] - Optional call with a different base font size when using em
 ///
 /// @example scss
@@ -196,15 +205,21 @@
     }
 }
 
-/// To use in `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
+/// To use on `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 ///
 /// Outputs `margin-bottom` and `margin-top`.
 ///
 /// @param {string} $unit [$sgl-base-unit] - Unit to output
+///
 /// @param {number} $base-value [$sgl-base-font-size] - Optional call with a different base font size when using em
 ///
 /// @example scss
-/// p, ul, ol, pre, table, blockquote {
+/// p,
+/// ul,
+/// ol,
+/// pre,
+/// table,
+/// blockquote {
 /// 	@include sgl-margins();
 /// }
 ///
