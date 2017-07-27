@@ -442,7 +442,7 @@ blockquote {
 
 ### v5.2.1 (July 27th 2017)
 
-* Fixed MIT License for `npm` and `bower` packages
+* Fixed MIT License for `npm` and `bower` packages.
 
 ### v5.2.0 (April 18th 2017)
 
