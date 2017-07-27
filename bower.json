@@ -9,7 +9,7 @@
 		"sassy-gridlover/_functions.scss",
 		"sassy-gridlover/_sassy-gridlover.scss"
 	],
-	"license": "Unlicense",
+	"license": "MIT License",
 	"ignore": [
 		"**/.*",
 		"node_modules",
