@@ -1,9 +1,9 @@
 rvm:
-  - 2.0.0
+  - 2.4.1
 language: sass
 before_install:
  - gem install sass
- - chmod +x test/travis.rb
 
 script:
  - test/travis.rb
+ - chmod +x test/travis.rb
