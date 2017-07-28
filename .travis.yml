@@ -1,4 +1,5 @@
-dist: precise
+rvm:
+  - 2.0.0
 language: sass
 before_install:
  - gem install sass
