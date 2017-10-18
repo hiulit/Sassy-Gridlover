@@ -440,7 +440,7 @@ blockquote {
 
 ## Changelog
 
-### v.5.2.2 (October 18th 2017)
+### v5.2.2 (October 18th 2017)
 
 * Added [Code of conduct](https://github.com/hiulit/Sassy-Gridlover/blob/master/CODE_OF_CONDUCT.md).
 * Added [Issue template](https://github.com/hiulit/Sassy-Gridlover/blob/master/ISSUE_TEMPLATE.md).
