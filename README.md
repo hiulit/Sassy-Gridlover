@@ -442,9 +442,9 @@ blockquote {
 
 ### v.5.2.2 (October 18th 2017)
 
-* Added [Code of conduct](https://github.com/hiulit/Sassy-Gridlover/blob/master/CODE_OF_CONDUCT.md)
-* Added [Issue template](https://github.com/hiulit/Sassy-Gridlover/blob/master/ISSUE_TEMPLATE.md)
-* Added [Pull request template](https://github.com/hiulit/Sassy-Gridlover/blob/master/PULL_REQUEST_TEMPLATE.md)
+* Added [Code of conduct](https://github.com/hiulit/Sassy-Gridlover/blob/master/CODE_OF_CONDUCT.md).
+* Added [Issue template](https://github.com/hiulit/Sassy-Gridlover/blob/master/ISSUE_TEMPLATE.md).
+* Added [Pull request template](https://github.com/hiulit/Sassy-Gridlover/blob/master/PULL_REQUEST_TEMPLATE.md).
 
 ### v5.2.1 (July 27th 2017)
 
