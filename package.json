@@ -1,7 +1,7 @@
 {
 	"title": "Sassy-Gridlover",
 	"name": "sassy-gridlover",
-	"version": "5.2.0",
+	"version": "5.2.2",
 	"description": "Super easy to use Sass mixins to establish a typographic system with modular scale and vertical rhythm. Based on the Gridlover app.",
 	"keywords": [
 		"typography",
@@ -19,7 +19,7 @@
 		"url": "https://github.com/hiulit/Sassy-Gridlover/issues",
 		"email": "hiulit@gmail.com"
 		},
-	"license": "Unlicense",
+	"license": "MIT License",
 	"author": [
 		{
 			"name": "hiulit",
