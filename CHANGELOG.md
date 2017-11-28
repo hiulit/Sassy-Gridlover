@@ -2,7 +2,7 @@
 
 ## v5.2.3 (November 28th 2017)
 
-* Merged #16 (Fixes `sgl-extras` variable).
+* Merged [#16](https://github.com/hiulit/Sassy-Gridlover/pull/16) (Fixes `sgl-extras` variable).
 * Added `.editorconfig`.
 
 ## v5.2.2 (October 18th 2017)
