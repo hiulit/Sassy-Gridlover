@@ -18,6 +18,6 @@ You can help make **Sassy-Gridlover** better by [reporting issues](#issues) or [
 
 [Pull requests](https://help.github.com/articles/creating-a-pull-request/) are most welcomed! 😃
 
-* Fork **Sassy-Gridlover**: ` git clone git@github.com:your-username/Sassy-Gridlover.git`.
+* Fork **Sassy-Gridlover**: `git clone git@github.com:your-username/Sassy-Gridlover.git`.
 * Create a **new branch** and make the desired changes there.
 * [Create a pull request](https://github.com/hiulit/Sassy-Gridlover/pulls).
