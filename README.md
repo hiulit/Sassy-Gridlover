@@ -188,7 +188,7 @@ $sgl-debug-mode: false !default;
 ///   bottom: -0.25em;
 /// }
 /// @type boolean
-$sgl-extra: false !default;
+$sgl-extras: false !default;
 ```
 
 ## Mixins
