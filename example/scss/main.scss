@@ -8,7 +8,7 @@ html {
 }
 
 body {
-	@include sgl-body("em");
+	@include sgl-body(0, "em");
 }
 
 h1 {
