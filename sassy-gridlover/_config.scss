@@ -30,17 +30,17 @@ $SGL_DEFAULT_FONT_SIZE: 16;
 /// Base font size.
 ///
 /// @type number
-$sgl-base-font-size: $SGL_DEFAULT_FONT_SIZE !default;
+$sgl-base-font-size: 18 !default;
 
 /// Base line height.
 ///
 /// @type number
-$sgl-base-line-height: 1.2 !default;
+$sgl-base-line-height: 1.3 !default;
 
 /// Base unit (`px`, `em`, `rem`, `pxrem`).
 ///
 /// @type string
-$sgl-base-unit: "pxrem" !default;
+$sgl-base-unit: "em" !default;
 
 /// Scale factor.
 ///
