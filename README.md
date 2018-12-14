@@ -243,7 +243,7 @@ Accepts 3 arguments:
     * `<h5>` &rarr; `$step: 0`
 	* `<h6>` &rarr; `$step: 0`
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
-* `$base-value`: Optional call with a different base font size when using em.
+* `$base-value`: Optional parameter for a different base font size when using em.
 
 ### `sgl-margins()`
 
@@ -258,7 +258,7 @@ Outputs `margin-bottom` and `margin-top`.
 Accepts 2 arguments:
 
 * `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
-* `$base-value`: Optional call with a different base font size when using em.
+* `$base-value`: Optional parameter for a different base font size when using em.
 
 ## Debug mode
 
