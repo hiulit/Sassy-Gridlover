@@ -60,25 +60,25 @@
 /// }
 
 @mixin sgl-body($line-height-step: 0, $unit: $sgl-base-unit) {
-    $line-height: round($sgl-root-font-size * $sgl-base-line-height);
-
     @if $line-height-step == 0 {
         $line-height-step: 1;
     }
 
+    $line-height: round($sgl-root-font-size * $sgl-base-line-height) * $line-height-step;
+
     @if $unit == "px" or $unit == "pxrem" {
         font-size: $sgl-root-font-size * 1px;
-        line-height: $line-height * $line-height-step * 1px;
+        line-height: $line-height * 1px;
     }
 
     @if $unit == "rem" or $unit == "pxrem" {
         font-size: sgl-decimal-ceil(sgl-rem-calc($sgl-root-font-size, $sgl-root-font-size), 5);
-        line-height: sgl-decimal-ceil(sgl-rem-calc($line-height, $sgl-root-font-size), 5) * $line-height-step;
+        line-height: sgl-decimal-ceil(sgl-rem-calc($line-height, $sgl-root-font-size), 5);
     }
 
     @if $unit == "em" {
         font-size: sgl-decimal-ceil(sgl-em-calc($sgl-root-font-size, $sgl-root-font-size), 5);
-        line-height: sgl-decimal-ceil(sgl-em-calc($line-height, $sgl-root-font-size), 5) * $line-height-step;
+        line-height: sgl-decimal-ceil(sgl-em-calc($line-height, $sgl-root-font-size), 5);
     }
 }
 

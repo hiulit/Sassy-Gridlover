@@ -8,27 +8,27 @@ html {
 }
 
 body {
-    @include sgl-body(0);
+    @include sgl-body(4, "px");
 }
 
 h1 {
-    @include sgl-heading(3, 0, 1, 3);
+    @include sgl-heading(3, 0, 1, 3, "px");
 }
 
 h2 {
-    @include sgl-heading(2, 2, 1, 1);
+    @include sgl-heading(2, 2, 1, 1, "px");
 }
 
 h3 {
-    @include sgl-heading(1, 0, 1, 0);
+    @include sgl-heading(1, 0, 1, 0, "px");
 }
 
 h4 {
-    @include sgl-heading(0, 0, 1, 0);
+    @include sgl-heading(0, 0, 1, 0, "px");
 }
 
 h5 {
-    @include sgl-heading(0, 0, 1, 0);
+    @include sgl-heading(0, 0, 1, 0, "px");
 }
 
 p,
@@ -37,12 +37,12 @@ ol,
 pre,
 table,
 blockquote {
-    @include sgl-margins(1, 0);
+    @include sgl-margins(1, 0, "px");
 }
 
 ul ul,
 ol ol,
 ul ol,
 ol ul {
-    @include sgl-margins(0, 0);
+    @include sgl-margins(0, 0, "px");
 }

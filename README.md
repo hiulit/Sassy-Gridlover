@@ -81,7 +81,7 @@ Outputs `font-size` and `line-height` **always** in `px`.
 
 Accepts 1 argument:
 
-* `$font-size`: Base font size (without unit, just a number).
+* `$font-size`: Root font size (without unit, just a number).
 
 ### `sgl-body()`
 
