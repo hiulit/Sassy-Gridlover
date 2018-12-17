@@ -12,7 +12,7 @@ body {
     }
 }
 
-@mixin sgl-show-margins($margin-bottom, $margin-top, $computed-font-size, $unit) {
+@mixin sgl-show-margins($margin-top, $margin-bottom, $computed-font-size, $unit) {
     position: relative;
 
     &:before,
