@@ -38,4 +38,9 @@ pre,
 table,
 blockquote {
     @include sgl-margins;
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    @include sgl-margins(0, 0);
 }
