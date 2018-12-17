@@ -5,19 +5,19 @@
 
 /// To use on `<html>`.
 ///
-/// Outputs `font-size` and `line-height`.
+/// Outputs `font-size` and `line-height` **always** in `px`.
 ///
-/// @param {number} $font-size [$sgl-base-font-size] - Root font size.
+/// @param {number} $font-size [$sgl-base-font-size] - Root font size (without unit, just a number).
 ///
 /// @example scss
 /// html {
-///     @include sgl-html(16);
+///     @include sgl-html(18);
 /// }
 ///
 /// @example css
 /// html {
-///     font-size: 16px;
-///     line-height: 19px;
+///     font-size: 18px;
+///     line-height: 23px;
 /// }
 
 @mixin sgl-html($font-size: $sgl-base-font-size) {
@@ -42,13 +42,13 @@
 ///
 /// Outputs `font-size` and `line-height`.
 ///
-/// @param {number} $line-height-step [0] - Multiplies the `line-height` by the step number. Steps go from `0` to `12` (`0` actually multiplies by 1).
+/// @param {number} $line-height-step [0] - Multiplies `$line-height-step` by `$sgl-base-line-height` (`0` behaves as `1`).
 ///
 /// @param {string} $unit [$sgl-base-unit] - Unit to output (`px`, `em`, `rem`, `pxrem`).
 ///
 /// @example scss
 /// body {
-/// 	@include sgl-body("pxrem");
+/// 	@include sgl-body;
 /// }
 ///
 /// @example css
@@ -84,15 +84,15 @@
 
 /// To use on headings `<h1> - <h6>`.
 ///
-/// Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
+/// Outputs `font-size`, `line-height`, `margin-top` and `margin-bottom`.
 ///
-/// @param {number} $font-size-step - Multiplies the `font-size` by the step number. Steps go from `0` to `12` (`0` behaves as `1`).
+/// @param {number} $font-size-step - xxxxxxx.
 ///
-/// @param {number} $line-height-step - Multiplies the `line-height` by the step number. Steps go from `1` to `12` (if `0` is set, the `line-height` will "follow" the `font-size` accordingly).
+/// @param {number} $line-height-step - xxxxxx (if `0` is set, the `line-height` will "follow" the `font-size` accordingly).
 ///
-/// @param {number} $margin-top-step - Multiplies the `margin-top` by the step number. Steps go from `0` to `12`.
+/// @param {number} $margin-top-step - Multiplies `$margin-top-step` by `$sgl-base-line-height`.
 ///
-/// @param {number} $margin-bottom-step - Multiplies the `margin-bottom` by the step number. Steps go from `0` to `12`.
+/// @param {number} $margin-bottom-step -  Multiplies `$margin-bottom-step` by `$sgl-base-line-height`.
 ///
 /// @param {string} $unit [$sgl-base-unit] - Unit to output (`px`, `em`, `rem`, `pxrem`).
 ///
@@ -100,15 +100,15 @@
 ///
 /// @example scss
 /// h1 {
-/// 	@include sgl-heading(3, 0, 1, 2, "em");
+/// 	@include sgl-heading(3, 0, 1, 2);
 /// }
 ///
 /// h2 {
-/// 	@include sgl-heading(2, 0, 1, 1, "px");
+/// 	@include sgl-heading(2, 0, 1, 1);
 /// }
 ///
 /// h3 {
-/// 	@include sgl-heading(1, 0, 1, 0, "pxrem");
+/// 	@include sgl-heading(1, 0, 1, 0);
 /// }
 ///
 /// h4 {
@@ -121,39 +121,58 @@
 ///
 /// @example css
 /// h1 {
-///     font-size: 4.25em;
-///     line-height: 1.11765em;
-///     margin-bottom: 0.55883em;
-///     margin-top: 0.27942em;
+///     font-size: 76px;
+///     line-height: 92px;
+///     margin-top: 23px;
+///     margin-bottom: 46px;
+///     font-size: 4.22223rem;
+///     line-height: 5.11112rem;
+///     margin-top: 1.27778rem;
+///     margin-bottom: 2.55556rem;
 /// }
 ///
 /// h2 {
-///     font-size: 42px;
-///     line-height: 57px;
-///     margin-bottom: 19px;
-///     margin-top: 19px;
+///     font-size: 47px;
+///     line-height: 69px;
+///     margin-top: 23px;
+///     margin-bottom: 23px;
+///     font-size: 2.61112rem;
+///     line-height: 3.83334rem;
+///     margin-top: 1.27778rem;
+///     margin-bottom: 1.27778rem;
 /// }
 ///
 /// h3 {
-///     font-size: 26px;
-///     line-height: 38px;
+///     font-size: 29px;
+///     line-height: 46px;
+///     margin-top: 23px;
 ///     margin-bottom: 0px;
-///     margin-top: 19px;
-///     font-size: 1.625rem;
-///     line-height: 2.375rem;
+///     font-size: 1.61112rem;
+///     line-height: 2.55556rem;
+///     margin-top: 1.27778rem;
 ///     margin-bottom: 0rem;
-///     margin-top: 1.1875rem;
 /// }
 ///
 /// h4 {
-///     font-size: 16px;
-///     line-height: 19px;
+///     font-size: 18px;
+///     line-height: 23px;
+///     margin-top: 23px;
 ///     margin-bottom: 0px;
-///     margin-top: 19px;
 ///     font-size: 1rem;
-///     line-height: 1.1875rem;
+///     line-height: 1.27778rem;
+///     margin-top: 1.27778rem;
 ///     margin-bottom: 0rem;
-///     margin-top: 1.1875rem;
+/// }
+///
+/// h5 {
+///     font-size: 18px;
+///     line-height: 23px;
+///     margin-top: 23px;
+///     margin-bottom: 0px;
+///     font-size: 1rem;
+///     line-height: 1.27778rem;
+///     margin-top: 1.27778rem;
+///     margin-bottom: 0rem;
 /// }
 
 @mixin sgl-heading($font-size-step, $line-height-step, $margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-root-font-size) {
@@ -166,46 +185,46 @@
     $computed-font-size: round($font-size * sgl-exponent($scale, $font-size-step));
     $line-height: round($font-size * $sgl-base-line-height);
     $computed-line-height: $line-height * $line-height-step;
-    $margin-bottom: $line-height;
-    $margin-top: $line-height;
-
-    @warn $computed-font-size;
-
-    @warn $computed-line-height;
+    $margin-top: $line-height * $margin-top-step;
+    $margin-bottom: $line-height * $margin-bottom-step;
 
     @if $sgl-debug-mode == true {
-        @include sgl-show-margins($margin-bottom * $margin-bottom-step, $margin-top * $margin-top-step, $computed-font-size, $unit);
+        @include sgl-show-margins($margin-top, $margin-bottom, $computed-font-size, $unit);
     }
 
     @if $unit == "px" or $unit == "pxrem" {
         font-size: $computed-font-size * 1px;
         line-height: $computed-line-height * 1px;
-        margin-bottom: $margin-bottom * $margin-bottom-step * 1px;
-        margin-top: $margin-top * $margin-top-step * 1px;
+        margin-top: $margin-top * 1px;
+        margin-bottom: $margin-bottom * 1px;
     }
 
     @if $unit == "rem" or $unit == "pxrem" {
         font-size: sgl-decimal-ceil(sgl-rem-calc($computed-font-size, $base-value), 5);
         line-height: sgl-decimal-ceil(sgl-rem-calc($computed-line-height, $base-value), 5);
-        margin-bottom: sgl-decimal-ceil(sgl-rem-calc($margin-bottom, $base-value), 5);
         margin-top: sgl-decimal-ceil(sgl-rem-calc($margin-top, $base-value), 5);
+        margin-bottom: sgl-decimal-ceil(sgl-rem-calc($margin-bottom, $base-value), 5);
     }
 
     @if $unit == "em" {
         font-size: sgl-decimal-ceil(sgl-em-calc($computed-font-size, $base-value), 5);
         line-height: sgl-decimal-ceil(sgl-em-calc($computed-line-height, $computed-font-size), 5);
-        margin-bottom: sgl-decimal-ceil(sgl-em-calc($margin-bottom, $computed-font-size), 5);
         margin-top: sgl-decimal-ceil(sgl-em-calc($margin-top, $computed-font-size), 5);
+        margin-bottom: sgl-decimal-ceil(sgl-em-calc($margin-bottom, $computed-font-size), 5);
     }
 }
 
 /// To use on `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 ///
-/// Outputs `margin-bottom` and `margin-top`.
+/// Outputs `margin-top` and `margin-bottom`.
 ///
-/// @param {string} $unit [$sgl-base-unit] - Unit to output
+/// @param {number} $margin-top-step - Multiplies `$margin-top-step` by `$sgl-base-line-height`.
 ///
-/// @param {number} $base-value [$sgl-base-font-size] - Optional parameter for a different base font size when using em
+/// @param {number} $margin-bottom-step - Multiplies `$margin-bottom-step` by `$sgl-base-line-height`.
+///
+/// @param {string} $unit [$sgl-base-unit] - Unit to output.
+///
+/// @param {number} $base-value [$sgl-base-font-size] - Optional parameter for a different base font size when using em.
 ///
 /// @example scss
 /// p,
@@ -214,8 +233,16 @@
 /// pre,
 /// table,
 /// blockquote {
-/// 	@include sgl-margins();
+/// 	@include sgl-margins(0, 1);
 /// }
+///
+/// ul ul,
+/// ol ol,
+/// ul ol,
+/// ol ul {
+///     @include sgl-margins(0, 0);
+/// }
+///
 ///
 /// @example css
 /// p,
@@ -224,34 +251,43 @@
 /// pre,
 /// table,
 /// blockquote {
-///     position: relative;
-///     margin-bottom: 19px;
-///     margin-top: 0;
-///     margin-bottom: 1.1875rem;
-///     margin-top: 0;
+///     margin-top: 0px;
+///     margin-bottom: 23px;
+///     margin-top: 0rem;
+///     margin-bottom: 1.27778rem;
+/// }
+///
+/// ul ul,
+/// ol ol,
+/// ul ol,
+/// ol ul {
+///     margin-top: 0px;
+///     margin-bottom: 0px;
+///     margin-top: 0rem;
+///     margin-bottom: 0rem;
 /// }
 
-@mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-root-font-size) {
-    $margin: round($base-value * $sgl-base-line-height);
-    $margin-bottom: $margin;
-    $margin-top: 0;
+@mixin sgl-margins($margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-root-font-size) {
+    $line-height: round($base-value * $sgl-base-line-height);
+    $margin-top: $line-height * $margin-top-step;
+    $margin-bottom: $line-height * $margin-bottom-step;
 
     @if $sgl-debug-mode == true {
-        @include sgl-show-margins($margin-bottom, $margin-top, $base-value, $unit);
+        @include sgl-show-margins($margin-top, $margin-bottom, $base-value, $unit);
     }
 
     @if $unit == "px" or $unit == "pxrem" {
-        margin-bottom: $margin * 1px;
-        margin-top: $margin-top;
+        margin-top: $margin-top * 1px;
+        margin-bottom: $margin-bottom * 1px;
     }
 
     @if $unit == "rem" or $unit == "pxrem" {
-        margin-bottom: sgl-decimal-ceil(sgl-rem-calc($margin, $base-value), 5);
-        margin-top: $margin-top;
+        margin-top: sgl-decimal-ceil(sgl-rem-calc($margin-top, $base-value), 5);
+        margin-bottom: sgl-decimal-ceil(sgl-rem-calc($margin-bottom, $base-value), 5);
     }
 
     @if $unit == "em" {
-        margin-bottom: sgl-decimal-ceil(sgl-em-calc($margin, $base-value), 5);
-        margin-top: $margin-top;
+        margin-top: sgl-decimal-ceil(sgl-em-calc($margin-top, $base-value), 5);
+        margin-bottom: sgl-decimal-ceil(sgl-em-calc($margin-bottom, $base-value), 5);
     }
 }
