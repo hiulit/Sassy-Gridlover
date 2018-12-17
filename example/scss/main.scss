@@ -8,27 +8,27 @@ html {
 }
 
 body {
-    @include sgl-body(0, "em");
+    @include sgl-body(0);
 }
 
 h1 {
-    @include sgl-heading(3, 0, 1, 3, "px");
+    @include sgl-heading(3, 0, 1, 3);
 }
 
 h2 {
-    @include sgl-heading(2, 2, 1, 1, "px");
+    @include sgl-heading(2, 2, 1, 1);
 }
 
 h3 {
-    @include sgl-heading(1, 0, 1, 0, "px");
+    @include sgl-heading(1, 0, 1, 0);
 }
 
 h4 {
-    @include sgl-heading(0, 0, 1, 0, "px");
+    @include sgl-heading(0, 0, 1, 0);
 }
 
 h5 {
-    @include sgl-heading(0, 0, 1, 0, "px");
+    @include sgl-heading(0, 0, 1, 0);
 }
 
 p,
@@ -37,7 +37,9 @@ ol,
 pre,
 table,
 blockquote {
-    @include sgl-margins;
+    @include sgl-margins(1, 0);
+}
+
 ul ul,
 ol ol,
 ul ol,
