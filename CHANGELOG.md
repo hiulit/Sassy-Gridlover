@@ -1,5 +1,28 @@
 # Changelog
 
+## v6.0.0 (December 18th 2018)
+
+**NOTE:** This release contains breaking changes!
+
+* Refactored **Sassy-Gridlover** so it stays up to date with [Gridlover](https://www.gridlover.net/try).
+    * Changed some defaults:
+        * ~~`$sgl-base-font-size: $SGL_DEFAULT_FONT_SIZE`.~~ **Deprecated**
+        * `$sgl-base-font-size: 18`.
+        * ~~`$sgl-base-line-height: 1.2`.~~ **Deprecated**
+        * `$sgl-base-line-height: 1.3`.
+        * ~~`$sgl-base-unit: "pxrem"`.~~ **Deprecated**
+        * `$sgl-base-unit: "em"`.
+    * Added new steps to `sgl-body()` `sgl-heading()` and `sgl-margins()` mixins:
+        * ~~`@mixin sgl-body($unit: $sgl-base-unit)`.~~ **Deprecated**
+        * `sgl-body()` now accepts 2 arguments: `$line-height-step: 0` and `$unit: $sgl-base-unit` &rarr; `@mixin sgl-body($line-height-step: 0, $unit: $sgl-base-unit)`.
+        * ~~`@mixin sgl-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-root-font-size)`.~~ **Deprecated**
+        * `sgl-heading()` now accepts 6 arguments (the first 4 are mandatory): `$font-size-step`, `$line-height-step`, `$margin-top-step`, `$margin-bottom-step`, `$unit: $sgl-base-unit` and `$base-value: $sgl-root-font-size` &rarr; `@mixin sgl-heading($font-size-step, $line-height-step, $margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-root-font-size)`.
+        * ~~`@mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-root-font-size)`.~~ **Deprecated**
+        * `sgl-margins()` now accepts 4 arguments (the first 2 are mandatory): `$margin-top-step`, `$margin-bottom-step`, `$unit: $sgl-base-unit` and `$base-value: $sgl-root-font-size` &rarr; `@mixin sgl-margins($margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-root-font-size)`.
+    * Added `$sgl-debug-mode-max-width` to center the text when **debug mode** is `true`.
+    * Moved some list styles from `_extras.scss` to `main.scss`.
+    * Cleaned up the docs.
+
 ## v5.2.3 (November 28th 2017)
 
 * Merged [#16](https://github.com/hiulit/Sassy-Gridlover/pull/16) (Fixes `sgl-extras` variable).
