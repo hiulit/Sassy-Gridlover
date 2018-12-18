@@ -1,8 +1,14 @@
 # Changelog
 
+## v6.0.2 (December 18th 2018)
+
+### Fixed
+
+* `bower.json` minor issue.
+
 ## v6.0.1 (December 18th 2018)
 
-### Fixes
+### Fixed
 
 * Failed to publish **v6.0.0** correctly to npm and yarn.
 
