@@ -40,7 +40,7 @@ $sgl-base-line-height: 1.3 !default;
 /// Base unit (`px`, `em`, `rem`, `pxrem`).
 ///
 /// @type string
-$sgl-base-unit: "pxrem" !default;
+$sgl-base-unit: "em" !default;
 
 /// Scale factor.
 ///
