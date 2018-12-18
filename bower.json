@@ -9,7 +9,7 @@
 		"sassy-gridlover/_functions.scss",
 		"sassy-gridlover/_sassy-gridlover.scss"
 	],
-	"license": "MIT License",
+	"license": "MIT",
 	"ignore": [
 		"**/.*",
 		"node_modules",
@@ -36,6 +36,6 @@
 	"homepage": "https://github.com/hiulit/Sassy-Gridlover",
 	"repository": {
 		"type": "git",
-		"url": "git@github.com:hiulit/Sassy-Gridlover.git"
+		"url": "https://github.com/hiulit/Sassy-Gridlover.git"
 	}
 }
