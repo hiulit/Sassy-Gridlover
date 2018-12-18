@@ -14,11 +14,26 @@
         * `$sgl-base-unit: "em"`.
     * Added new steps to `sgl-body()` `sgl-heading()` and `sgl-margins()` mixins:
         * ~~`@mixin sgl-body($unit: $sgl-base-unit)`.~~ **Deprecated**
-        * `sgl-body()` now accepts 2 arguments: `$line-height-step: 0` and `$unit: $sgl-base-unit` &rarr; `@mixin sgl-body($line-height-step: 0, $unit: $sgl-base-unit)`.
+        * `sgl-body()` now accepts 2 arguments:
+            * `$line-height-step: 0`
+            * `$unit: $sgl-base-unit`
+            * &rarr; `@mixin sgl-body($line-height-step: 0, $unit: $sgl-base-unit)`.
         * ~~`@mixin sgl-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-root-font-size)`.~~ **Deprecated**
-        * `sgl-heading()` now accepts 6 arguments (the first 4 are mandatory): `$font-size-step`, `$line-height-step`, `$margin-top-step`, `$margin-bottom-step`, `$unit: $sgl-base-unit` and `$base-value: $sgl-root-font-size` &rarr; `@mixin sgl-heading($font-size-step, $line-height-step, $margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-root-font-size)`.
+        * `sgl-heading()` now accepts 6 arguments (the first 4 are mandatory): 
+            * `$font-size-step`
+            * `$line-height-step`
+            * `$margin-top-step`
+            * `$margin-bottom-step`
+            * `$unit: $sgl-base-unit`
+            * `$base-value: $sgl-root-font-size`
+            * &rarr; `@mixin sgl-heading($font-size-step, $line-height-step, $margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-root-font-size)`.
         * ~~`@mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-root-font-size)`.~~ **Deprecated**
-        * `sgl-margins()` now accepts 4 arguments (the first 2 are mandatory): `$margin-top-step`, `$margin-bottom-step`, `$unit: $sgl-base-unit` and `$base-value: $sgl-root-font-size` &rarr; `@mixin sgl-margins($margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-root-font-size)`.
+        * `sgl-margins()` now accepts 4 arguments (the first 2 are mandatory): 
+            * `$margin-top-step`
+            * `$margin-bottom-step`
+            * `$unit: $sgl-base-unit`
+            * `$base-value: $sgl-root-font-size`
+            * &rarr; `@mixin sgl-margins($margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-root-font-size)`.
     * Added `$sgl-debug-mode-max-width` to center the text when **debug mode** is `true`.
     * Moved some list styles from `_extras.scss` to `main.scss`.
     * Cleaned up the docs.
