@@ -37,6 +37,7 @@
     * Added `$sgl-debug-mode-max-width` to center the text when **debug mode** is `true`.
     * Moved some list styles from `_extras.scss` to `main.scss`.
     * Cleaned up the docs.
+    * Published Sassy-Gridlover as a [yarn package (https://yarnpkg.com/en/package/sassy-gridlover).
 
 ## v5.2.3 (November 28th 2017)
 
