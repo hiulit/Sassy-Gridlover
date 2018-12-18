@@ -1,5 +1,5 @@
 $sgl-debug-mode: true;
-$sgl-debug-mode-max-width: 1024;
+$sgl-debug-mode-max-width: 1024; // Only needed if `$sgl-debug-mode` is `true`.
 $sgl-extras: true;
 
 @import "../../sassy-gridlover/sassy-gridlover";
