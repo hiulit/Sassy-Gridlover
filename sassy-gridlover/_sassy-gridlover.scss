@@ -83,7 +83,7 @@
 
     @if $sgl-debug-mode == true {
         margin: auto;
-        max-width: 560px;
+        max-width: $sgl-debug-mode-max-width * 1px;
     }
 }
 
