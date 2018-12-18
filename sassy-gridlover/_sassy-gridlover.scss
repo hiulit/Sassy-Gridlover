@@ -91,7 +91,7 @@
 ///
 /// Outputs `font-size`, `line-height`, `margin-top` and `margin-bottom`.
 ///
-/// @param {number} $font-size-step - xxxxxxx.
+/// @param {number} $font-size-step - Creates an exponent of the base `font-size` (from `sgl-html`) in conjunction with `sgl-scale-factor`. `0` is the base `font-size`.
 ///
 /// @param {number} $line-height-step - Multiplies the step number by the base `line-height` (from `sgl-html`). If `0` is set, the `line-height` will grow with the `font-size` accordingly.
 ///

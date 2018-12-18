@@ -116,8 +116,8 @@ Outputs `font-size`, `line-height`, `margin-top` and `margin-bottom`.
 
 | Name | Description | Type | Default value |
 | :---: | :---: | :---: | :---: |
-| `$font-size-step` | xxxx  | `Number` | - |
-| `$line-height-step` | xxxxxx (if 0 is set, the line-height will "follow" the font-size accordingly). | `Number` | - |
+| `$font-size-step` | Creates an exponent of the base `font-size` (from `sgl-html`) in conjunction with `sgl-scale-factor`. `0` is the base `font-size`.  | `Number` | - |
+| `$line-height-step` | Multiplies the step number by the base `line-height` (from `sgl-html`). If `0` is set, the `line-height` will grow with the `font-size` accordingly. | `Number` | - |
 | `$margin-top-step` | Multiplies the step number by the base `line-height` (from `sgl-html`). | `Number` | - |
 | `$margin-bottom-step` | Multiplies the step number by the base `line-height` (from `sgl-html`). | `Number` | - |
 | `$unit` | Unit to output (`px`, `em`, `rem`, `pxrem`). | `String` | `$sgl-base-unit` |
