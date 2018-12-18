@@ -8,13 +8,6 @@ html {
 html body {
   box-shadow: 1px 0px 0px rgba(0, 170, 255, 0.3), -1px 0px 0px rgba(0, 170, 255, 0.3);
 }
-html ul ul,
-html ol ol,
-html ul ol,
-html ol ul {
-  margin-bottom: 0;
-  margin-top: 0;
-}
 html hr,
 html .hr {
   border: 1px solid;
@@ -45,14 +38,16 @@ html sub {
 body {
   font-size: 1em;
   line-height: 1.27778em;
+  margin: auto;
+  max-width: 1024px;
 }
 
 h1 {
   position: relative;
   font-size: 4.22223em;
   line-height: 1.21053em;
-  margin-bottom: 0.60527em;
   margin-top: 0.30264em;
+  margin-bottom: 0.60527em;
 }
 h1:before, h1:after {
   content: "";
@@ -74,10 +69,10 @@ h1:after {
 
 h2 {
   position: relative;
-  font-size: 47px;
-  line-height: 69px;
-  margin-bottom: 23px;
-  margin-top: 23px;
+  font-size: 2.61112em;
+  line-height: 1.46809em;
+  margin-top: 0.48937em;
+  margin-bottom: 0.48937em;
 }
 h2:before, h2:after {
   content: "";
@@ -88,25 +83,21 @@ h2:before, h2:after {
 }
 h2:before {
   background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
-  height: 23px;
-  top: -23px;
+  height: 0.48937em;
+  top: -0.48937em;
 }
 h2:after {
   background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>') 49% bottom repeat-y;
-  bottom: -23px;
-  height: 23px;
+  bottom: -0.48937em;
+  height: 0.48937em;
 }
 
 h3 {
   position: relative;
-  font-size: 29px;
-  line-height: 46px;
-  margin-bottom: 0px;
-  margin-top: 23px;
-  font-size: 1.61112rem;
-  line-height: 2.55556rem;
-  margin-bottom: 0rem;
-  margin-top: 1.27778rem;
+  font-size: 1.61112em;
+  line-height: 1.58621em;
+  margin-top: 0.79311em;
+  margin-bottom: 0em;
 }
 h3:before, h3:after {
   content: "";
@@ -117,25 +108,21 @@ h3:before, h3:after {
 }
 h3:before {
   background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
-  height: 23px;
-  top: -23px;
-  height: 1.27778rem;
-  top: -1.27778rem;
+  height: 0.79311em;
+  top: -0.79311em;
 }
 h3:after {
   background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>') 49% bottom repeat-y;
-  bottom: 0px;
-  height: 0px;
-  bottom: 0rem;
-  height: 0rem;
+  bottom: 0em;
+  height: 0em;
 }
 
 h4 {
   position: relative;
   font-size: 1em;
   line-height: 1.27778em;
-  margin-bottom: 0em;
   margin-top: 1.27778em;
+  margin-bottom: 0em;
 }
 h4:before, h4:after {
   content: "";
@@ -155,6 +142,31 @@ h4:after {
   height: 0em;
 }
 
+h5 {
+  position: relative;
+  font-size: 1em;
+  line-height: 1.27778em;
+  margin-top: 1.27778em;
+  margin-bottom: 0em;
+}
+h5:before, h5:after {
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+h5:before {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
+  height: 1.27778em;
+  top: -1.27778em;
+}
+h5:after {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>') 49% bottom repeat-y;
+  bottom: 0em;
+  height: 0em;
+}
+
 p,
 ul,
 ol,
@@ -162,8 +174,8 @@ pre,
 table,
 blockquote {
   position: relative;
+  margin-top: 0em;
   margin-bottom: 1.27778em;
-  margin-top: 0;
 }
 p:before, p:after,
 ul:before,
@@ -201,6 +213,44 @@ blockquote:after {
   background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>') 49% bottom repeat-y;
   bottom: -1.27778em;
   height: 1.27778em;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  position: relative;
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+ul ul:before, ul ul:after,
+ol ol:before,
+ol ol:after,
+ul ol:before,
+ul ol:after,
+ol ul:before,
+ol ul:after {
+  content: "";
+  display: block;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+ul ul:before,
+ol ol:before,
+ul ol:before,
+ol ul:before {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 5.5 9.5 0.5 13.5 5.5"/></svg>') 51% top repeat-y;
+  height: 0em;
+  top: 0em;
+}
+ul ul:after,
+ol ol:after,
+ul ol:after,
+ol ul:after {
+  background: rgba(0, 170, 255, 0.3) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40px" height="300px" viewBox="0 0 40 300"><path d="M9.5,1.5 L9.5,298.5" stroke="#1AB3FF"/><polyline stroke="#1AB3FF" fill="none" points="5.5 294.5 9.5 299.5 13.5 294.5"/></svg>') 49% bottom repeat-y;
+  bottom: 0em;
+  height: 0em;
 }
 
 /*# sourceMappingURL=main.css.map */
