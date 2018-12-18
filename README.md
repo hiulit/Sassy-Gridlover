@@ -1,5 +1,4 @@
-Sassy-Gridlover [![Build Status](https://travis-ci.org/hiulit/Sassy-Gridlover.svg?branch=master)](https://travis-ci.org/hiulit/Sassy-Gridlover)
-===============
+# Sassy-Gridlover [![Build Status](https://travis-ci.org/hiulit/Sassy-Gridlover.svg?branch=master)](https://travis-ci.org/hiulit/Sassy-Gridlover)
 
 **Super easy to use Sass mixins** to establish a typographic system with modular scale and vertical rhythm.
 Based on the [Gridlover app](https://www.gridlover.net/try).
@@ -31,7 +30,7 @@ or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the 
 
 ## Getting started
 
-**Sassy-Gridlover** consists of 6 configurable variables:
+**Sassy-Gridlover** consists of 7 configurable variables:
 
 ```scss
 $sgl-base-font-size;
@@ -39,6 +38,7 @@ $sgl-base-line-height;
 $sgl-base-unit;
 $sgl-scale-factor;
 $sgl-debug-mode;
+$sgl-debug-mode-max-width;
 $sgl-extras;
 ```
 
@@ -67,11 +67,11 @@ I would encourage you **not to change them directly here**, though. It would be 
 
 ## Mixins
 
-By default, all the mixins (except `sgl-html`) will output `pxrem`. But you can also choose to output `px`, `em` or `rem`.
+By default, all the mixins (except `sgl-html`) will output `em`. But you can also choose to output `px`, `rem` or `pxrem`.
 
 ### `sgl-html()`
 
-To be used on `<html>`.
+To use on `<html>`.
 
 Outputs `font-size` and `line-height` **always** in `px`.
 
@@ -79,60 +79,68 @@ Outputs `font-size` and `line-height` **always** in `px`.
 @mixin sgl-html($font-size: $sgl-base-font-size)
 ```
 
-Accepts 1 argument:
+#### Parameters
 
-* `$font-size`: Root font size (without unit, just a number).
+| Name | Description | Type | Default value |
+| :---: | :---: | :---: | :---: |
+| `$font-size` | Root font size (without unit, just a number). | `Number` | `	$sgl-base-font-size` |
 
 ### `sgl-body()`
 
-To be used on `<body>`.
+To use on `<body>`.
 
 Outputs `font-size` and `line-height`.
 
 ```scss
-@mixin sgl-body($unit: $sgl-base-unit)
+@mixin sgl-body($line-height-step: 0, $unit: $sgl-base-unit)
 ```
 
-Accepts 1 argument:
+#### Parameters
 
-* `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
+| Name | Description | Type | Default value |
+| :---: | :---: | :---: | :---: |
+| `$line-height-step` | Multiplies `$line-height-step` by `$sgl-base-line-height` (0 behaves as 1). | `Number` | 0 |
+| `$unit` | Unit to output (`px`, `em`, `rem`, `pxrem`). | `String` | `$sgl-base-unit` |
 
 ### `sgl-heading()`
 
-To be used on headings `<h1> - <h6>`.
+To use on headings `<h1> - <h6>`.
 
-Outputs `font-size`, `line-height`, `margin-bottom` and `margin-top`.
+Outputs `font-size`, `line-height`, `margin-top` and `margin-bottom`.
 
 ```scss
-@mixin sgl-heading($step, $unit: $sgl-base-unit, $base-value: $sgl-root-font-size)
+@mixin sgl-heading($font-size-step, $line-height-step, $margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
 ```
 
-Accepts 3 arguments:
+#### Parameters
 
-* `$step`:
-	* `<h1>` &rarr; `$step: 3`
-	* `<h2>` &rarr; `$step: 2`
-	* `<h3>` &rarr; `$step: 1`
-    * `<h4>` &rarr; `$step: 0`
-    * `<h5>` &rarr; `$step: 0`
-	* `<h6>` &rarr; `$step: 0`
-* `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
-* `$base-value`: Optional parameter for a different base font size when using em.
+| Name | Description | Type | Default value |
+| :---: | :---: | :---: | :---: |
+| `$font-size-step` | xxx | `Number` | - |
+| `$line-height-step` | xxxxxx (if 0 is set, the line-height will "follow" the font-size accordingly). | `Number` | - |
+| `$margin-top-step` | Multiplies `$margin-top-step` by `$sgl-base-line-height`. | `Number` | - |
+| `$margin-bottom-step` | Multiplies `$margin-bottom-step` by `$sgl-base-line-height`. | `Number` | - |
+| `$unit` | Unit to output (`px`, `em`, `rem`, `pxrem`). | `String` | `$sgl-base-unit` |
+| `$base-value` | Optional parameter for a different base font size when using `em`. | `Number` | `$sgl-base-font-size` |
 
 ### `sgl-margins()`
 
-To be used on `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
+To use on `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 
 Outputs `margin-bottom` and `margin-top`.
 
 ```scss
-@mixin sgl-margins($unit: $sgl-base-unit, $base-value: $sgl-root-font-size)
+@mixin sgl-margins($margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
 ```
 
-Accepts 2 arguments:
+#### Parameters
 
-* `$unit`: Unit to output (`px`, `em`, `rem`, `pxrem`).
-* `$base-value`: Optional parameter for a different base font size when using em.
+| Name | Description | Type | Default value |
+| :---: | :---: | :---: | :---: |
+| `$margin-top-step` | Multiplies `$margin-top-step` by `$sgl-base-line-height`. | `Number` | - |
+| `$margin-bottom-step` | Multiplies `$margin-bottom-step` by `$sgl-base-line-height`. | `Number` | - |
+| `$unit` | Unit to output (`px`, `em`, `rem`, `pxrem`). | `String` | `$sgl-base-unit` |
+| `$base-value` | Optional parameter for a different base font size when using `em`. | `Number` | `$sgl-base-font-size` |
 
 ## Debug mode
 
@@ -140,9 +148,11 @@ Enables/disables **debug mode**.
 
 Outputs background lines imitating a notebook's sheet.
 
-Accepts 1 argument:
+#### Parameters
 
-* `$sgl-debug-mode`: `true` / `false`.
+| Name | Description | Type | Default value |
+| :---: | :---: | :---: | :---: |
+| `$sgl-debug-mode` | Enables/disables **debug mode**. | `Boolean` | `false` |
 
 Declare it in your own `_variables.scss`, `_config.scss` or the like.
 Basically, **it must be declared before the** `@import "sassy-gridlover"`.
@@ -156,24 +166,18 @@ Basically, **it must be declared before the** `@import "sassy-gridlover"`.
 Styles to make sure everything is aligned.
 
 Outputs extra **reset styles**.
+ 
+#### Parameters
 
-Accepts 1 argument:
-
-* `$sgl-extras`: `true` / `false`.
+| Name | Description | Type | Default value |
+| :---: | :---: | :---: | :---: |
+| `$sgl-extras` | Outputs styles to make sure everything is aligned. | `Boolean` | `false` |
 
 Declare it in your own `_variables.scss`, `_config.scss` or the like.
 Basically, **it must be declared before the** `@import "sassy-gridlover"`.
 
 ### CSS output
 ```css
-html ul ul,
-html ol ol,
-html ul ol,
-html ol ul {
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
 html hr,
 html .hr {
     border: 1px solid;
@@ -212,32 +216,37 @@ html sub {
 
 ```scss
 $sgl-debug-mode: false;
+// $sgl-debug-mode-max-width: 1024; // Only needed if `$sgl-debug-mode` is `true`.
 $sgl-extras: false;
 
 @import "../../sassy-gridlover/sassy-gridlover";
 
 html {
-    @include sgl-html();
+    @include sgl-html;
 }
 
 body {
-    @include sgl-body("rem");
+    @include sgl-body;
 }
 
 h1 {
-    @include sgl-heading(3, "em");
+    @include sgl-heading(3, 0, 1, 2);
 }
 
 h2 {
-    @include sgl-heading(2, "px");
+    @include sgl-heading(2, 0, 1, 1);
 }
 
 h3 {
-    @include sgl-heading(1, "pxrem");
+    @include sgl-heading(1, 0, 1, 0);
 }
 
 h4 {
-    @include sgl-heading(0);
+    @include sgl-heading(0, 0, 1, 0);
+}
+
+h5 {
+    @include sgl-heading(0, 0, 1, 0);
 }
 
 p,
@@ -246,7 +255,14 @@ ol,
 pre,
 table,
 blockquote {
-    @include sgl-margins();
+    @include sgl-margins(0, 1);
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    @include sgl-margins(0, 0);
 }
 ```
 
@@ -254,49 +270,48 @@ blockquote {
 
 ```css
 html {
-    font-size: 16px;
-    line-height: 19px;
+  font-size: 18px;
+  line-height: 23px;
 }
 
 body {
-    font-size: 1rem;
-    line-height: 1.1875rem;
+  font-size: 1em;
+  line-height: 1.27778em;
 }
 
 h1 {
-    font-size: 4.25em;
-    line-height: 1.11765em;
-    margin-bottom: 0.55883em;
-    margin-top: 0.27942em;
+  font-size: 4.22223em;
+  line-height: 1.21053em;
+  margin-top: 0.30264em;
+  margin-bottom: 0.60527em;
 }
 
 h2 {
-    font-size: 42px;
-    line-height: 57px;
-    margin-bottom: 19px;
-    margin-top: 19px;
+  font-size: 2.61112em;
+  line-height: 1.46809em;
+  margin-top: 0.48937em;
+  margin-bottom: 0.48937em;
 }
 
 h3 {
-    font-size: 26px;
-    line-height: 38px;
-    margin-bottom: 0px;
-    margin-top: 19px;
-    font-size: 1.625rem;
-    line-height: 2.375rem;
-    margin-bottom: 0rem;
-    margin-top: 1.1875rem;
+  font-size: 1.61112em;
+  line-height: 1.58621em;
+  margin-top: 0.79311em;
+  margin-bottom: 0em;
 }
 
 h4 {
-    font-size: 16px;
-    line-height: 19px;
-    margin-bottom: 0px;
-    margin-top: 19px;
-    font-size: 1rem;
-    line-height: 1.1875rem;
-    margin-bottom: 0rem;
-    margin-top: 1.1875rem;
+  font-size: 1em;
+  line-height: 1.27778em;
+  margin-top: 1.27778em;
+  margin-bottom: 0em;
+}
+
+h5 {
+  font-size: 1em;
+  line-height: 1.27778em;
+  margin-top: 1.27778em;
+  margin-bottom: 0em;
 }
 
 p,
@@ -305,10 +320,16 @@ ol,
 pre,
 table,
 blockquote {
-    margin-bottom: 19px;
-    margin-top: 0;
-    margin-bottom: 1.1875rem;
-    margin-top: 0;
+  margin-top: 0em;
+  margin-bottom: 1.27778em;
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 0em;
+  margin-bottom: 0em;
 }
 ```
 
@@ -326,7 +347,7 @@ See [CONTRIBUTING](/CONTRIBUTING.md).
 
 ## Inspiration and alternatives
 
-* [Gridlover app](https://www.gridlover.net/try) - The tool to establish a typographic system with modular scale and vertical rhythm.
+* [Gridlover app](https://www.gridlover.net/try) - The tool to establish a typographic system with modular scale and vertical rhythm on which **Sassy-gridlover** is based.
 * [Knife](https://github.com/Pushplaybang/knife) - Nail vertical rhythm, modular scale, and REMs like a boss with this simple set of SASS/SCSS variables, functions and mixins.
 * [gridlover-mixin](https://github.com/sevenupcan/gridlover-mixin) - A mixin to generate modular scale and vertical rhythm for your typography.
 
@@ -342,7 +363,7 @@ Thanks to:
 * Takeru Suzuki ([@terkel](https://github.com/terkel)) - For the `@function decimal-xxx`.
 * Matt Andrews ([@matthew-andrews](https://github.com/matthew-andrews)) - For his [Travis CI Sass Example](https://github.com/matthew-andrews/sass-example).
 * Thomas Blum [@tbaddade](https://github.com/tbaddade) - For detecting a typo in [`sgl-extras` variable](https://github.com/hiulit/Sassy-Gridlover/pull/16).
-* Many other sources I don't recall right now... 😅 I'm trying to... 🤔 But when they come to me, I'll put them here right away! 😎
+* Many other sources I don't recall right now... 😅  I'm trying to... 🤔  But when they come to me, I'll put them here right away! 😎
 
 ## License
 
