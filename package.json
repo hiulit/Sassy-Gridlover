@@ -1,30 +1,28 @@
 {
-	"title": "Sassy-Gridlover",
-	"name": "sassy-gridlover",
-	"version": "5.2.3",
-	"description": "Super easy to use Sass mixins to establish a typographic system with modular scale and vertical rhythm. Based on the Gridlover app.",
-	"keywords": [
-		"typography",
-		"baseline",
-		"modular",
-		"scale",
-		"vertical-rhythm",
-		"sass",
-		"scss",
-		"mixins",
-		"gridlover"
-	],
-	"homepage": "https://github.com/hiulit/Sassy-Gridlover",
-	"bugs": {
-		"url": "https://github.com/hiulit/Sassy-Gridlover/issues",
-		"email": "hiulit@gmail.com"
-		},
-	"license": "MIT License",
-	"author": [
-		{
-			"name": "hiulit",
-			"email": "hiulit@gmail.com",
-			"url": "https://github.com/hiulit"
-		}
-	]
+    "title": "Sassy-Gridlover",
+    "name": "sassy-gridlover",
+    "version": "6.0.0",
+    "description": "Super easy to use Sass mixins to establish a typographic system with modular scale and vertical rhythm. Based on the Gridlover app.",
+    "keywords": [
+        "typography",
+        "baseline",
+        "modular",
+        "scale",
+        "vertical-rhythm",
+        "sass",
+        "scss",
+        "mixins",
+        "gridlover"
+    ],
+    "homepage": "https://github.com/hiulit/Sassy-Gridlover",
+    "bugs": {
+        "url": "https://github.com/hiulit/Sassy-Gridlover/issues",
+        "email": "hiulit@gmail.com"
+    },
+    "license": "MIT",
+    "author": {
+        "name": "hiulit",
+        "email": "hiulit@gmail.com",
+        "url": "https://github.com/hiulit"
+    }
 }

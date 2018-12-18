@@ -1,30 +1,35 @@
 $sgl-debug-mode: true;
+$sgl-debug-mode-max-width: 1024; // Only needed if `$sgl-debug-mode` is `true`.
 $sgl-extras: true;
 
 @import "../../sassy-gridlover/sassy-gridlover";
 
 html {
-    @include sgl-html();
+    @include sgl-html;
 }
 
 body {
-	@include sgl-body("rem");
+    @include sgl-body;
 }
 
 h1 {
-	@include sgl-heading(3, "em");
+    @include sgl-heading(3, 0, 1, 2);
 }
 
 h2 {
-	@include sgl-heading(2, "px");
+    @include sgl-heading(2, 0, 1, 1);
 }
 
 h3 {
-	@include sgl-heading(1, "pxrem");
+    @include sgl-heading(1, 0, 1, 0);
 }
 
 h4 {
-	@include sgl-heading(0);
+    @include sgl-heading(0, 0, 1, 0);
+}
+
+h5 {
+    @include sgl-heading(0, 0, 1, 0);
 }
 
 p,
@@ -33,5 +38,12 @@ ol,
 pre,
 table,
 blockquote {
-	@include sgl-margins();
+    @include sgl-margins(0, 1);
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    @include sgl-margins(0, 0);
 }

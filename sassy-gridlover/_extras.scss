@@ -1,12 +1,4 @@
-@mixin sgl-extras() {
-    ul ul,
-    ol ol,
-    ul ol,
-    ol ul {
-            margin-bottom: 0;
-            margin-top: 0;
-        }
-
+@mixin sgl-extras {
     hr,
     .hr {
         border: 1px solid;
