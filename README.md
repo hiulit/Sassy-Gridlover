@@ -83,7 +83,7 @@ Outputs `font-size` and `line-height` **always** in `px`.
 
 | Name | Description | Type | Default value |
 | :---: | :---: | :---: | :---: |
-| `$font-size` | Root font size (without unit, just a number). | `Number` | `	$sgl-base-font-size` |
+| `$font-size` | Root font size. | `Number` | `	$sgl-base-font-size` |
 
 ### `sgl-body()`
 
@@ -99,7 +99,7 @@ Outputs `font-size` and `line-height`.
 
 | Name | Description | Type | Default value |
 | :---: | :---: | :---: | :---: |
-| `$line-height-step` | Multiplies `$line-height-step` by the base `line-height` (`$sgl-root-font-size * $sgl-base-line-height`). If `0` is set, it will actually multiply by `1`. | `Number` | 0 |
+| `$line-height-step` | Multiplies the step number by the base `line-height` (from `sgl-html`). If `0` is set, it will actually multiply by `1`. | `Number` | 0 |
 | `$unit` | Unit to output (`px`, `em`, `rem`, `pxrem`). | `String` | `$sgl-base-unit` |
 
 ### `sgl-heading()`
@@ -118,8 +118,8 @@ Outputs `font-size`, `line-height`, `margin-top` and `margin-bottom`.
 | :---: | :---: | :---: | :---: |
 | `$font-size-step` | xxxx  | `Number` | - |
 | `$line-height-step` | xxxxxx (if 0 is set, the line-height will "follow" the font-size accordingly). | `Number` | - |
-| `$margin-top-step` | Multiplies `$margin-top-step` by the base `line-height` (`$sgl-root-font-size * $sgl-base-line-height`). | `Number` | - |
-| `$margin-bottom-step` | Multiplies `$margin-bottom-step` by the base `line-height` (`$sgl-root-font-size * $sgl-base-line-height`). | `Number` | - |
+| `$margin-top-step` | Multiplies the step number by the base `line-height` (from `sgl-html`). | `Number` | - |
+| `$margin-bottom-step` | Multiplies the step number by the base `line-height` (from `sgl-html`). | `Number` | - |
 | `$unit` | Unit to output (`px`, `em`, `rem`, `pxrem`). | `String` | `$sgl-base-unit` |
 | `$base-value` | Optional parameter for a different base font size when using `em`. | `Number` | `$sgl-base-font-size` |
 
@@ -137,8 +137,8 @@ Outputs `margin-bottom` and `margin-top`.
 
 | Name | Description | Type | Default value |
 | :---: | :---: | :---: | :---: |
-| `$margin-top-step` | Multiplies `$margin-top-step` by the base `line-height` (`$sgl-root-font-size * $sgl-base-line-height`). | `Number` | - |
-| `$margin-bottom-step` | Multiplies `$margin-bottom-step` by the base `line-height` (`$sgl-root-font-size * $sgl-base-line-height`). | `Number` | - |
+| `$margin-top-step` | Multiplies the step number by the base `line-height` (from `sgl-html`). | `Number` | - |
+| `$margin-bottom-step` | Multiplies the step number by the base `line-height` (from `sgl-html`). | `Number` | - |
 | `$unit` | Unit to output (`px`, `em`, `rem`, `pxrem`). | `String` | `$sgl-base-unit` |
 | `$base-value` | Optional parameter for a different base font size when using `em`. | `Number` | `$sgl-base-font-size` |
 
