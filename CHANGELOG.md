@@ -1,5 +1,11 @@
 # Changelog
 
+## v6.0.1 (December 18th 2018)
+
+### Fixes
+
+* Failed to publish **v6.0.0** correctly to npm and yarn.
+
 ## v6.0.0 (December 18th 2018)
 
 **NOTE:** This release contains breaking changes!
