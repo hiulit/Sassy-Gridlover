@@ -7,7 +7,7 @@
 ///
 /// Outputs `font-size` and `line-height` **always** in `px`.
 ///
-/// @param {number} $font-size [$sgl-base-font-size] - Root font size (without unit, just a number).
+/// @param {number} $font-size [$sgl-base-font-size] - Root font size.
 ///
 /// @example scss
 /// html {
@@ -42,7 +42,7 @@
 ///
 /// Outputs `font-size` and `line-height`.
 ///
-/// @param {number} $line-height-step [0] - Multiplies `$line-height-step` by the base `line-height` (`$sgl-root-font-size * $sgl-base-line-height`). If `0` is set, it will actually multiply by `1`.
+/// @param {number} $line-height-step [0] - Multiplies the step number by the base `line-height` (from `sgl-html`). If `0` is set, it will actually multiply by `1`.
 ///
 /// @param {string} $unit [$sgl-base-unit] - Unit to output (`px`, `em`, `rem`, `pxrem`).
 ///
@@ -93,11 +93,11 @@
 ///
 /// @param {number} $font-size-step - xxxxxxx.
 ///
-/// @param {number} $line-height-step - Multiplies `$line-height-step` by the base `line-height` (`$sgl-root-font-size * $sgl-base-line-height`). If `0` is set, the `line-height` will grow with the `font-size` accordingly.
+/// @param {number} $line-height-step - Multiplies the step number by the base `line-height` (from `sgl-html`). If `0` is set, the `line-height` will grow with the `font-size` accordingly.
 ///
-/// @param {number} $margin-top-step - Multiplies `$margin-top-step` by the base `line-height` (`$sgl-root-font-size * $sgl-base-line-height`).
+/// @param {number} $margin-top-step - Multiplies the step number by the base `line-height` (from `sgl-html`).
 ///
-/// @param {number} $margin-bottom-step -  Multiplies `$margin-bottom-step` by the base `line-height` (`$sgl-root-font-size * $sgl-base-line-height`).
+/// @param {number} $margin-bottom-step -  Multiplies the step number by the base `line-height` (from `sgl-html`).
 ///
 /// @param {string} $unit [$sgl-base-unit] - Unit to output (`px`, `em`, `rem`, `pxrem`).
 ///
@@ -189,12 +189,6 @@
     $scale: $sgl-scale-factor;
     $computed-font-size: round($font-size * sgl-exponent($scale, $font-size-step));
 
-    @warn $font-size;
-
-    @warn sgl-exponent($scale, $font-size-step);
-
-    @warn $computed-font-size;
-
     $line-height: round($font-size * $sgl-base-line-height);
     $computed-line-height: $line-height * $line-height-step;
     $margin-top: $line-height * $margin-top-step;
@@ -230,9 +224,9 @@
 ///
 /// Outputs `margin-top` and `margin-bottom`.
 ///
-/// @param {number} $margin-top-step - Multiplies `$margin-top-step` by the base `line-height` (`$sgl-root-font-size * $sgl-base-line-height`).
+/// @param {number} $margin-top-step - Multiplies the step number by the base `line-height` (from `sgl-html`).
 ///
-/// @param {number} $margin-bottom-step - Multiplies `$margin-bottom-step` by the base `line-height` (`$sgl-root-font-size * $sgl-base-line-height`).
+/// @param {number} $margin-bottom-step - Multiplies the step number by the base `line-height` (from `sgl-html`).
 ///
 /// @param {string} $unit [$sgl-base-unit] - Unit to output (`px`, `em`, `rem`, `pxrem`).
 ///
