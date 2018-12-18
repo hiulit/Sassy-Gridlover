@@ -101,7 +101,7 @@
 ///
 /// @param {string} $unit [$sgl-base-unit] - Unit to output (`px`, `em`, `rem`, `pxrem`).
 ///
-/// @param {number} $base-value [$sgl-base-font-size] - Optional parameter for a different base font size when using em.
+/// @param {number} $base-value [$sgl-base-font-size] - Optional parameter for a different base font size when using `em`.
 ///
 /// @example scss
 /// h1 {
@@ -227,9 +227,9 @@
 ///
 /// @param {number} $margin-bottom-step - Multiplies `$margin-bottom-step` by `$sgl-base-line-height`.
 ///
-/// @param {string} $unit [$sgl-base-unit] - Unit to output.
+/// @param {string} $unit [$sgl-base-unit] - Unit to output (`px`, `em`, `rem`, `pxrem`).
 ///
-/// @param {number} $base-value [$sgl-base-font-size] - Optional parameter for a different base font size when using em.
+/// @param {number} $base-value [$sgl-base-font-size] - Optional parameter for a different base font size when using `em`.
 ///
 /// @example scss
 /// p,
