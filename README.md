@@ -363,6 +363,7 @@ Thanks to:
 * Takeru Suzuki ([@terkel](https://github.com/terkel)) - For the `@function decimal-xxx`.
 * Matt Andrews ([@matthew-andrews](https://github.com/matthew-andrews)) - For his [Travis CI Sass Example](https://github.com/matthew-andrews/sass-example).
 * Thomas Blum [@tbaddade](https://github.com/tbaddade) - For detecting a typo in [`sgl-extras` variable](https://github.com/hiulit/Sassy-Gridlover/pull/16).
+* Rizqi Nizamil Putra [@rizqinizamil](https://github.com/rizqinizamil) - For bringing up the changes [#19](https://github.com/hiulit/Sassy-Gridlover/issues/19) that led to [v6.0.0](https://github.com/hiulit/Sassy-Gridlover/releases/tag/v6.0.0).
 * Many other sources I don't recall right now... 😅  I'm trying to... 🤔  But when they come to me, I'll put them here right away! 😎
 
 ## License
