@@ -26,6 +26,12 @@ Install **Sassy-Gridlover** via **npm**.
 $ npm install sassy-gridlover
 ```
 
+Install **Sassy-Gridlover** via **yarn**.
+
+```bash
+$ yarn add sassy-gridlover
+```
+
 or [Download](https://github.com/hiulit/Sassy-Gridlover/archive/master.zip) the repository and include the `sassy-gridlover` folder to your Sass directory.
 
 ## Getting started
