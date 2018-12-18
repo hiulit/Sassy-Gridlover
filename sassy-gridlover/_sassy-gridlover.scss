@@ -80,6 +80,11 @@
         font-size: sgl-decimal-ceil(sgl-em-calc($sgl-root-font-size, $sgl-root-font-size), 5);
         line-height: sgl-decimal-ceil(sgl-em-calc($line-height, $sgl-root-font-size), 5);
     }
+
+    @if $sgl-debug-mode == true {
+        margin: auto;
+        max-width: 560px;
+    }
 }
 
 /// To use on headings `<h1> - <h6>`.
