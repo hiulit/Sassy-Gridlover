@@ -51,9 +51,7 @@ $sgl-scale-factor: $GOLDEN_SECTION !default;
 ///
 /// Outputs background lines imitating a notebook's sheet.
 ///
-/// Declare it in your own `_variables.scss`, `_config.scss` or the like.
-///
-/// Basically, **it must be declared before the** `@import "sassy-gridlover"`.
+/// Declare it in your own `_variables.scss`, `_config.scss` or the like. Basically, **it must be declared before the** `@import "sassy-gridlover"`.
 ///
 /// @example scss
 /// $sgl-debug-mode: true;
@@ -74,9 +72,7 @@ $sgl-debug-mode: false !default;
 
 /// Sets a maximum width to center the text when **debug mode** is `true`.
 ///
-/// Declare it in your own `_variables.scss`, `_config.scss` or the like.
-///
-/// Basically, **it must be declared before the** `@import "sassy-gridlover"`.
+/// Declare it in your own `_variables.scss`, `_config.scss` or the like. Basically, **it must be declared before the** `@import "sassy-gridlover"`.
 ///
 /// @example scss
 /// $sgl-debug-mode-max-width: 1024
@@ -94,9 +90,7 @@ $sgl-debug-mode-max-width: 560 !default;
 ///
 /// Outputs extra **reset styles**.
 ///
-/// Declare it in your own `_variables.scss`, `_config.scss` or the like.
-///
-/// Basically, **it must be declared before the** `@import "sassy-gridlover"`.
+/// Declare it in your own `_variables.scss`, `_config.scss` or the like. Basically, **it must be declared before the** `@import "sassy-gridlover"`.
 ///
 /// @example scss
 /// $sgl-extras: true;
