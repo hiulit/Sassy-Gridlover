@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+
+* Up to date
+
+## v6.0.3 (March 6th 2018)
+
+### Fixed
+
+* Warning error in `!global` variables when using Dart Sass.
+
 ## v6.0.2 (December 18th 2018)
 
 ### Fixed
