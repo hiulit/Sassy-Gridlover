@@ -3,6 +3,8 @@
 @import "debug-mode";
 @import "extras";
 
+$sgl-root-font-size: null;
+
 /// To use on `<html>`.
 ///
 /// Outputs `font-size` and `line-height` **always** in `px`.
