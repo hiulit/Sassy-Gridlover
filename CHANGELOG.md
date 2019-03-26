@@ -4,6 +4,12 @@
 
 * Up to date
 
+## v6.0.4 (March 26th 2018)
+
+### Added
+
+* `main` attribute to `package.json` so it's easier to import **Sassy Gridlover** when using bundlers [#21](https://github.com/hiulit/Sassy-Gridlover/issues/21)
+
 ## v6.0.3 (March 6th 2018)
 
 ### Fixed
