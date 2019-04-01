@@ -77,12 +77,16 @@ By default, all the mixins (except `sgl-html`) will output `em`. But you can als
 
 ### `sgl-html()`
 
+This mixin is **mandatory** for the all the other mixins to work.
+
 To use on `<html>`.
 
 Outputs `font-size` and `line-height` **always** in `px`.
 
 ```scss
-@mixin sgl-html($font-size: $sgl-base-font-size)
+html {
+    @include sgl-html($font-size: $sgl-base-font-size);
+}
 ```
 
 #### Parameters
@@ -98,7 +102,9 @@ To use on `<body>`.
 Outputs `font-size` and `line-height`.
 
 ```scss
-@mixin sgl-body($line-height-step: 0, $unit: $sgl-base-unit)
+body {
+    @include sgl-body($line-height-step: 0, $unit: $sgl-base-unit);
+}
 ```
 
 #### Parameters
@@ -115,7 +121,7 @@ To use on headings `<h1> - <h6>`.
 Outputs `font-size`, `line-height`, `margin-top` and `margin-bottom`.
 
 ```scss
-@mixin sgl-heading($font-size-step, $line-height-step, $margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
+@include sgl-heading($font-size-step, $line-height-step, $margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
 ```
 
 #### Parameters
@@ -136,7 +142,7 @@ To use on `<p>`, `<ul>`, `<ol>`, `<pre>`, `<table>`, `<blockquote>`, etc.
 Outputs `margin-bottom` and `margin-top`.
 
 ```scss
-@mixin sgl-margins($margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
+@include sgl-margins($margin-top-step, $margin-bottom-step, $unit: $sgl-base-unit, $base-value: $sgl-base-font-size)
 ```
 
 #### Parameters

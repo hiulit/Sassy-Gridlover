@@ -7,6 +7,8 @@ $sgl-root-font-size: null;
 
 /// To use on `<html>`.
 ///
+/// This mixin is **mandatory** for the all the other mixins to work.
+///
 /// Outputs `font-size` and `line-height` **always** in `px`.
 ///
 /// @param {number} $font-size [$sgl-base-font-size] - Root font size.
