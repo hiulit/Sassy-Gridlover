@@ -1,7 +1,7 @@
 {
     "title": "Sassy-Gridlover",
     "name": "sassy-gridlover",
-    "version": "6.0.4",
+    "version": "6.0.5",
     "description": "Super easy to use Sass mixins to establish a typographic system with modular scale and vertical rhythm. Based on the Gridlover app.",
     "main": "sassy-gridlover/_sassy-gridlover.scss",
     "keywords": [
